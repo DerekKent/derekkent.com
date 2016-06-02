@@ -1,0 +1,39 @@
+<template args="model">
+    <article>
+        <h1>District 32 Locator</h1>
+
+        <form>
+            <input type="text" name="address" placeholder="Address where you're registered to vote" aria-label="Address" />
+            <input type="submit" value="Find Me" class="btn btn-blue" />
+        </form>
+
+        <if condition="model.error">
+            <div class="notice notice-red">
+                Error: {model.error}
+            </div>
+        </if>
+
+        <if condition="model.resident === true">
+            <div class="notice notice-green" key="resident">
+                You appear to be a resident of District 32!
+            </div>
+            <p>
+                Don't forget to <a href="https://voterservices.elections.maryland.gov/VoterSearch">make
+                sure you're registered to vote</a>!
+            </p>
+            <p>
+                <strong>Primary Day is June 26th, 2018.</strong>
+            </p>
+        <elseif condition="model.resident === false">
+            <div class="notice notice-yellow" key="not-resident">
+                It appears you are not a resident of District 32.
+            </div>
+            <p>
+                If you believe this to be an error, you can check on Maryland's
+                <a href="https://voterservices.elections.maryland.gov/VoterSearch">Voter Lookup site</a>.
+            </p>
+        </if>
+
+        <div class="district32-map" skipNode="model.resident !== undefined" key="map"></div>
+    </article>
+</template>

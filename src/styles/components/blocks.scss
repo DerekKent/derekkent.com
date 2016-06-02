@@ -1,0 +1,48 @@
+@import 'variables';
+@import 'mixins';
+
+$block-colors: (
+    red: color(red),
+    blue: color(blue)
+);
+
+$focus-colors: (
+    yellow: color(yellow)
+);
+
+.block {
+    background-color: color(blue);
+    border-radius: 0.3rem;
+    color: color(white);
+    display: inline-block;
+    padding: 4rem;
+    text-align: center;
+
+    > .header {
+        > .title {
+            font-size: 2.8em;
+            font-weight: bold;
+        }
+    }
+}
+
+@each $name, $color in $block-colors {
+    .block-#{$name} {
+        background-color: $color;
+
+        &:active,
+        &:hover,
+        &:focus {
+            background-color: darken($color, 5%);
+        };
+    }
+}
+
+@each $name, $color in $focus-colors {
+    .block-focus-#{$name} {
+        &:focus {
+            box-shadow: 0 0 2pt 2pt $color;
+            outline: 0;
+        }
+    }
+}

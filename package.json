@@ -1,0 +1,80 @@
+{
+  "name": "@derekkent/derekkent.com",
+  "version": "0.1.0",
+  "description": "Derek Kent for Maryland District 32 Delegate official web site",
+  "contributors": [
+    {
+      "name": "Derek Kent",
+      "email": "derek@derekkent.com"
+    }
+  ],
+  "scripts": {
+    "prepublish": "jspm install",
+    "upgrade": "jspm update",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/DerekKent/derekkent.com.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "6.0.4",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-preset-es2015": "6.9.0",
+    "browser-sync": "2.12.8",
+    "connect-history-api-fallback": "1.2.0",
+    "del": "2.2.0",
+    "eslint": "2.10.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-babel": "6.1.2",
+    "gulp-clip-empty-files": "0.1.2",
+    "gulp-cssnano": "2.1.2",
+    "gulp-env": "0.4.0",
+    "gulp-eslint": "2.0.0",
+    "gulp-htmlmin": "2.0.0",
+    "gulp-if": "2.0.1",
+    "gulp-imagemin": "3.0.1",
+    "gulp-load-plugins": "1.2.4",
+    "gulp-real-favicon": "^0.2.1",
+    "gulp-rename": "1.2.2",
+    "gulp-replace": "0.5.4",
+    "gulp-sass": "2.3.1",
+    "gulp-scss-lint": "0.4.0",
+    "gulp-sourcemaps": "2.0.0-alpha",
+    "gulp-superviewsjs": "github:dak/gulp-superviewsjs",
+    "gulp-uglify": "1.5.3",
+    "gulp-util": "3.0.7",
+    "gulp-wrap": "0.13.0",
+    "jspm": "0.17.0-beta.16",
+    "require-dir": "0.3.0",
+    "sw-precache": "3.2.0",
+    "yargs": "4.7.1"
+  },
+  "jspm": {
+    "main": "/app/main.js",
+    "directories": {
+      "lib": "src/app"
+    },
+    "configFiles": {
+      "jspm:browser": "src/jspm.browser.js",
+      "jspm": "src/jspm.config.js"
+    },
+    "dependencies": {
+      "superb": "npm:superb.js@^0.0.4"
+    },
+    "devDependencies": {
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.9"
+    },
+    "peerDependencies": {
+      "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
+      "incremental-dom": "npm:incremental-dom@^0.4.1",
+      "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
+    }
+  },
+  "engines": {
+    "node": ">=5.10"
+  }
+}

@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'mixins';
+
+.map-page {
+    border-top: 1px solid color(gray, lighter);
+    margin: 0 0 6rem;
+    text-align: center;
+
+    form {
+        margin-bottom: 3rem;
+    }
+
+    .district32-map {
+        background-color: color(gray, light);
+        height: 40vw;
+        margin: 0 auto;
+        width: 50vw;
+    }
+}

@@ -1,0 +1,80 @@
+$colors: (
+    red: (
+        light: #f7d9da,
+        lighter: #f1bcbf,
+        base: #d9222a,
+        darker: #bd0f18,
+        dark: #a10008
+    ),
+    green: (
+        light: #d8f0d8,
+        lighter: #c6e9c6,
+        base: #1fad1f,
+        darker: #0c8b0c,
+        dark: #006e00
+    ),
+    blue: (
+        light: #d9daf7,
+        lighter: #bcbff1,
+        base: #292d78,
+        darker: #1a1d5c,
+        dark: #0e1145
+    ),
+    orange: (
+        light: #ffc87f,
+        lighter: #e9a850,
+        base: #d88c27,
+        darker: #ad6b12,
+        dark: #864d00
+    ),
+    yellow: (
+        light: #fcf8e3,
+        lighter: #faf2cc,
+        base: #d8ba27,
+        darker: #ae930f,
+        dark: #897200
+    ),
+    teal: (
+        light: #d8f0e6,
+        lighter: #c6e9da,
+        base: #1b9460,
+        darker: #0c7749,
+        dark: #005c34
+    ),
+    gray: (
+        light: #e6e6e6,
+        lighter: #ccc,
+        base: gray,
+        darker: #4c4c4c,
+        dark: #323232
+    ),
+    background: #f0f3fa,
+    links: #208feb,
+    serenity: #91a8d0,
+    black: black,
+    white: white
+);
+
+@function color($color, $shade: 'base') {
+    $hue: null;
+
+    @if map-has-key($colors, $color) {
+        $hue: map-get($colors, $color);
+    }
+
+    @if (type-of($hue) == color) {
+        @return map-get($colors, $color);
+    }
+
+    @if (type-of($hue) == map) {
+        @if map-has-key($hue, $shade) {
+            @return map-get($hue, $shade);
+        }
+
+        @warn 'Unknown shade `#{$shade}` in `#{$color}`.';
+        @return null;
+    }
+
+    @warn 'Unknown `#{$color}` in $colors.';
+    @return null;
+}

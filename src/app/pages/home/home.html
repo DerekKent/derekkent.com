@@ -1,0 +1,221 @@
+<template args="model">
+    <div class="intro banner curved-bottom">
+        <div class="join block">
+            <if condition="!model.subscribed">
+                <form class="subscribe" key="subscribe">
+                    <fieldset>
+                        <legend>Join the Movement</legend>
+                        <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" />
+                        <input type="text" name="zip" placeholder="Zip Code" aria-label="Zip Code" />
+                        <input type="submit" value="Count Me In" class="btn btn-red" />
+                    </fieldset>
+                </form>
+            </if>
+            <if condition="model.subscribed">
+                <form action="https://secure.actblue.com/contribute/page/derekkent" method="get" class="donate" key="donate">
+                    <fieldset>
+                        <legend>Can You Help Us?</legend>
+                        <input type="hidden" name="refcode" value="homepage">
+                        <div class="input-wrapper">
+                            <span>
+                                <label class="btn {model.amt === 10 ? 'btn-serenity' : ''}">$10
+                                    <input type="radio" name="amount" value="10" checked="{model.amt === 10 ? '' : void 0}">
+                                </label>
+                            </span>
+                            <span>
+                                <label class="btn {model.amt === 35 ? 'btn-serenity' : ''}">$35
+                                    <input type="radio" name="amount" value="35" checked="{model.amt === 35 ? '' : void 0}">
+                                </label>
+                            </span>
+                            <span key="100">
+                                <label class="btn {model.amt === 100 ? 'btn-serenity' : ''}">$100
+                                    <input type="radio" name="amount" value="100" checked="{model.amt === 100 ? '' : void 0}">
+                                </label>
+                            </span>
+                            <span>
+                                <label class="btn">Other
+                                    <input type="number" min="1" max="6000" placeholder="Other">
+                                </label>
+                            </span>
+                        </div>
+                        <input type="submit" value="Donate" class="btn btn-green">
+                    </fieldset>
+                </form>
+            </if>
+        </div>
+    </div>
+
+    <article>
+        <h1>Together We Can</h1>
+
+        <ul class="vision-list">
+            <li>
+                <h2>Make Government Work for Us</h2>
+                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Make Government work for us" width="150" height="150" />
+            </li>
+
+            <li>
+                <h2>Reform Our Criminal Justice System</h2>
+                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Reform our criminal justice system" width="150" height="150" />
+            </li>
+
+            <li>
+                <h2>Ensure a Living Wage for all Workers</h2>
+                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Fight for a $15 minimum wage" width="150" height="150" />
+            </li>
+
+            <li>
+                <h2>Give Our Children a Brighter Future</h2>
+                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Improve our children's education" width="150" height="150" />
+            </li>
+
+            <li>
+                <h2>Create a More Just Society for Everyone</h2>
+                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Create a more just society" width="150" height="150" />
+            </li>
+
+            <li>
+                <h2>Accomplish So Much for Our Community</h2>
+                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="See other issues" width="150" height="150" />
+            </li>
+        </ul>
+
+        <h1>A Note From Derek</h1>
+        <blockquote>
+            <p>
+                I've always believed that <strong>government is most effective when it is
+                responsive to the needs of the community it represents</strong>. At its core,
+                government is simply a community coming together to solve its
+                collective problems for the benefit of the community as a whole.
+            </p>
+            <p>
+                In a modern society, the sheer breadth of issues faced by
+                our community is too vast for every citizen to remain informed
+                on every issue, so we elect people from our community to serve
+                as our representatives.
+            </p>
+            <p>
+                Now I don't mean to patronize you — we're all aware of the basic
+                premise of how Democracy works. But I mention it to raise an
+                important point.
+            </p>
+            <p>
+                Government is only responsive to the needs of a community if
+                the people we elect — the politicians — are responsive to the
+                needs of our community as a whole. And it genuinely requires
+                an altruistic and committed individual to maintain an open dialogue
+                with their community and to represent their best interests —
+                even when their constituents are too busy with their own lives
+                to pay attention.
+            </p>
+            <p>
+                Over the past four years now, I have closely followed the actions
+                and voting records of our elected Democratic representatives
+                of District 32. <strong>What I've learned has shocked me.</strong>
+            </p>
+            <p>
+                Our representatives, who are all members of the
+                <em>Democratic Party</em>, have not just voted for, but in many cases
+                actually <em>sponsored bills</em> to:
+                <ul>
+                    <li>Send children to jail who haven't been convicted of a crime [HB196]</li>
+                    <li>Take away a woman's right to choose [HB1312] [HB283]</li>
+                    <li>Allow people to bring handguns into Maryland [HB464]</li>
+                    <li>Allow people to purchase assault rifles [HB317]</li>
+                    <li>Increase individual campaign contributions to $6000 [HB1499]</li>
+                    <li>Give a tax break to the wealthy</li>
+                </ul>
+                They have also voted <em>against</em>:
+                <ul>
+                    <li>
+                        Guaranteed Sick Leave for employees
+                        <a href="http://mgaleg.maryland.gov/webmga/frmMain.aspx?pid=flrvotepage&tab=subject3&id=hb0580,h-0997&stab=02&ys=2016RS">[HB580]</a>
+                    </li>
+                </ul>
+                In many cases these stances were in stark contrast to the majority
+                of Democrats in the House, and aligned much more closely with
+                Republican Delegates.
+            </p>
+            <p>
+                I do not believe these positions are in line with the Democratic
+                Party or with our community as a whole. That's why I've decided
+                to submit my name to represent District 32 in the House of
+                Delegates.
+            </p>
+            <p>
+                I promise to engage with and represent our whole community
+            </p>
+        </blockquote>
+
+        <div class="donate block">
+            <div class="header">
+                <span class="title">Donate to Our Campaign</span>
+            </div>
+            <span>Let's start a revolution</span>
+        </div>
+
+        <h1>It Starts With You</h1>
+
+        <div>
+            <p>
+                The United States is the most advanced, richest nation on the face of the Earth.
+                And Maryland is the richest state in the Union.[1]
+                Yet,
+            </p>
+
+            <cite>[1] Calculated by Median Household Income</cite>
+
+            <p>
+                Maryland legislatures recently voted to increase individual campaign
+                contribution limits from $4,000 to $6,000 for State elections.
+                Even Presidential campaigns are still limited to just $2,700.
+                That's the wrong direction to be moving after the disasterous
+                Citizen's United decision.
+                <strong>In fact, in Maryland, Campaign Contribution Limits
+                have been raising faster than the minimum wage.</strong>
+                We need to get big money out of politics and get our priorities
+                straight.
+            </p>
+
+            <p>EPA's action level for lead in drinking water is 15 ppb; however,
+            \"Rules and science are outdated. The E.P.A.’s trigger level for addressing lead in drinking water — 15 parts per billion — is not based on any health threat; rather, it reflects a calculation that water in at least nine in 10 homes susceptible to lead contamination will fall below that standard.\" (http://www.nytimes.com/2016/02/09/us/regulatory-gaps-leave-unsafe-lead-levels-in-water-nationwide.html).
+            NO AMOUNT OF LEAD IN DRINKING WATER IS CONSIDERED SAFE FOR CHILDREN.
+            https://www.epa.gov/your-drinking-water/basic-information-about-lead-drinking-water
+            \"The MCLG for lead is zero. EPA has set this level based on the best available science which shows there is no safe level of exposure to lead.\"
+            Maryland Department of Environment (MDE)
+            http://www.dsd.state.md.us/comar/comarhtml/26/26.04.01.06-2.htm
+            Maryland action level is 5ppb, sampled once every 3 years, lt 10%
+            Proposal: Lead-free schools: Set standard for schools to 0 ppb.
+            </p>
+
+            <p>The E.P.A. has compiled a list of 100 potentially risky chemicals and 12 microbes that are known or expected to be found in public water systems, but are not yet regulated.
+            </p>
+            <p>Expand regulations in Maryland</p>
+
+            <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/5tu32CCA_Ig" frameborder="0" allowfullscreen></iframe>-->
+
+            <h2>Revitalize Baltimore</h2>
+
+            <p>Baltimore's poorest neighborhoods are our neighbors. According to the Census Bureau (American Community Survey, 2012),
+            25.2% of people in Baltimore live in poverty. 36.5% of children live in poverty. 84.9% of children receive their meals
+            through the Free and Reduced Priced Meals Program. Neighborhoods in Baltimore have lower Life Expectancy rates
+            lower than North Korea and the Gaza Strip. Growing up in these neighborhoods is a virtual death sentence.
+            Those statistics alone should be enough to make it clear that we have a moral obligation to help our neighbors.
+            But it is also in our own best interest to revitalize Baltimore and improve the quality of life for its
+            residents.
+            </p>
+            <p>As Jordan Rappaport, a senior economist at the Federal Reserve Bank of Kansas City, observed:
+            \"cities and suburbs depend on each other for economic growth\" and they
+            \"grow or decline together\".
+            </p>
+
+            <p>$15 times 0 is still $0. Raising the minimum wage is important, but it's not enough. We also have to
+            bring jobs in to the area that are going to stay and help the area grow.</p>
+
+        </div>
+
+        <h1>For the People</h1>
+
+        <p>A practical idealist.</p>
+    </article>
+</template>

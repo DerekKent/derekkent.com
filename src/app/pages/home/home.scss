@@ -1,0 +1,120 @@
+@import 'variables';
+@import 'mixins';
+
+.home-page {
+    text-align: center;
+
+    > .intro {
+        background-color: lightblue;
+        background-image: url('/images/home/intro-bg.jpg');
+    }
+
+    .join {
+        background-color: color(blue, darker);
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        height: 45rem;
+        padding: 4rem 4rem 16rem 16rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 48.5rem;
+
+        .btn-serenity {
+            text-shadow: 0.1rem 0 0.1rem color(blue);
+        }
+
+        input {
+            border: 0;
+        }
+    }
+
+    .donate {
+        .input-wrapper {
+            align-items: stetch;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            input {
+                display: none;
+            }
+
+            span {
+                flex: 0 1 50%;
+                padding: 0.85rem 0;
+                text-align: center;
+            }
+
+            label {
+                border-radius: 0.5rem;
+                font-size: 1.8rem;
+                height: 4.7rem;
+                padding: 1rem;
+                width: 9rem;
+            }
+        }
+    }
+
+    .vision-list {
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        img {
+            height: auto;
+            transition: background-color 0.4s ease-in-out;
+            width: 17rem;
+
+            &:hover {
+                background-color: color(red);
+            }
+        }
+
+        > li {
+            flex: 1 1 33%;
+            padding: 1.5rem;
+
+            > h2 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    blockquote {
+        border-left: 1rem solid #ccc;
+        margin: 0 -3rem 6rem;
+        padding: 1rem 3rem;
+        position: relative;
+        quotes: '“' '”' '‘' '’';
+        text-align: justify;
+
+        &::after,
+        &::before {
+            color: rgba(color(black), 0.1);
+            font-size: 15em;
+            line-height: 0;
+            vertical-align: -0.4em;
+        }
+
+        &::before {
+            content: open-quote;
+            left: 0.1em;
+            position: absolute;
+            top: 0.3em;
+        }
+
+        &::after {
+            bottom: -0.3em;
+            content: close-quote;
+            position: absolute;
+            right: 0.1em;
+        }
+    }
+}

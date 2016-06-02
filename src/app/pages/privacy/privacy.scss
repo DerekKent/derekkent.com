@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+
+.privacy-page {
+    margin-bottom: 6rem;
+
+    .banner {
+        background-image: url('/images/privacy/online-privacy.jpg');
+    }
+
+    .dnt-info {
+        border: 0.1rem solid color(black);
+        padding: 0 3rem;
+
+        > .opt-in,
+        > .opt-out {
+            display: block;
+            font-size: 1em;
+            margin: 0 auto 2.5rem;
+        }
+    }
+
+    .last-update {
+        color: color(gray, lighter);
+        font-family: $sans-serif;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+}

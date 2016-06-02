@@ -1,0 +1,221 @@
+<template args="model">
+    <div class="banner curved-bottom"></div>
+    <article>
+        <h1>Privacy Policy</h1>
+        <time class="last-update">Last Updated May 31, 2016</time>
+
+        <p>
+            Privacy is important. To show you that that's more than just an empty line,
+            <strong>we've developed a privacy policy that goes above and beyond what is
+            required by law</strong>. The below privacy policy applies only to
+            resources served from DerekKent.com (\"this site\").
+        </p>
+
+        <div class="dnt-info">
+            <h2>Are you tracking me?</h2>
+
+            <if condition="model.optedOut">
+                <div>
+                    <span class="notice notice-green" key="opted-out">NO, you are not being tracked.</span>
+                </div>
+
+                <p>
+                    Your browser has told us that you have asked to not be tracked.
+                    Although web sites in the US do not have to (and indeed rarely do)
+                    honor your settings, we do. <strong>We will not collect any information,
+                    identifying or otherwise, about you, what pages you visit, or what
+                    actions you take</strong> on this site, beyond the most basic of server logs.
+                    We do not run any analytics on or share those logs with any third
+                    parties, and we purge them after no more than 30 days.
+                </p>
+                <p>
+                    Furthermore, no tracking cookies are installed or accessed, and we
+                    have taken steps to prevent other third parties from tracking you
+                    while you are on this site, including by disabling Google Analytics.
+                </p>
+                <p>
+                    The above only applies to pages you visit on this site with this
+                    browser, and cannot be applied to other mediums, such as email
+                    (see below for more details).
+                </p>
+
+                <h3>Can I opt in to tracking?</h3>
+
+                <p>
+                    Yes. If you would like to support our campaign by allowing us to
+                    collect analytics on you while visiting this site, you can click
+                    the \"Opt In\" button below. Data will be stored on your browser
+                    that will only be used to remember and confirm this setting.
+                </p>
+
+                <button class="opt-in btn btn-green" key="opt-in">Opt In</button>
+            <else>
+                <div>
+                    <span class="notice notice-yellow">Yes, this session is being recorded.</span>
+                </div>
+
+                <if condition="model.optedIn">
+                    <p>
+                        Your browser has indicated to us that you have specifically
+                        chosen to opt in to tracking on this web site, even if
+                        you are sending a Do Not Track (DNT) request.
+                    </p>
+                <else>
+                    <p>
+                        Your browser has indicated to us that you have not chosen to
+                        opt out of online tracking. If you would like to learn more about
+                        Do Not Track (DNT) or how to opt out of online tracking,
+                        you can visit <a href="http://donottrack.us">donottrack.us</a>.
+                    </p>
+                </if>
+
+                <p>
+                    We are using Google Analytics to record information about this
+                    session that may include, but is not limited to,
+                    your IP address, geographic location, Operating System and browser,
+                    screen resolution, language preferences, age, gender, pages you visit,
+                    and how you came to this site. If you would like to prevent
+                    Google Analytics from collecting this information from you on this
+                    site and others, you can
+                    <a href="https://tools.google.com/dlpage/gaoptout/">download
+                    Google's Analytics Opt-out Browser Add-on</a>.
+                </p>
+
+                <p>
+                    Although we do not use or install any tracking cookies,
+                    Google does install and read advertising cookies as a part of
+                    Google Analytics that may be used to track you beyond this site.
+                    You can opt out of having Google and other advertisers track you through
+                    the use of online cookies on the <a href="http://www.networkadvertising.org/choices/">
+                    Network Advertising Initiative's Consumer opt-out page</a>.
+                    Google also offers more fine-grained control of its own ads on its
+                    <a href="https://www.google.com/settings/ads/preferences">Ads
+                    Settings page.</a>
+                </p>
+
+                <h3>Can I opt out of tracking on this site only?</h3>
+
+                <p>
+                    Yes. If you would like to opt out of tracking on this site only,
+                    you can click the \"Opt Out\" button below. Data will be stored on
+                    your browser that will only be used to remember and confirm this setting.
+                </p>
+
+                <button class="opt-out btn btn-red">Opt Out</button>
+            </if>
+        </div>
+
+        <p>
+            If you choose to actively provide us with information about yourself
+            by submitting one of our online forms, <strong>we will do our utmost to
+            protect your personal information</strong>, as described in the sections
+            below.
+        </p>
+
+        <h2>Information Collection, Use, and Sharing</h2>
+
+        <h3>Browsers, Cookies, and Analytics</h3>
+
+        <p>
+            If you have not opted out of tracking, as indicated above, we may collect
+            information about you, including your IP address, geographic location
+            (which can be determined by your IP address), the Operating System and
+            browser that you are using, screen resolution, language preferences,
+            pages that you visit, and how you came to this site. This information
+            is all provided to us by your browser. We may also collect demographic
+            data about you including your age and gender, which is provided by Google.
+        </p>
+
+        <p>
+            No attempt is ever made to associate the above information with you,
+            your name, your email address, or any other personally identifiable information.
+        </p>
+
+        <p>
+            We use the above information to determine the success of resource
+            allocation in order to improve how our message is delivered and to
+            improve this site's user experience.
+        </p>
+
+        <h3>Server Logs</h3>
+
+        <p>
+            Whether or not you have opted out of tracking above, our server may still
+            record resources that you request from it. These logs typically include
+            the resource requested, as well as your IP address and a time stamp.
+            These logs are used only for troubleshooting and server administration
+            and are purged every 30 days.
+        </p>
+
+        <h3>Newsletters, Petitions, and Other Communications</h3>
+
+        <p>
+            We are the sole owners of any information submitted to us voluntarily
+            through forms on this site, email, or other forms of direct contact.
+            We will not sell or rent this information to anyone.
+        </p>
+
+        <h4>Email</h4>
+
+        <p>
+            By providing your email address to us, you agree to allow us to send
+            periodic campaign updates, news, and other information we may think
+            you will find interesting to you via email.
+        </p>
+
+        <p>
+            You may opt out of receiving further communications from us
+            at any time by following the opt-out instructions as the bottom
+            of any email you receive from us.
+        </p>
+
+        <h4>Petitions</h4>
+
+        <p>
+            We consider petitions to be public information. Any information
+            you provide to a petition, with the exception of your e-mail address,
+            may be published or provided to media organizations.
+        </p>
+
+        <h4>Legal Requirements</h4>
+
+        <p>
+            We are required by Maryland campaign finance laws to report your
+            name, address, occupation, employer, and contribution amounts to
+            the Maryland Campaign Reporting Information System.
+        </p>
+
+        <h2>Control of Your Information</h2>
+
+        <p>
+            You may contact us at any time to see what data we have about you,
+            if any, as well as to request that any information we have on you be
+            changed, corrected, or deleted. You are also welcome to express
+            any concerns you may have about our use of your data.
+        </p>
+
+        <h2>Protecting Your Information</h2>
+
+        <p>
+            This Site <a href="https://www.ssllabs.com/ssltest/analyze.html?d=derekkent.com">utilizes
+            modern encryption standards</a> to ensure your connection to them is private and secure.
+            All connections are over the secure HTTPS protocol and utilize the most modern TLSv1.2
+            ciphers.
+        <p>
+            Additionally, our server is located in a locked, secure environment.
+        </p>
+        <p>
+            We do not store any credit card information on our servers. Instead, we rely on
+            the experts at <a href="https://secure.actblue.com">Act Blue</a> to handle and secure
+            all donations (see <a href="https://secure.actblue.com/privacy">ActBlue's privacy policy</a>).
+        </p>
+        <p>
+            Although we make good-faith efforts to store information collected by the Sites in a secure
+            operating environment, we cannot guarantee complete security.
+        </p>
+
+        <h2>How to contact us</h2>
+
+        <p>Questions regarding this Privacy Policy can be directed to info@derekkent.com.</p>
+    </article>
+</template>

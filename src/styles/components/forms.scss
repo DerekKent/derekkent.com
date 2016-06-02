@@ -1,0 +1,25 @@
+@import 'variables';
+@import 'mixins';
+
+fieldset {
+    border: 0;
+    text-align: left;
+
+    > legend {
+        font-size: 3rem;
+    }
+}
+
+input {
+    appearance: none;
+    border: 0.1rem solid color(gray, lighter);
+    border-radius: 0.3rem;
+    display: block;
+    font-family: $serif;
+    font-size: 1.15em;
+    height: 2.5em;
+    margin-top: 1em;
+    outline: 0;
+    padding: 0 1em;
+    width: 100%;
+}

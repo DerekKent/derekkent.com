@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'mixins';
+
+$notice-colors: (
+    red,
+    yellow,
+    green,
+    blue
+);
+
+.notice {
+    background-color: color(yellow, light);
+    border: 0.1rem solid color(yellow, lighter);
+    color: color(yellow, dark);
+    display: inline-block;
+    font-family: $serif;
+    margin: 0 0 1rem;
+    padding: 1.5rem;
+}
+
+@each $color in $notice-colors {
+    .notice-#{$color} {
+        background-color: color($color, light);
+        border-color: color($color, lighter);
+        color: color($color, dark);
+    }
+}

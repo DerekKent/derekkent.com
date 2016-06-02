@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'mixins';
+
+.page-header {
+    padding: 1rem;
+    text-transform: uppercase;
+
+    a {
+        color: color(blue);
+        display: inline-block;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: color(red);
+        }
+
+        &.btn {
+            color: color(white);
+        }
+    }
+
+    ul {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        > li {
+            flex: 1 0 auto;
+        }
+    }
+
+    > nav {
+        text-align: center;
+    }
+
+    .menu-link {
+        padding: 1rem;
+    }
+}
