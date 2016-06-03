@@ -8,13 +8,13 @@ function precompileTemplates() {
     return gulp.src(`${config.src}/app/**/*.html`, {
         since: gulp.lastRun('templates')
     })
-    .pipe(pi.htmlmin({
-        collapseWhitespace: true
-    }))
+    .pipe(pi.if(config.env !== 'production', pi.sourcemaps.init()))
     .pipe(pi.rename((uri) => {
         uri.extname = '.html.js';
     }))
-    .pipe(pi.if(config.env !== 'production', pi.sourcemaps.init()))
+    .pipe(pi.htmlmin({
+        collapseWhitespace: true
+    }))
     .pipe(pi.superviewsjs({
         es6: true
     }))
