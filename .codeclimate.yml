@@ -1,0 +1,28 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+    exclude_fingerprints:
+    - 6b2a5b0b7886f37dccdfaf652942b253
+    - a920429d130fa919b124e1d13c184aba
+    - cc23edd6983df267de8c179a6ad41488
+    - 76c0b7946915851237ea99d30365892d
+    - 065e3360c8c2d5ab92b94aefab67f564
+    - 51d5079e68f4e3a22566806e2b037fcc
+    - 0703e49442f382c21b2a23f98b197a8a
+    - 6ce92b75975c1f1114c7e91733fe2602
+    - ede7b8ce295b030cb7fe27f02c715ab8
+  eslint:
+    enabled: true
+  scss-lint:
+    enabled: true
+    config: 'gulp/.scss-lint.yml'
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - '**.js'
+  - '**.scss'
+exclude_paths: []
