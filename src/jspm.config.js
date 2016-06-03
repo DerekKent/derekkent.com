@@ -5,7 +5,7 @@ SystemJS.config({
       "main": "/app/main.js"
     },
     "~/": {
-      defaultExtension: 'js',
+      defaultExtension: 'js'
     }
   }
 });
