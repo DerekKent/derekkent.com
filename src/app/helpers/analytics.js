@@ -1,6 +1,7 @@
 import linkHelper from '~/helpers/link';
 
 const analyticsID = 'UA-77275133-1';
+const RELATIVE_TO_ROOT = /^\//;
 
 export function optedOut() {
     let dnt = window.localStorage.getItem('dnt');
@@ -51,7 +52,7 @@ class Analytics {
     sendPageview(page) {
         let frag = page || location.pathname;
 
-        if (!(/^\//).test(frag)) {
+        if (!(RELATIVE_TO_ROOT).test(frag)) {
             frag = `/${frag}`;
         }
 
