@@ -34,6 +34,7 @@
     "gulp-env": "0.4.0",
     "gulp-eslint": "2.0.0",
     "gulp-htmlmin": "2.0.0",
+    "gulp-humans": "2.0.2",
     "gulp-if": "2.0.1",
     "gulp-imagemin": "3.0.1",
     "gulp-load-plugins": "1.2.4",

@@ -27,7 +27,8 @@ gulp.task('dist', gulp.series(
     'production',
     'default',
     'precache',
-    'minify-scripts'
+    'minify-scripts',
+    'humans'
 ));
 
 gulp.task('lint', gulp.parallel(
