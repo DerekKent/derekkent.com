@@ -96,7 +96,7 @@ gem install scss_lint
 ### Install Gulp
 
 ```bash
-npm install -g gulpjs/gulp-cli#4.0
+npm install -g gulp-cli
 ```
 
 Note: On OS X, you must have Xcode 7.1+ installed along with the associated Command Line Tools (Xcode will prompt you to install these when you launch it if they are not installed).
