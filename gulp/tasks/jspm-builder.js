@@ -3,7 +3,6 @@ var path = require('path');
 var gulp = require('gulp');
 var jspm = require('jspm');
 var config = require('../config');
-var bs = require('browser-sync').get(config.name);
 
 const glob = [
     'jspm_packages/system.js',
@@ -54,6 +53,6 @@ gulp.task('jspm:watch', () => {
     gulp.watch('./jspm_packages/**/*', config.watchOpts)
     .on('change', gulp.series(
         'jspm-builder',
-        bs.reload
+        'reload-browser'
     ));
 });
