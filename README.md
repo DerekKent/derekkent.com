@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://derekkent.com">
-        <img height="125" src="/src/images/kent-for-delegate-441x250.png" alt="Derek Kent for Delegate">
+        <img height="125" src="src/images/kent-for-delegate-441x250.png" alt="Derek Kent for Delegate">
     </a>
 </p>
 
