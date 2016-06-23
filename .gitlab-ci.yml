@@ -1,0 +1,18 @@
+image: ruby:2.2.5
+
+cache:
+  paths:
+   - node_modules/
+   - jspm_packages/
+
+before_script:
+ - curl -sL https://deb.nodesource.com/setup_5.x | bash -
+ - apt-get update -qq && apt-get install -y -qq nodejs build-essential
+ - gem install scss_lint
+ - npm install -g gulp-cli jspm
+ - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+
+test:
+  script:
+   - npm install
+   - npm test
