@@ -6,6 +6,7 @@
 
 # Derek Kent for Maryland District 32 Delegate
 
+[![Build Status](https://gitlab.com/DerekKent/derekkent.com/badges/master/build.svg)](https://gitlab.com/DerekKent/derekkent.com/pipelines)
 [![Code Climate](https://codeclimate.com/repos/5750dad013b6ff00730012ef/badges/75647d1a50288266576e/gpa.svg)](https://codeclimate.com/repos/5750dad013b6ff00730012ef/feed)
 
 Welcome to the official repo for the _Derek Kent for Maryland District 32 Delegate_ campaign web site.
