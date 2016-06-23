@@ -27,7 +27,7 @@ All Mac installation instructions assume you already have [Homebrew](http://brew
 
 ### Install Node.js
 
-#### Mac OS X
+#### macOS
 
 ```bash
 brew install node
@@ -43,9 +43,9 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 ### Install Ruby
 
-#### Mac OS X
+#### macOS
 
-Newer versions of OS X use System Integrity Protection, which prevents modification of certain System directories, even as root.  This also prevents installation of Gems to the System copy of Ruby; therefore, you will need to install a separate copy of Ruby for development.
+Newer versions of macOS use System Integrity Protection, which prevents modification of certain System directories, even as root.  This also prevents installation of Gems to the System copy of Ruby; therefore, you will need to install a separate copy of Ruby for development.
 
 ```bash
 brew install rbenv ruby-build
@@ -100,7 +100,7 @@ gem install scss_lint
 npm install -g gulp-cli
 ```
 
-Note: On OS X, you must have Xcode 7.1+ installed along with the associated Command Line Tools (Xcode will prompt you to install these when you launch it if they are not installed).
+Note: On macOS, you must have Xcode 7.1+ installed along with the associated Command Line Tools (Xcode will prompt you to install these when you launch it if they are not installed).
 
 ### Install JSPM
 
