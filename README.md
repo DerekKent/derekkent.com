@@ -18,7 +18,7 @@ This site is targeted at developers who would like to contribute to the campaign
 * Node.js v5.11
 * Ruby v2.2.3
 * Gulp v4.0.0-alpha.2
-* JSPM v0.17.0-beta.16
+* JSPM v0.17.0-beta.22
 * SCSS-Lint v0.48.0 (for testing)
 
 ## Installation
