@@ -15,4 +15,5 @@ before_script:
 test:
   script:
    - npm install
+   - jspm install
    - npm test

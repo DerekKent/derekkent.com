@@ -11,7 +11,7 @@
   "scripts": {
     "prepublish": "jspm install",
     "upgrade": "jspm update",
-    "test": "gulp test"
+    "test": "gulp dev-setup && nyc ava"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "eslint": "2.13.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "3.1.0",
+    "gulp-ava": "0.12.1",
     "gulp-babel": "6.1.2",
     "gulp-clip-empty-files": "0.1.2",
     "gulp-cssnano": "2.1.2",
@@ -49,6 +50,7 @@
     "gulp-util": "3.0.7",
     "gulp-wrap": "0.13.0",
     "jspm": "0.17.0-beta.22",
+    "nyc": "6.6.1",
     "require-dir": "0.3.0",
     "sw-precache": "3.2.0",
     "yargs": "4.7.1"
@@ -75,6 +77,13 @@
       "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
       "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
     }
+  },
+  "ava": {
+    "require": [
+      "./test/helpers/jspm_loader.js",
+      "./test/helpers/setup-browser-env.js"
+    ],
+    "verbose": true
   },
   "engines": {
     "node": ">=5.10"

@@ -17,9 +17,13 @@ gulp.task('default', gulp.series(
     'jspm-builder'
 ));
 
-gulp.task('dev', gulp.series(
+gulp.task('dev-setup', gulp.series(
     'development',
-    'default',
+    'default'
+));
+
+gulp.task('dev', gulp.series(
+    'dev-setup',
     'watch'
 ));
 
@@ -35,5 +39,3 @@ gulp.task('lint', gulp.parallel(
     'scsslint',
     'eslint'
 ));
-
-gulp.task('test', gulp.series('lint'));

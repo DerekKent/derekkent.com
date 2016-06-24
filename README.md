@@ -11,7 +11,7 @@
 
 Welcome to the official repo for the _Derek Kent for Maryland District 32 Delegate_ campaign web site.
 
-This site is targeted at developers who would like to contribute to the campaign with code. If you are looking for the [campaign web site](https://derekkent.com), you can click the logo above. If you'd like to volunteer to improve the site, you can read on to learn how to setup your development environment. You can also take a look through the list of open Issues and read CONTRIBUTING.md for more information.
+This site is targeted at developers who would like to contribute to the campaign with code. If you are looking for the [campaign web site](https://derekkent.com), you can click the logo above. If you'd like to volunteer to improve the site, you can read on to learn how to setup your development environment. You can also take a look through the list of open Issues and read [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## Requirements
 
@@ -135,3 +135,16 @@ gulp dev
 That will create a new `dev` directory from which the site is served.  Changes should be made to files in the `src` directory.  Gulp will automatically watch for changes in `src`, perform any compilation and transpilation necessary, and update the result in `dev`.
 
 You can also run individual tasks.  Enter `gulp --tasks` to see the full list.
+
+## Testing
+
+To run the linters and unit tests locally, enter:
+
+```bash
+npm test
+```
+
+You can also just run the linters with:
+```bash
+gulp lint
+```

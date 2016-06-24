@@ -4,7 +4,7 @@
 
 The following is a set of guidelines for contributing code to the campaign. You can find all public projects related to the campaign hosted in the DerekKent group on [GitLab](https://gitlab.com/groups/DerekKent) and the DerekKent organization on [GitHub](http://github.com/DerekKent).
 
-These are just guidelines, not rules. Use your best judgment and feel free to propose changes to this document in a pull request.
+These are just guidelines, not rules. Use your best judgment and feel free to propose changes to this document in a merge request.
 
 #### Table Of Contents
 
@@ -16,7 +16,7 @@ These are just guidelines, not rules. Use your best judgment and feel free to pr
 [How Can I Contribute?](#how-can-i-contribute)
   * [Reporting Bugs](#reporting-bugs)
   * [Suggesting Enhancements](#suggesting-enhancements)
-  * [Pull Requests](#pull-requests)
+  * [Merge Requests](#merge-requests)
 
 [Styleguides](#styleguides)
   * [Git Commit Messages](#git-commit-messages)
@@ -24,7 +24,7 @@ These are just guidelines, not rules. Use your best judgment and feel free to pr
   * [SCSS Styleguide](#scss-styleguide)
 
 [Additional Notes](#additional-notes)
-  * [Issue and Pull Request Labels](#issue-and-pull-request-labels)
+  * [Issue and Merge Request Labels](#issue-and-merge-request-labels)
 
 ## What should I know before I get started?
 
@@ -48,7 +48,7 @@ A [humans.txt](https://derekkent.com/humans.txt) file is generated with every re
 
 ### Reporting Bugs
 
-You don't have to know how to code to contribute. We make every effort to review and test code, but with the huge variety of different devices and browsers, bugs are an innevitability. If you find an issue, chances are other people are going to be affected by it as well. By reporting issues, you help us improve the user experience and better reach more people to spread our message.
+You don't have to know how to code to contribute. We make every effort to review and test code, but with the huge variety of different devices and browsers, bugs are an inevitability. If you find an issue, chances are other people are going to be affected by it as well. By reporting issues, you help us improve the user experience and better reach more people to spread our message.
 
 Following the below guidelines helps us more quickly understand and address the issue you're reporting.
 
@@ -145,13 +145,14 @@ If you'd like to suggest a change to a policy position or suggest a position be 
 
     [Explain why the enhancement would be useful]
 
-### Pull Requests
+### Merge Requests
 
-* Include screenshots in your pull request whenever possible.
+* Include screenshots in your merge request whenever possible.
 * Follow the [JavaScript](#javascript-styleguide)
   and [SCSS](#scss-styleguide) styleguides.
 * End files with a newline.
 * Create well-crafted git commits that provide a useful and accurate history.
+* Pass all linters and Ava unit tests (`npm test`).
 
 ## Styleguides
 
@@ -164,7 +165,7 @@ If you'd like to suggest a change to a policy position or suggest a position be 
 * Separate subject from body with a blank line.
 * Wrap the body at 72 characters.
 * Use the body to explain what and why vs. how (if useful).
-* Reference related issues and pull requests.
+* Reference related issues and merge requests.
 
 [Read more](http://chris.beams.io/posts/git-commit/) about how to write a good git commit message.
 
@@ -208,7 +209,7 @@ If you'd like to suggest a change to a policy position or suggest a position be 
 
 ## Additional Notes
 
-### Issue and Pull Request Labels
+### Issue and Merge Request Labels
 
 #### Type of Issue and Issue State
 
@@ -243,15 +244,15 @@ If you'd like to suggest a change to a policy position or suggest a position be 
 | `git` | [search][search-repo-label-git] | Related to Git functionality (e.g. problems with gitignore). |
 | `gulp` | [search][search-repo-label-gulp] | Related to Gulp functionality. |
 
-#### Pull Request Labels
+#### Merge Request Labels
 
 | Label Name | Search Link | Description
 | --- | --- | --- |
-| `work-in-progress` | [search][search-repo-label-work-in-progress] | Pull requests which are still being worked on. |
-| `needs-review` | [search][search-repo-label-needs-review] | Pull requests which need code review. |
-| `under-review` | [search][search-repo-label-under-review] | Pull requests actively under review. |
-| `requires-changes` | [search][search-repo-label-requires-changes] | Pull requests which need changes based on review comments. |
-| `needs-testing` | [search][search-repo-label-needs-testing] | Pull requests which need manual testing. |
+| `work-in-progress` | [search][search-repo-label-work-in-progress] | Merge requests which are still being worked on. |
+| `needs-review` | [search][search-repo-label-needs-review] | Merge requests which need code review. |
+| `under-review` | [search][search-repo-label-under-review] | Merge requests actively under review. |
+| `requires-changes` | [search][search-repo-label-requires-changes] | Merge requests which need changes based on review comments. |
+| `needs-testing` | [search][search-repo-label-needs-testing] | Merge requests which need manual testing. |
 
 [search-repo-label-enhancement]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=enhancement
 [search-repo-label-bug]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=bug
