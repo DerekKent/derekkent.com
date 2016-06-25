@@ -3,6 +3,7 @@ global.window = document.defaultView;
 global.navigator = window.navigator;
 global.location = global.window.location;
 global.Element = global.document._htmlToDom.core.Element;
+global.HTMLAnchorElement = global.document._htmlToDom.core.HTMLAnchorElement;
 
 var RESERVED_KEYS = {
     length: true,
