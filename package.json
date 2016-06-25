@@ -86,6 +86,6 @@
     "verbose": true
   },
   "engines": {
-    "node": ">=5.10"
+    "node": ">=6.2"
   }
 }

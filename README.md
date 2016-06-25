@@ -15,7 +15,7 @@ This site is targeted at developers who would like to contribute to the campaign
 
 ## Requirements
 
-* Node.js v5.11
+* Node.js v6.2
 * Ruby v2.2.3
 * Gulp v4.0.0-alpha.2
 * JSPM v0.17.0-beta.22
@@ -36,7 +36,7 @@ brew install node
 #### Debian / Ubuntu
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs build-essential
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 ```

@@ -6,7 +6,7 @@ cache:
    - jspm_packages/
 
 before_script:
- - curl -sL https://deb.nodesource.com/setup_5.x | bash -
+ - curl -sL https://deb.nodesource.com/setup_6.x | bash -
  - apt-get update -qq && apt-get install -y -qq nodejs build-essential
  - gem install scss_lint
  - npm install -g gulp-cli jspm
