@@ -16,7 +16,7 @@ function ignoreUrl(url) {
 }
 
 function ignoreClick(e) {
-    return e.defaultPrevented || e.metaKey || e.which !== 1;
+    return e.defaultPrevented || e.metaKey;
 }
 
 function validUrlClick(e) {
