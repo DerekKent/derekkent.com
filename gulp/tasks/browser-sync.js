@@ -1,7 +1,7 @@
-var gulp = require('gulp');
-var config = require('../config');
-var bs = require('browser-sync').create(config.name);
-var historyApiFallback = require('connect-history-api-fallback');
+const gulp = require('gulp');
+const config = require('../config');
+const bs = require('browser-sync').create(config.name);
+const historyApiFallback = require('connect-history-api-fallback');
 
 const corsHeaders = [
     'DNT',

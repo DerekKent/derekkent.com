@@ -1,12 +1,12 @@
-var spawnSync = require('child_process').spawnSync;
-var gulp = require('gulp');
-var config = require('../config');
-var pi = require('gulp-load-plugins')({
+const spawnSync = require('child_process').spawnSync;
+const gulp = require('gulp');
+const config = require('../config');
+const pi = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
 });
 
 function humans() {
-    var committers = spawnSync('git', ['shortlog', '-sn'], {
+    const committers = spawnSync('git', ['shortlog', '-sn'], {
         encoding: 'utf8',
         stdio: [0, 'pipe', 'ignore']
     }).stdout.trim().split('\n');

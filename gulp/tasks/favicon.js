@@ -1,11 +1,11 @@
-var fs = require('fs');
-var gulp = require('gulp');
-var config = require('../config');
-var pi = require('gulp-load-plugins')({
+const fs = require('fs');
+const gulp = require('gulp');
+const config = require('../config');
+const pi = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
 });
 
-var FAVICON_DATA_FILE = '.favicon.json';
+const FAVICON_DATA_FILE = '.favicon.json';
 
 function generateFavicons(done) {
     if (config.env !== 'production') {

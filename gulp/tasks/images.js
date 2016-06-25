@@ -1,7 +1,7 @@
-var gulp = require('gulp');
-var argv = require('yargs').argv;
-var config = require('../config');
-var pi = require('gulp-load-plugins')({
+const gulp = require('gulp');
+const argv = require('yargs').argv;
+const config = require('../config');
+const pi = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
 });
 

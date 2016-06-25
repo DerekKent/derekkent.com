@@ -1,8 +1,8 @@
 /* eslint no-console: 0 */
-var path = require('path');
-var gulp = require('gulp');
-var jspm = require('jspm');
-var config = require('../config');
+const path = require('path');
+const gulp = require('gulp');
+const jspm = require('jspm');
+const config = require('../config');
 
 const glob = [
     'jspm_packages/system.js',
@@ -21,10 +21,10 @@ function copyDependencies() {
 }
 
 function jspmBuilder() {
-    var builder = new jspm.Builder();
-    var appPath = path.join(config.dest, '/app/**/*');
-    var dependencies = `${appPath}.js - [${appPath}]`;
-    var output = path.join(config.dest, '/libs/dependencies.js');
+    const appPath = path.join(config.dest, '/app/**/*');
+    const dependencies = `${appPath}.js - [${appPath}]`;
+    const output = path.join(config.dest, '/libs/dependencies.js');
+    let builder = new jspm.Builder();
 
     builder.config({
         defaultJSExtensions: true,

@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var config = require('../config');
+const gulp = require('gulp');
+const config = require('../config');
 
 const glob = `${config.src}/**/*.{json,txt,ico,eot,ttf,woff,woff2,kml,geojson}`;
 
