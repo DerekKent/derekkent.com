@@ -15,12 +15,16 @@ System.config({
 });
 
 Module._load = (name, m) => {
+    if (name in System._loader.modules) {
+        return System._loader.modules[name].module;
+    }
+
     try {
         return load(name, m);
     } catch (e) {
-        var normalizedName;
+        let normalizedName;
 
-        if (name.indexOf('.') === 0) {
+        if (name.indexOf('./') === 0 || name.indexOf('..') === 0) {
             normalizedName = path.normalize(`${path.dirname(m.filename)}/${name}.js`);
         } else {
             normalizedName = url.parse(System.normalizeSync(name)).path;
