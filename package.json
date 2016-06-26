@@ -85,6 +85,10 @@
     ],
     "verbose": true
   },
+  "nyc": {
+    "exclude": ["dev/libs/**", "dev/jspm_packages/**"],
+    "include": ["dev/**"]
+  },
   "engines": {
     "node": ">=6.2"
   }
