@@ -1,7 +1,8 @@
 import test from 'ava';
-import linkHelper from '~/helpers/link';
 
-test('External Link Detection', assert => {
+test('External Link Detection', async function (assert) {
+    const {default: linkHelper} = await SystemJS.import('~/helpers/link');
+
     const externalLink = 'https://derekkent.com';
     const internalLink = '/issues';
 
@@ -18,7 +19,9 @@ test('External Link Detection', assert => {
         `isExternal() should return false for ${internalLink}.`);
 });
 
-test('Internal Link Click Detection', assert => {
+test('Internal Link Click Detection', async function (assert) {
+    const {default: linkHelper} = await SystemJS.import('~/helpers/link');
+
     let href = '#hash';
     let e = {
         target: {

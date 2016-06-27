@@ -1,7 +1,8 @@
 import test from 'ava';
-import {default as analytics, optedOut, optedIn} from '~/helpers/analytics';
 
-test('Tracking Opt-in', assert => {
+test('Tracking Opt-in', async function (assert) {
+    const {default: analytics, optedOut, optedIn} = await SystemJS.import('~/helpers/analytics');
+
     window.localStorage.clear();
 
     let actual = optedIn();
@@ -19,7 +20,9 @@ test('Tracking Opt-in', assert => {
         'optedIn() should return true after calling analytics.optIn().');
 });
 
-test('Tracking Opt-out', assert => {
+test('Tracking Opt-out', async function (assert) {
+    const {default: analytics, optedOut, optedIn} = await SystemJS.import('~/helpers/analytics');
+
     analytics.optOut();
 
     const actual = optedOut();

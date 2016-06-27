@@ -1,9 +1,4 @@
-global.document = require('jsdom').jsdom('<body></body>');
-global.window = document.defaultView;
-global.navigator = window.navigator;
-global.location = global.window.location;
-global.Element = global.document._htmlToDom.core.Element;
-global.HTMLAnchorElement = global.document._htmlToDom.core.HTMLAnchorElement;
+require('jsdom-global')()
 
 var RESERVED_KEYS = {
     length: true,

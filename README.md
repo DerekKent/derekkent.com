@@ -141,10 +141,9 @@ You can also run individual tasks.  Enter `gulp --tasks` to see the full list.
 To run the linters and unit tests locally, enter:
 
 ```bash
-npm test
+gulp test
 ```
 
-You can also just run the linters with:
-```bash
-gulp lint
-```
+You can also just run the linters (`gulp lint`) or unit tests (`gulp ava`) individually without rebuilding.
+
+**Note:** The unit tests require the dev build to be built (in the `dev` directory).

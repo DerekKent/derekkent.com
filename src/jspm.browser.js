@@ -1,8 +1,8 @@
 SystemJS.config({
-    baseURL: "/",
-    paths: {
-        "github:": "jspm_packages/github/",
-        "npm:": "jspm_packages/npm/",
-        "~/": "app/"
-    }
+  baseURL: "/",
+  paths: {
+    "npm:": "jspm_packages/npm/",
+    "github:": "jspm_packages/github/",
+    "~/": "app/"
+  }
 });
