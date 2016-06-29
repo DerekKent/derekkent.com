@@ -58,35 +58,6 @@
         }
     }
 
-    .vision-list {
-        align-items: stretch;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-
-        img {
-            height: auto;
-            transition: background-color 0.4s ease-in-out;
-            width: 17rem;
-
-            &:hover {
-                background-color: color(red);
-            }
-        }
-
-        > li {
-            flex: 1 1 33%;
-            padding: 1.5rem;
-
-            > h2 {
-                font-size: 2rem;
-            }
-        }
-    }
-
     blockquote {
         border-left: 1rem solid #ccc;
         margin: 0 -3rem 6rem;
