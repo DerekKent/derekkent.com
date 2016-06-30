@@ -22,7 +22,8 @@ function eslint() {
         },
         extends: 'eslint:recommended',
         globals: {
-            require: false
+            require: false,
+            SystemJS: false
         },
         rules: {
             // Best Practices

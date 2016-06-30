@@ -43,7 +43,7 @@ class Analytics {
 
     send(fields) {
         if (this.tracking) {
-            System.import('ga').then(() => {
+            SystemJS.import('ga').then(() => {
                 window.ga('send', fields);
             });
         }
