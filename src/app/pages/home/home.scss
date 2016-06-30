@@ -57,35 +57,4 @@
             }
         }
     }
-
-    blockquote {
-        border-left: 1rem solid #ccc;
-        margin: 0 -3rem 6rem;
-        padding: 1rem 3rem;
-        position: relative;
-        quotes: '“' '”' '‘' '’';
-        text-align: justify;
-
-        &::after,
-        &::before {
-            color: rgba(color(black), 0.1);
-            font-size: 15em;
-            line-height: 0;
-            vertical-align: -0.4em;
-        }
-
-        &::before {
-            content: open-quote;
-            left: 0.1em;
-            position: absolute;
-            top: 0.3em;
-        }
-
-        &::after {
-            bottom: -0.3em;
-            content: close-quote;
-            position: absolute;
-            right: 0.1em;
-        }
-    }
 }

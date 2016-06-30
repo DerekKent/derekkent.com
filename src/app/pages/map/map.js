@@ -9,7 +9,7 @@ export default class Map extends Controller {
         this.css = '/app/pages/map/map.css';
         this.view = {
             tag: 'main',
-            classes: ['map-page']
+            classes: ['map-page', 'page']
         };
         this.model = {};
 

@@ -71,15 +71,6 @@ a {
     }
 }
 
-article {
-    margin: 0 auto;
-    max-width: 80rem;
-
-    > p:first-of-type {
-        margin-top: 0;
-    }
-}
-
 h1,
 h2,
 h3,
@@ -120,12 +111,14 @@ p {
     font-weight: 400;
 }
 
+@import 'components/blockquotes';
 @import 'components/blocks';
 @import 'components/buttons';
 @import 'components/forms';
 // @import 'components/headers';
 @import 'components/issue-blocks';
 @import 'components/notices';
+@import 'components/pages';
 // @import 'components/responsive';
 
 .banner {

@@ -9,7 +9,7 @@ export default class Privacy extends Controller {
         this.css = '/app/pages/privacy/privacy.css';
         this.view = {
             tag: 'main',
-            classes: ['privacy-page']
+            classes: ['privacy-page', 'page']
         };
 
         this.model = () => {

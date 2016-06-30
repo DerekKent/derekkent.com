@@ -8,7 +8,7 @@ export default class Issues extends Controller {
         this.css = '/app/pages/issues/issues.css';
         this.view = {
             tag: 'main',
-            classes: ['issues-page']
+            classes: ['issues-page', 'page']
         };
     }
 

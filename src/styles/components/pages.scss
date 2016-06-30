@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'mixins';
+
+.page {
+    margin-bottom: 6rem;
+
+    article {
+        margin: 0 auto;
+        max-width: 80rem;
+
+        > p:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    iframe {
+        display: block;
+        margin: 0 auto;
+    }
+}

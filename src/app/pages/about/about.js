@@ -8,7 +8,7 @@ export default class About extends Controller {
         this.css = '/app/pages/about/about.css';
         this.view = {
             tag: 'main',
-            classes: ['about-page']
+            classes: ['about-page', 'page']
         };
     }
 

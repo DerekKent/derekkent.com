@@ -8,7 +8,7 @@ export default class Home extends Controller {
         this.css = '/app/pages/home/home.css';
         this.view = {
             tag: 'main',
-            classes: ['home-page']
+            classes: ['home-page', 'page']
         };
 
         this.model = {
