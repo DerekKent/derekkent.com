@@ -68,7 +68,7 @@
       "jspm:browser": "src/jspm.browser.js"
     },
     "dependencies": {
-      "superb": "npm:superb.js@^0.0.4"
+      "superb": "npm:superb.js@^0.0.5"
     },
     "devDependencies": {},
     "peerDependencies": {

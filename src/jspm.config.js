@@ -14,15 +14,12 @@ SystemJS.config({
       "exports": "google",
       "format": "global"
     }
-  }
-});
-
-SystemJS.config({
+  },
   nodeConfig: {
     "paths": {
       "npm:": "jspm_packages/npm/",
       "github:": "jspm_packages/github/",
-      "~/": "src/app/",
+      "~/": "src/app/"
     }
   },
   packages: {
@@ -46,7 +43,7 @@ SystemJS.config({
     "incremental-dom": "npm:incremental-dom@0.4.1",
     "path": "github:jspm/nodelibs-path@0.2.0-alpha",
     "process": "github:jspm/nodelibs-process@0.2.0-alpha",
-    "superb": "npm:superb.js@0.0.4"
+    "superb": "npm:superb.js@0.0.5"
   },
   packages: {
     "github:jspm/nodelibs-buffer@0.2.0-alpha": {
@@ -61,7 +58,7 @@ SystemJS.config({
         "base64-js": "npm:base64-js@1.1.2"
       }
     },
-    "npm:superb.js@0.0.4": {
+    "npm:superb.js@0.0.5": {
       "map": {
         "supermodels.js": "npm:supermodels.js@0.1.1"
       }
