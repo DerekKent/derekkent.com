@@ -52,6 +52,12 @@
         }
     }
 
+    .copyright {
+        &::after {
+            content: ' | ';
+        }
+    }
+
     .md5 {
         color: color(background);
         user-select: none;
