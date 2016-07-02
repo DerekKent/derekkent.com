@@ -26,7 +26,7 @@
     "browser-sync": "2.13.0",
     "connect-history-api-fallback": "1.2.0",
     "del": "2.2.1",
-    "eslint": "2.13.1",
+    "eslint": "3.0.0",
     "find-pkg": "0.1.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "3.1.0",
@@ -58,7 +58,7 @@
     "yargs": "4.7.1"
   },
   "jspm": {
-    "main": "app/main.js",
+    "main": "src/app/main.js",
     "directories": {
       "lib": "src/app"
     },
