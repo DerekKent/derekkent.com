@@ -24,7 +24,7 @@ function jspmBuilder() {
     const appPath = path.join(config.dest, '/app/**/*');
     const dependencies = `${appPath}.js - [${appPath}]`;
     const output = path.join(config.dest, '/libs/dependencies.js');
-    let builder = new jspm.Builder();
+    const builder = new jspm.Builder();
 
     builder.config({
         defaultJSExtensions: true,

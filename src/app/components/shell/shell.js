@@ -22,6 +22,6 @@ class Shell extends Controller {
 
 }
 
-let shell = new Shell();
+const shell = new Shell();
 
 export default shell;

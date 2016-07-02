@@ -25,7 +25,7 @@ export default class Home extends Controller {
             },
 
             'click .input-wrapper input': (e) => {
-                let input = e.target;
+                const input = e.target;
 
                 this.model.amt = +input.getAttribute('value');
                 this.update();

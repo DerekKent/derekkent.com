@@ -23,7 +23,7 @@ class AppRouter extends Router {
         this.root('home');
         this.route('issues/:issue', {view: 'issues'});
 
-        for (let page of pages) {
+        for (const page of pages) {
             this.route(page);
         }
     }
@@ -43,19 +43,19 @@ class AppRouter extends Router {
         document.removeEventListener('click', this.linkHandler);
     }
 
-    navigate() {
-        super.navigate(...arguments);
+    navigate(...args) {
+        super.navigate(...args);
         analytics.sendPageview();
     }
 
     static linkHandler(e) {
-        let el = linkHelper.validUrlClick(e);
+        const el = linkHelper.validUrlClick(e);
 
         if (!el) {
             return;
         }
 
-        let href = el.getAttribute('href');
+        const href = el.getAttribute('href');
 
         e.preventDefault();
 
@@ -74,6 +74,6 @@ class AppRouter extends Router {
 
 }
 
-let router = new AppRouter();
+const router = new AppRouter();
 
 export default router;

@@ -9,11 +9,11 @@ require('require-dir')('.', {recurse: true});
  *
  */
 const taskNames = Object.keys(gulp.registry().tasks());
-let watchTasks = [];
+const watchTasks = [];
 
 for (let i = 0, l = taskNames.length; i < l; i++) {
     const taskName = taskNames[i];
-    let taskParts = taskName.split(':');
+    const taskParts = taskName.split(':');
 
     // Check length is greater one to avoid selecting this task &
     // check if the last part is 'watch'

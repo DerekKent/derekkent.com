@@ -17,9 +17,9 @@ export default class Map extends Controller {
             'submit form': (e) => {
                 e.preventDefault();
 
-                let formData = new FormData(e.target);
+                const formData = new FormData(e.target);
                 let address = null;
-                let maps = window.google.maps;
+                const maps = window.google.maps;
 
                 if (typeof formData.get === 'function') {
                     address = formData.get('address');
@@ -27,11 +27,11 @@ export default class Map extends Controller {
                     address = e.target.elements[0].value;
                 }
 
-                let geocoder = new maps.Geocoder();
+                const geocoder = new maps.Geocoder();
 
                 geocoder.geocode({address: address}, (results, status) => {
                     if (status === maps.GeocoderStatus.OK) {
-                        let latLong = results[0].geometry.location;
+                        const latLong = results[0].geometry.location;
 
                         this.map.setCenter(latLong);
 
@@ -44,7 +44,7 @@ export default class Map extends Controller {
                             position: latLong
                         });
 
-                        let containsLocation = maps.geometry.poly.containsLocation;
+                        const containsLocation = maps.geometry.poly.containsLocation;
 
                         if (containsLocation(latLong, this.district32)) {
                             this.model = {resident: true};
@@ -62,7 +62,7 @@ export default class Map extends Controller {
     }
 
     onLoaded() {
-        let controller = this;
+        const controller = this;
 
         function handler(e) {
             if (!document.body.contains(controller.el)) {
@@ -81,12 +81,12 @@ export default class Map extends Controller {
     }
 
     initMap() {
-        let el = document.querySelector('.district32-map');
-        let options = {
+        const el = document.querySelector('.district32-map');
+        const options = {
             zoom: 11,
             center: new window.google.maps.LatLng(39.155, -76.713)
         };
-        let map = new window.google.maps.Map(el, options);
+        const map = new window.google.maps.Map(el, options);
 
         this.map = map;
 
@@ -99,10 +99,10 @@ export default class Map extends Controller {
         });
 
         window.google.maps.event.addListenerOnce(map, 'idle', () => {
-            let layer = map.data.getFeatureById('district32');
-            let gP = layer.getGeometry(); // Polygon geometry object
-            let gLG = gP.getArray()[0]; // LinearRing geometry object
-            let arPnt = gLG.getArray(); // Points of the LinearRing
+            const layer = map.data.getFeatureById('district32');
+            const gP = layer.getGeometry(); // Polygon geometry object
+            const gLG = gP.getArray()[0]; // LinearRing geometry object
+            const arPnt = gLG.getArray(); // Points of the LinearRing
 
             this.district32 = new window.google.maps.Polygon({paths: arPnt});
         });

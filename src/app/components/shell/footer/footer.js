@@ -14,6 +14,6 @@ class Footer extends Controller {
 
 }
 
-let footer = new Footer();
+const footer = new Footer();
 
 export default footer;

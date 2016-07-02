@@ -14,6 +14,6 @@ class Header extends Controller {
 
 }
 
-let header = new Header();
+const header = new Header();
 
 export default header;

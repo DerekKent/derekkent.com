@@ -20,8 +20,8 @@ function ignoreClick(e) {
 }
 
 function validUrlClick(e) {
-    let el = findAncestor(e.target, HTMLAnchorElement) || e.target;
-    let href = el.getAttribute('href');
+    const el = findAncestor(e.target, HTMLAnchorElement) || e.target;
+    const href = el.getAttribute('href');
 
     if (ignoreClick(e) || ignoreUrl(href)) {
         return false;

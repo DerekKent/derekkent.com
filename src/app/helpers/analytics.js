@@ -4,7 +4,7 @@ const analyticsID = 'UA-77275133-1';
 const RELATIVE_TO_ROOT = /^\//;
 
 export function optedOut() {
-    let dnt = window.localStorage.getItem('dnt');
+    const dnt = window.localStorage.getItem('dnt');
 
     return (navigator.doNotTrack === '1' ||
            window.doNotTrack === '1' ||
@@ -13,7 +13,7 @@ export function optedOut() {
 }
 
 export function optedIn() {
-    let dnt = window.localStorage.getItem('dnt');
+    const dnt = window.localStorage.getItem('dnt');
 
     return dnt === '0';
 }
@@ -109,6 +109,6 @@ class Analytics {
 
 }
 
-let analytics = new Analytics();
+const analytics = new Analytics();
 
 export default analytics;

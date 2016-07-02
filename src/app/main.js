@@ -9,7 +9,7 @@ if ('@ENV@' === 'production' && 'serviceWorker' in navigator) {
         }
 
         registration.onupdatefound = function () {
-            let installingWorker = registration.installing;
+            const installingWorker = registration.installing;
 
             installingWorker.onstatechange = function () {
                 switch (installingWorker.state) {
@@ -42,6 +42,6 @@ class App {
 
 }
 
-let app = new App();
+const app = new App();
 
 export default app;
