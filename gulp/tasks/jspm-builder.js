@@ -1,4 +1,3 @@
-/* eslint no-console: 0 */
 const path = require('path');
 const gulp = require('gulp');
 const jspm = require('jspm');
@@ -38,6 +37,7 @@ function jspmBuilder() {
         sourceMaps: (config.env !== 'production')
     })
     .catch((err) => {
+        /* eslint no-console: 0 */
         console.log('JSPM Build error');
         console.log(err);
     });
