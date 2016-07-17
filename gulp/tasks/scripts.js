@@ -76,7 +76,7 @@ function eslint() {
             'no-useless-concat': 'error',
             'no-useless-escape': 'error',
             'no-void': 'error',
-            'no-warning-comments': ['warn', {'terms': ['fixme', 'hack', 'todo', 'xxx'], 'location': 'anywhere'}],
+            'no-warning-comments': ['warn', {'terms': ['fix', 'hack', 'todo', 'xxx'], 'location': 'anywhere'}],
             'no-with': 'error',
             'radix': ['error', 'always'],
             'vars-on-top': 'error',
@@ -125,6 +125,7 @@ function eslint() {
             'no-spaced-func': 'error',
             'no-trailing-spaces': 'error',
             'no-whitespace-before-property': 'error',
+            'one-var': ['error', 'never'],
             'operator-linebreak': ['error', 'after'],
             'padded-blocks': ['error', {
                 'blocks': 'never',
