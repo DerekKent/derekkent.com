@@ -76,10 +76,6 @@ export default class Map extends Controller {
         this.el.addEventListener('DOMNodeInserted', handler);
     }
 
-    onRender() {
-        this.initMap();
-    }
-
     initMap() {
         const el = document.querySelector('.district32-map');
         const options = {
