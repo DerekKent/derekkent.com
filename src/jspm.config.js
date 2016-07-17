@@ -43,24 +43,24 @@ SystemJS.config({
     "incremental-dom": "npm:incremental-dom@0.4.1",
     "path": "github:jspm/nodelibs-path@0.2.0-alpha",
     "process": "github:jspm/nodelibs-process@0.2.0-alpha",
-    "superb": "npm:superb.js@0.0.6"
+    "superb": "npm:superb.js@0.0.15"
   },
   packages: {
     "github:jspm/nodelibs-buffer@0.2.0-alpha": {
       "map": {
-        "buffer-browserify": "npm:buffer@4.7.0"
+        "buffer-browserify": "npm:buffer@4.7.1"
       }
     },
-    "npm:buffer@4.7.0": {
-      "map": {
-        "isarray": "npm:isarray@1.0.0",
-        "ieee754": "npm:ieee754@1.1.6",
-        "base64-js": "npm:base64-js@1.1.2"
-      }
-    },
-    "npm:superb.js@0.0.6": {
+    "npm:superb.js@0.0.15": {
       "map": {
         "supermodels.js": "npm:supermodels.js@0.1.1"
+      }
+    },
+    "npm:buffer@4.7.1": {
+      "map": {
+        "base64-js": "npm:base64-js@1.1.2",
+        "ieee754": "npm:ieee754@1.1.6",
+        "isarray": "npm:isarray@1.0.0"
       }
     }
   }
