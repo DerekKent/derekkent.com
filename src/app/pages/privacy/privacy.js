@@ -1,4 +1,5 @@
 import {Controller} from 'superb';
+import {on} from '~/helpers/controller/decorators';
 import {default as analytics, optedOut, optedIn} from '~/helpers/analytics';
 import {description as template} from './privacy.html';
 
@@ -18,18 +19,18 @@ export default class Privacy extends Controller {
                 optedIn: optedIn()
             };
         };
+    }
 
-        this.events = {
-            'click button.opt-in': () => {
-                analytics.optIn();
-                this.update();
-            },
+    @on('click .opt-in')
+    onOptIn() {
+        analytics.optIn();
+        this.update();
+    }
 
-            'click button.opt-out': () => {
-                analytics.optOut();
-                this.update();
-            }
-        };
+    @on('click .opt-out')
+    onOptOut() {
+        analytics.optOut();
+        this.update();
     }
 
 }

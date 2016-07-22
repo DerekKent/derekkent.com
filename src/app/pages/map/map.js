@@ -1,4 +1,5 @@
 import {Controller} from 'superb';
+import {on} from '~/helpers/controller/decorators';
 import {description as template} from './map.html';
 import 'maps';
 
@@ -12,53 +13,6 @@ export default class Map extends Controller {
             classes: ['map-page', 'page']
         };
         this.model = {};
-
-        this.events = {
-            'submit form': (e) => {
-                e.preventDefault();
-
-                const formData = new FormData(e.target);
-                let address = null;
-                const maps = window.google.maps;
-
-                if (typeof formData.get === 'function') {
-                    address = formData.get('address');
-                } else {
-                    address = e.target.elements[0].value;
-                }
-
-                const geocoder = new maps.Geocoder();
-
-                geocoder.geocode({address: address}, (results, status) => {
-                    if (status === maps.GeocoderStatus.OK) {
-                        const latLong = results[0].geometry.location;
-
-                        this.map.setCenter(latLong);
-
-                        if (this.marker) {
-                            this.marker.setMap(null);
-                        }
-
-                        this.marker = new maps.Marker({
-                            map: this.map,
-                            position: latLong
-                        });
-
-                        const containsLocation = maps.geometry.poly.containsLocation;
-
-                        if (containsLocation(latLong, this.district32)) {
-                            this.model = {resident: true};
-                        } else {
-                            this.model = {resident: false};
-                        }
-                    } else {
-                        this.model = {error: status};
-                    }
-
-                    this.update();
-                });
-            }
-        };
     }
 
     onLoaded() {
@@ -101,6 +55,52 @@ export default class Map extends Controller {
             const arPnt = gLG.getArray(); // Points of the LinearRing
 
             this.district32 = new window.google.maps.Polygon({paths: arPnt});
+        });
+    }
+
+    @on('submit form')
+    onAddressLookup(e) {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        let address = null;
+        const maps = window.google.maps;
+
+        if (typeof formData.get === 'function') {
+            address = formData.get('address');
+        } else {
+            address = e.target.elements[0].value;
+        }
+
+        const geocoder = new maps.Geocoder();
+
+        geocoder.geocode({address}, (results, status) => {
+            if (status === maps.GeocoderStatus.OK) {
+                const latLong = results[0].geometry.location;
+
+                this.map.setCenter(latLong);
+
+                if (this.marker) {
+                    this.marker.setMap(null);
+                }
+
+                this.marker = new maps.Marker({
+                    map: this.map,
+                    position: latLong
+                });
+
+                const containsLocation = maps.geometry.poly.containsLocation;
+
+                if (containsLocation(latLong, this.district32)) {
+                    this.model = {resident: true};
+                } else {
+                    this.model = {resident: false};
+                }
+            } else {
+                this.model = {error: status};
+            }
+
+            this.update();
         });
     }
 
