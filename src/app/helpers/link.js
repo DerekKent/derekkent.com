@@ -35,6 +35,6 @@ function isExternal(href) {
 }
 
 export default {
-    isExternal: isExternal,
-    validUrlClick: validUrlClick
+    isExternal,
+    validUrlClick
 };
