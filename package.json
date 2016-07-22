@@ -2,12 +2,6 @@
   "name": "@derekkent/derekkent.com",
   "version": "0.1.0",
   "description": "Derek Kent for Maryland District 32 Delegate official web site",
-  "contributors": [
-    {
-      "name": "Derek Kent",
-      "email": "derek@derekkent.com"
-    }
-  ],
   "scripts": {
     "prepublish": "jspm install",
     "upgrade": "jspm update",
