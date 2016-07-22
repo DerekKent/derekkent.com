@@ -19,7 +19,6 @@ test('External Link Detection', async function (assert) {
 });
 
 test('Internal Link Click Detection', async function (assert) {
-    let href = '#hash';
     let e = {
         target: {
             getAttribute() {
@@ -28,15 +27,9 @@ test('Internal Link Click Detection', async function (assert) {
         }
     };
 
+    let href = 'mailto:derek@derekkent.com';
     let actual = linkHelper.validUrlClick(e);
     let expected = false;
-
-    assert.is(actual, expected,
-        'validUrlClick() should return false for links beginning with a hash (#).');
-
-    href = 'mailto:derek@derekkent.com';
-    actual = linkHelper.validUrlClick(e);
-    expected = false;
 
     assert.is(actual, expected,
         'validUrlClick() should return false for `mailto` links.');

@@ -12,7 +12,7 @@ function findAncestor(el, Element) {
 }
 
 function ignoreUrl(url) {
-    return typeof url !== 'string' || url.charAt(0) === '#' || MAILTO.test(url);
+    return typeof url !== 'string' || MAILTO.test(url);
 }
 
 function ignoreClick(e) {
