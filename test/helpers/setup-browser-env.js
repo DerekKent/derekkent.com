@@ -59,7 +59,9 @@ var StorageShim = function () {
         enumerable: false,
         value: function () {
             for (var key in this) {
-                delete this[key]
+                if (this.hasOwnProperty(key)) {
+                    delete this[key]
+                }
             }
         }
     })
