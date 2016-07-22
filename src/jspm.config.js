@@ -43,17 +43,12 @@ SystemJS.config({
     "incremental-dom": "npm:incremental-dom@0.4.1",
     "path": "github:jspm/nodelibs-path@0.2.0-alpha",
     "process": "github:jspm/nodelibs-process@0.2.0-alpha",
-    "superb": "npm:superb.js@0.0.15"
+    "superb": "npm:superb.js@0.2.1"
   },
   packages: {
     "github:jspm/nodelibs-buffer@0.2.0-alpha": {
       "map": {
         "buffer-browserify": "npm:buffer@4.7.1"
-      }
-    },
-    "npm:superb.js@0.0.15": {
-      "map": {
-        "supermodels.js": "npm:supermodels.js@0.1.1"
       }
     },
     "npm:buffer@4.7.1": {

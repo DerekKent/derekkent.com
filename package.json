@@ -26,7 +26,7 @@
     "browser-sync": "2.13.0",
     "connect-history-api-fallback": "1.2.0",
     "del": "2.2.1",
-    "eslint": "3.1.0",
+    "eslint": "3.1.1",
     "find-pkg": "0.1.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "3.1.0",
@@ -39,7 +39,7 @@
     "gulp-htmlmin": "2.0.0",
     "gulp-humans": "2.0.2",
     "gulp-if": "2.0.1",
-    "gulp-imagemin": "3.0.1",
+    "gulp-imagemin": "3.0.2",
     "gulp-load-plugins": "1.2.4",
     "gulp-real-favicon": "0.2.1",
     "gulp-rename": "1.2.2",
@@ -68,7 +68,7 @@
       "jspm:browser": "src/jspm.browser.js"
     },
     "dependencies": {
-      "superb": "npm:superb.js@^0.0.15"
+      "superb": "npm:superb.js@^0.2.1"
     },
     "devDependencies": {},
     "peerDependencies": {

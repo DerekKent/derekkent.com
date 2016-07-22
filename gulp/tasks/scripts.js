@@ -21,10 +21,10 @@ function eslint() {
             sourceType: 'module'
         },
         extends: 'eslint:recommended',
-        globals: {
-            require: false,
-            SystemJS: false
-        },
+        globals: [
+            'require',
+            'SystemJS'
+        ],
         rules: {
             // Best Practices
             'accessor-pairs': ['error', {'getWithoutSet': false}],
