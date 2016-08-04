@@ -5,6 +5,7 @@ import shell from '~/components/shell/shell';
 
 const pages = [
     'about',
+    'accessibility',
     'contribute',
     'events',
     'issues',

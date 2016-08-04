@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'mixins';
+
+.accessibility-page {
+    .banner {
+        background-image: url('/images/accessibility/one-world.jpg');
+    }
+
+    .accessibility-level {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+
+        > li {
+            display: inline-block;
+            flex: 1 1 25%;
+            font-size: 3rem;
+            margin: 0 3rem;
+        }
+    }
+}
