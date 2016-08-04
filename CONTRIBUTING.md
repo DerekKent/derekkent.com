@@ -215,11 +215,12 @@ If you'd like to suggest a change to a policy position or suggest a position be 
 
 | Label Name | Search Link | Description |
 | --- | --- | --- |
-| `enhancement` | [search][search-repo-label-enhancement] | Suggested enhancements. |
 | `bug` | [search][search-repo-label-bug] | Confirmed or likely bugs. |
+| `accessibility` | [search][search-repo-label-accessibility] | Issues impacting accessibility. |
+| `enhancement` | [search][search-repo-label-enhancement] | Suggested enhancements. |
+| `policy` | [search][search-repo-label-policy] | Suggested policy change or new policy position. |
 | `question` | [search][search-repo-label-question] | Questions more than bug reports or feature requests. |
 | `feedback` | [search][search-repo-label-feedback] | General feedback more than bug reports or feature requests. |
-| `policy` | [search][search-repo-label-policy] | Suggested policy change or new policy position. |
 | `help-wanted` | [search][search-repo-label-help-wanted] | Issues where community help would be appreciated. |
 | `more-information-needed` | [search][search-repo-label-more-information-needed] | More information needs to be collected about these problems or feature requests (e.g. steps to reproduce). |
 | `needs-reproduction` | [search][search-repo-label-needs-reproduction] | Likely bugs that have yet to be reliably reproduced. |
@@ -232,15 +233,15 @@ If you'd like to suggest a change to a policy position or suggest a position be 
 
 | Label Name | Search Link | Description |
 | --- | --- | --- |
+| `documentation` | [search][search-repo-label-documentation] | Related to any type of documentation. |
+| `performance` | [search][search-repo-label-performance] | Related to performance. |
+| `security` | [search][search-repo-label-security] | Related to security. |
+| `ui` | [search][search-repo-label-ui] | Related to visual design. |
 | `chrome` | [search][search-repo-label-chrome] | Related to viewing the site on Chrome. |
 | `safari` | [search][search-repo-label-safari] | Related to viewing the site on Safari. |
 | `firefox` | [search][search-repo-label-firefox] | Related to viewing the site on Firefox. |
 | `edge` | [search][search-repo-label-edge] | Related to viewing the site on Edge. |
 | `ie` | [search][search-repo-label-ie] | Related to viewing the site on IE. |
-| `documentation` | [search][search-repo-label-documentation] | Related to any type of documentation. |
-| `performance` | [search][search-repo-label-performance] | Related to performance. |
-| `security` | [search][search-repo-label-security] | Related to security. |
-| `ui` | [search][search-repo-label-ui] | Related to visual design. |
 | `git` | [search][search-repo-label-git] | Related to Git functionality (e.g. problems with gitignore). |
 | `gulp` | [search][search-repo-label-gulp] | Related to Gulp functionality. |
 
@@ -254,11 +255,12 @@ If you'd like to suggest a change to a policy position or suggest a position be 
 | `requires-changes` | [search][search-repo-label-requires-changes] | Merge requests which need changes based on review comments. |
 | `needs-testing` | [search][search-repo-label-needs-testing] | Merge requests which need manual testing. |
 
-[search-repo-label-enhancement]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=enhancement
 [search-repo-label-bug]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=bug
+[search-repo-label-accessibility]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=accessibility
+[search-repo-label-enhancement]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=enhancement
+[search-repo-label-policy]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=policy
 [search-repo-label-question]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=question
 [search-repo-label-feedback]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=feedback
-[search-repo-label-policy]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=policy
 [search-repo-label-help-wanted]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=help-wanted
 [search-repo-label-more-information-needed]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=more-information-needed
 [search-repo-label-needs-reproduction]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=needs-reproduction
@@ -266,15 +268,15 @@ If you'd like to suggest a change to a policy position or suggest a position be 
 [search-repo-label-duplicate]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=duplicate
 [search-repo-label-wontfix]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=wontfix
 [search-repo-label-invalid]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=invalid
+[search-repo-label-documentation]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=documentation
+[search-repo-label-performance]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=performance
+[search-repo-label-security]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=security
+[search-repo-label-ui]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=ui
 [search-repo-label-chrome]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=chrome
 [search-repo-label-safari]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=safari
 [search-repo-label-firefox]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=firefox
 [search-repo-label-edge]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=edge
 [search-repo-label-ie]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=ie
-[search-repo-label-documentation]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=documentation
-[search-repo-label-performance]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=performance
-[search-repo-label-security]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=security
-[search-repo-label-ui]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=ui
 [search-repo-label-git]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=git
 [search-repo-label-gulp]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=gulp
 [search-repo-label-work-in-progress]:https://gitlab.com/DerekKent/derekkent.com/issues?label_name=work-in-progress
