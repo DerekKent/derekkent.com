@@ -1,4 +1,4 @@
-<template args="model">
+<template args="level">
     <div class="banner curved-bottom"></div>
     <article>
         <h1>Accessibility Statement</h1>
@@ -15,10 +15,15 @@
 
         <p>If you prefer a version of this site using enhanced contrast for improved accessibility, you can enable it below. This site is fully WCAG2 A accessible by default. Selecting AA or AAA will increase the contrast of all colors used on this site, with AAA providing the greatest contrast.</p>
 
-        <ul class="accessibility-level">
-            <li class="btn btn-large btn-serenity">A</li>
-            <li class="btn btn-large btn-harebell">AA</li>
-            <li class="btn btn-large btn-blue">AAA</li>
+        <span class="level">Current Level: {level.toUpperCase()}</span>
+
+        <ul class="accessibility-level" role="radiogroup">
+            <li class="btn btn-large btn-serenity btn-focus-default" tabindex="0" role="radio"
+                aria-checked="{level === 'a' ? 'true': 'false'}">A</li>
+            <li class="btn btn-large btn-harebell btn-focus-default" tabindex="0" role="radio"
+                aria-checked="{level === 'aa' ? 'true': 'false'}">AA</li>
+            <li class="btn btn-large btn-blue btn-focus-default" tabindex="0" role="radio"
+                aria-checked="{level === 'aaa' ? 'true': 'false'}">AAA</li>
         </ul>
 
         <h2>How are we doing?</h2>
