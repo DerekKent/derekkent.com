@@ -1,5 +1,5 @@
 import test from 'ava';
-import {default as analytics, optedOut, optedIn} from '~/helpers/analytics';
+import {default as analytics, optedOut, optedIn} from '~/handlers/analytics';
 
 test('Tracking Opt-in', async function (assert) {
     window.localStorage.clear();

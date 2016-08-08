@@ -1,6 +1,6 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators';
-import {default as analytics, optedOut, optedIn} from '~/helpers/analytics';
+import {default as analytics, optedOut, optedIn} from '~/handlers/analytics';
 import {description as template} from './privacy.html';
 
 export default class Privacy extends Controller {
