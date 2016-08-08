@@ -19,4 +19,28 @@
             margin: 0 3rem;
         }
     }
+
+    .aa,
+    .aaa {
+        align-items: center;
+        display: flex;
+
+        &::before {
+            font-size: 1.4rem;
+            margin-right: 1rem;
+            padding: 0.5rem 0.75rem;
+        }
+    }
+
+    .aa::before {
+        background-color: color(harebell);
+        color: white;
+        content: 'AA';
+    }
+
+    .aaa::before {
+        background-color: color(blue);
+        color: white;
+        content: 'AAA';
+    }
 }
