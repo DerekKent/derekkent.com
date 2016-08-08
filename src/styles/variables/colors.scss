@@ -48,10 +48,22 @@ $colors: (
         darker: #4c4c4c,
         dark: #323232
     ),
+    serenity: (
+        light: lighten(#91a8d0, 20%),
+        lighter: lighten(#91a8d0, 10%),
+        base: #91a8d0,
+        darker: darken(#91a8d0, 5%),
+        dark: darken(#91a8d0, 10%)
+    ),
+    harebell: (
+        light: lighten(#6a6fc4, 20%),
+        lighter: lighten(#6a6fc4, 10%),
+        base: #6a6fc4,
+        darker: darken(#6a6fc4, 5%),
+        dark: darken(#6a6fc4, 10%)
+    ),
     background: #f0f3fa,
     links: #208feb,
-    serenity: #91a8d0,
-    harebell: #6a6fc4,
     black: black,
     white: white
 );
