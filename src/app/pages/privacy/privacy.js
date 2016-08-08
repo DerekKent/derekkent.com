@@ -25,12 +25,14 @@ export default class Privacy extends Controller {
     onOptIn() {
         analytics.optIn();
         this.update();
+        this.el.querySelector('.opt-out').focus();
     }
 
     @on('click .opt-out')
     onOptOut() {
         analytics.optOut();
         this.update();
+        this.el.querySelector('.opt-in').focus();
     }
 
 }
