@@ -1,6 +1,6 @@
 # Contributing to DerekKent.com
 
-:flag_us::tada: Thank you for your support! :tada::flag_us:
+:us::tada: Thank you for your support! :tada::us:
 
 The following is a set of guidelines for contributing code to the campaign. You can find all public projects related to the campaign hosted in the DerekKent group on [GitLab](https://gitlab.com/groups/DerekKent) and the DerekKent organization on [GitHub](http://github.com/DerekKent).
 
