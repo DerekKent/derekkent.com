@@ -10,6 +10,9 @@ linters:
     Comment:
         enabled: false
 
+    DuplicateProperty:
+        ignore_consecutive: true
+
     Indentation:
         width: 4
 
