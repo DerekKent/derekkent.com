@@ -22,6 +22,7 @@ engines:
     - 98b593d1c263aab28bb96938c1816ce1
     - c4d7dbac8bfe54781d910f8d4c8e761e
     - 4baa8f330fd7207cd898e378d3f33ed2
+    - 9c533e1448af5652247f940a471f64e7
   eslint:
     enabled: true
   scss-lint:
