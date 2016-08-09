@@ -1,0 +1,11 @@
+@mixin wcag2-aa {
+    @at-root .wcag2-aa & {
+        @content;
+    }
+}
+
+@mixin wcag2-aaa {
+    @at-root .wcag2-aaa & {
+        @content;
+    }
+}

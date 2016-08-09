@@ -22,6 +22,10 @@
         top: 0;
         width: 48.5rem;
 
+        @include wcag2-aaa {
+            background-color: color(blue, dark);
+        }
+
         .btn-serenity {
             text-shadow: 0.1rem 0 0.1rem color(blue);
         }

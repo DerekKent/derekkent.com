@@ -56,11 +56,43 @@ $focus-colors: (
         background-color: color($color);
         color: color(white);
 
+        @include wcag2-aa {
+            @if $color == 'serenity' {
+                background-color: darken(color($color, darker), 5%);
+            } @else {
+                background-color: color($color, darker);
+            }
+        }
+
+        @include wcag2-aaa {
+            @if $color == 'serenity' {
+                background-color: darken(color($color, dark), 10%);
+            } @else {
+                background-color: color($color, dark);
+            }
+        }
+
         &:active,
         &:hover,
         &:focus {
             background-color: color($color, darker);
             color: color(white);
+
+            @include wcag2-aa {
+                @if $color == 'serenity' {
+                    background-color: darken(color($color, dark), 5%);
+                } @else {
+                    background-color: color($color, dark);
+                }
+            }
+
+            @include wcag2-aaa {
+                @if $color == 'serenity' {
+                    background-color: darken(color($color, dark), 15%);
+                } @else {
+                    background-color: darken(color($color, dark), 5%);
+                }
+            }
         };
     }
 }

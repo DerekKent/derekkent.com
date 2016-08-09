@@ -7,6 +7,10 @@
     padding: 3rem 5rem;
     text-align: center;
 
+    @include wcag2-aaa {
+        background-color: color(background, lighter);
+    }
+
     ul {
         align-items: center;
         display: flex;
@@ -62,5 +66,9 @@
     .md5 {
         color: color(background);
         user-select: none;
+
+        @include wcag2-aaa {
+            color: color(background, lighter);
+        }
     }
 }

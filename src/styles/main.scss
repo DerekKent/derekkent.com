@@ -64,6 +64,14 @@ a {
     color: color(links);
     text-decoration: none;
 
+    @include wcag2-aa {
+        color: color(links, dark);
+    }
+
+    @include wcag2-aaa {
+        color: color(links, dark);
+    }
+
     &:active,
     &:focus,
     &:hover {
