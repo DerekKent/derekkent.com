@@ -10,6 +10,15 @@ class Header extends Controller {
             tag: 'header',
             classes: ['page-header']
         };
+
+        window.addEventListener('route:loaded', (e) => {
+            this.updateHeaderRoute(e);
+        });
+    }
+
+    updateHeaderRoute(e) {
+        this.model = e.detail.page;
+        this.update();
     }
 
 }
