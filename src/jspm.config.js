@@ -43,7 +43,7 @@ SystemJS.config({
     "incremental-dom": "npm:incremental-dom@0.4.1",
     "path": "github:jspm/nodelibs-path@0.2.0-alpha",
     "process": "github:jspm/nodelibs-process@0.2.0-alpha",
-    "superb": "npm:superb.js@0.2.1"
+    "superb": "npm:superb.js@0.2.3"
   },
   packages: {
     "github:jspm/nodelibs-buffer@0.2.0-alpha": {
