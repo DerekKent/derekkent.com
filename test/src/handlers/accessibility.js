@@ -16,7 +16,7 @@ test('Toggle WCAG2 Level', async function (assert) {
     expected = 'aa';
 
     assert.is(actual, expected,
-        'accessibility.level should return \'aa\' after calling accessibility.setLevel(\'aa\')');
+        'accessibility.level should return \'aa\' after calling accessibility.setLevel(\'aa\').');
 
     accessibility.setLevel('aaa');
 
@@ -24,8 +24,11 @@ test('Toggle WCAG2 Level', async function (assert) {
     expected = 'aaa';
 
     assert.is(actual, expected,
-        'accessibility.level should return \'aaa\' after calling accessibility.setLevel(\'aaa\')');
+        'accessibility.level should return \'aaa\' after calling accessibility.setLevel(\'aaa\').');
 
     assert.throws(() => accessibility.setLevel('b'), Error,
-        'accessibility.setLevel() should throw an error if it is passed an invalid value');
+        'accessibility.setLevel() should throw an error if it is passed an invalid string value.');
+
+    assert.throws(() => accessibility.setLevel(null), Error,
+        'accessibility.setLevel() should throw an error if it is passed a non-string value.');
 });
