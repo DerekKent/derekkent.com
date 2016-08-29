@@ -1,6 +1,6 @@
 import linkHelper from '~/helpers/link';
 
-const analyticsID = 'UA-77275133-1';
+export const analyticsID = 'UA-77275133-1';
 const RELATIVE_TO_ROOT = /^\//;
 
 export function optedOut() {
@@ -19,7 +19,7 @@ export function optedIn() {
 }
 
 const SETUP_GA = Symbol();
-const REMOVE_GA = Symbol();
+const DISABLE_GA = Symbol();
 
 class Analytics {
 
@@ -38,15 +38,17 @@ class Analytics {
     }
 
     stop() {
-        this[REMOVE_GA]();
+        this[DISABLE_GA]();
     }
 
     send(fields) {
         if (this.tracking) {
-            SystemJS.import('ga').then(() => {
+            return SystemJS.import('ga').then(() => {
                 window.ga('send', fields);
             });
         }
+
+        return Promise.resolve();
     }
 
     sendPageview(page) {
@@ -56,27 +58,31 @@ class Analytics {
             frag = `/${frag}`;
         }
 
-        this.send({
+        return this.send({
             hitType: 'pageview',
             page: frag
         });
     }
 
     sendEvent(fields) {
-        this.send(Object.assign(
+        return this.send(Object.assign(
             {hitType: 'event'},
             fields
         ));
     }
 
     record(href) {
+        const promises = [];
+
         if (linkHelper.isExternal(href)) {
-            this.sendEvent({
+            promises.push(this.sendEvent({
                 eventCategory: 'External',
                 eventAction: 'open',
                 eventLabel: href
-            });
+            }));
         }
+
+        return Promise.all([promises]);
     }
 
     optIn() {
@@ -90,6 +96,8 @@ class Analytics {
     }
 
     [SETUP_GA]() {
+        delete window[`ga-disable-${analyticsID}`];
+
         if (typeof window.ga !== 'function') {
             window.GoogleAnalyticsObject = 'ga';
             window.ga = {
@@ -101,10 +109,8 @@ class Analytics {
         }
     }
 
-    [REMOVE_GA]() {
-        if (typeof window.ga === 'function') {
-            window.ga('remove');
-        }
+    [DISABLE_GA]() {
+        window[`ga-disable-${analyticsID}`] = true;
     }
 
 }
