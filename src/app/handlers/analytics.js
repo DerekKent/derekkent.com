@@ -82,7 +82,7 @@ class Analytics {
             }));
         }
 
-        return Promise.all([promises]);
+        return Promise.all(promises);
     }
 
     optIn() {
