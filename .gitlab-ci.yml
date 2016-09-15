@@ -13,6 +13,7 @@ install:
       - node_modules/
       - jspm_packages/
   artifacts:
+    expire_in: 2 days
     paths:
       - node_modules/
       - jspm_packages/
@@ -25,6 +26,7 @@ build:
   dependencies:
     - install
   artifacts:
+    expire_in: 2 days
     paths:
       - dev/
   script:
