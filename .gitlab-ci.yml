@@ -1,19 +1,38 @@
 image: ruby:2.2.5
 
-cache:
-  paths:
-   - node_modules/
-   - jspm_packages/
+stages:
+  - install
+  - build
+  - test
 
 before_script:
  - curl -sL https://deb.nodesource.com/setup_6.x | bash -
  - apt-get update -qq && apt-get install -y -qq nodejs build-essential
  - gem install scss_lint
- - npm install -g gulp-cli jspm
- - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+ - npm install -g gulp-cli jspm nyc ava
 
-test:
+install:
+  stage: install
+  cache:
+    key: "$CI_BUILD_REF_NAME"
+    untracked: true
+    paths:
+     - node_modules/
+     - jspm_packages/
   script:
-   - npm install
-   - jspm install
-   - npm test
+    - npm install
+
+build:
+  stage: build
+  script:
+    - gulp build
+
+lint:
+  stage: test
+  script:
+   - gulp lint
+
+unit_tests:
+  stage: test
+  script:
+    - nyc ava
