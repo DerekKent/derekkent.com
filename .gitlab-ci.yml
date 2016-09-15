@@ -1,38 +1,46 @@
-image: ruby:2.2.5
+image: derekkent/derekkent.com
 
 stages:
   - install
   - build
   - test
 
-before_script:
- - curl -sL https://deb.nodesource.com/setup_6.x | bash -
- - apt-get update -qq && apt-get install -y -qq nodejs build-essential
- - gem install scss_lint
- - npm install -g gulp-cli jspm nyc ava
-
 install:
   stage: install
   cache:
     key: "$CI_BUILD_REF_NAME"
-    untracked: true
     paths:
-     - node_modules/
-     - jspm_packages/
+      - node_modules/
+      - jspm_packages/
+  artifacts:
+    paths:
+      - node_modules/
+      - jspm_packages/
   script:
     - npm install
+    - jspm install
 
 build:
   stage: build
+  dependencies:
+    - install
+  artifacts:
+    paths:
+      - dev/
   script:
     - gulp build
 
 lint:
   stage: test
+  dependencies:
+    - install
   script:
-   - gulp lint
+    - gulp lint
 
 unit_tests:
   stage: test
+  dependencies:
+    - install
+    - build
   script:
     - nyc ava
