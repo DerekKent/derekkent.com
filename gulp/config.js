@@ -4,12 +4,10 @@ const project = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
 module.exports = {
     get env() {
-        let env = process.env.NODE_ENV;
+        let env = process.env.NODE_ENV || 'development';
 
-        if (argv.production) {
+        if (argv.production || env === 'production') {
             env = 'production';
-        } else if (argv.development) {
-            env = 'development';
         }
 
         return env;

@@ -94,7 +94,6 @@ gulp.task(compileChangedStyles);
 gulp.task(compileMainStyle);
 
 gulp.task('styles', gulp.series(
-    scsslint,
     compileAllStyles
 ));
 

@@ -223,7 +223,6 @@ gulp.task(compileScripts);
 gulp.task('minify-scripts', minifyScripts);
 
 gulp.task('scripts', gulp.series(
-    eslint,
     compileScripts
 ));
 

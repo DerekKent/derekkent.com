@@ -16,10 +16,10 @@ This site is targeted at developers who would like to contribute to the campaign
 ## Requirements
 
 * Node.js v6.2
-* Ruby v2.2.3
+* Ruby v2.2.3 (for testing)
 * Gulp v4.0.0-alpha.2
-* JSPM v0.17.0-beta.22
-* SCSS-Lint v0.48.0 (for testing)
+* JSPM v0.17.0-beta.28
+* SCSS-Lint v0.50.2 (for testing)
 
 ## Installation
 
@@ -126,7 +126,7 @@ npm install
 
 ## Development
 
-To build the site for development and load it in your default web browser with [BrowserSync](http://www.browsersync.io), simply run:
+To build the site for development and load it in your default web browser with [BrowserSync](http://www.browsersync.io), run:
 
 ```bash
 gulp dev
@@ -136,6 +136,14 @@ That will create a new `dev` directory from which the site is served.  Changes s
 
 You can also run individual tasks.  Enter `gulp --tasks` to see the full list.
 
+## Production
+
+To build the site for production, run:
+
+```bash
+gulp dist
+```
+
 ## Testing
 
 To run the linters and unit tests locally, enter:
@@ -144,6 +152,12 @@ To run the linters and unit tests locally, enter:
 gulp test
 ```
 
-You can also just run the linters (`gulp lint`) or unit tests (`gulp ava`) individually without rebuilding.
+or
 
-**Note:** The unit tests require the dev build to be built (in the `dev` directory).
+```bash
+gulp build && gulp test
+```
+
+if the `dev` environment has not already been built.
+
+You can also just run the linters (`gulp lint`) or unit tests (`gulp ava`) individually.

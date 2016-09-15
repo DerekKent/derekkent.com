@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 require('require-dir')('./gulp/tasks', {recurse: true});
 
-gulp.task('default', gulp.series(
+gulp.task('build', gulp.series(
     'clean',
     gulp.parallel(
         'copy',
@@ -17,20 +17,18 @@ gulp.task('default', gulp.series(
     'jspm-builder'
 ));
 
-gulp.task('dev-build', gulp.series(
-    'development',
-    'default'
+gulp.task('default', gulp.series(
+    'build'
 ));
 
 gulp.task('dev', gulp.series(
-    'dev-build',
-    'ava',
+    'build',
     'watch'
 ));
 
 gulp.task('dist', gulp.series(
     'production',
-    'default',
+    'build',
     'precache',
     'minify-scripts',
     'humans'
@@ -41,7 +39,7 @@ gulp.task('lint', gulp.parallel(
     'eslint'
 ));
 
-gulp.task('test', gulp.series(
-    'dev-build',
+gulp.task('test', gulp.parallel(
+    'lint',
     'ava'
 ));
