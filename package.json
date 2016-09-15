@@ -70,12 +70,9 @@
     },
     "devDependencies": {},
     "peerDependencies": {
-      "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
-      "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
-      "incremental-dom": "npm:incremental-dom@^0.4.1",
-      "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
-      "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
-    }
+      "incremental-dom": "npm:incremental-dom@^0.4.1"
+    },
+    "overrides": {}
   },
   "ava": {
     "require": [
