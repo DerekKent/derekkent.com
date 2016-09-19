@@ -1,14 +1,19 @@
-image: derekkent/derekkent.com
+image: registry.gitlab.com/derekkent/derekkent.com:build
 
 stages:
   - install
-  - build
+  - setup
   - test
+  - build
+  - release
 
-install:
+variables:
+  CONTAINER_RELEASE_IMAGE: registry.gitlab.com/derekkent/derekkent.com:latest
+
+install dependencies:
   stage: install
   cache:
-    key: "$CI_BUILD_REF_NAME"
+    key: $CI_BUILD_REF_NAME
     paths:
       - node_modules/
       - jspm_packages/
@@ -21,10 +26,10 @@ install:
     - npm install
     - jspm install
 
-build:
-  stage: build
+setup tests:
+  stage: setup
   dependencies:
-    - install
+    - install dependencies
   artifacts:
     expire_in: 2 days
     paths:
@@ -35,14 +40,38 @@ build:
 lint:
   stage: test
   dependencies:
-    - install
+    - install dependencies
   script:
     - gulp lint
 
-unit_tests:
+unit tests:
   stage: test
   dependencies:
-    - install
-    - build
+    - install dependencies
+    - setup tests
   script:
     - nyc ava
+
+build:
+  stage: build
+  dependencies:
+    - install dependencies
+  artifacts:
+    expire_in: 2 days
+    paths:
+      - dist/
+  script:
+    - gulp dist
+
+release:
+  stage: release
+  environment: staging
+  image: docker:latest
+  services:
+    - docker:dind
+  dependencies:
+    - build
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+    - docker build --pull -t $CONTAINER_RELEASE_IMAGE .
+    - docker push $CONTAINER_RELEASE_IMAGE
