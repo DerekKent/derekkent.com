@@ -13,27 +13,27 @@
             <else>
                 <form action="https://secure.actblue.com/contribute/page/derekkent" method="get" class="donate" key="donate">
                     <fieldset>
-                        <legend>Can You Help Us?</legend>
+                        <legend>Lend Your Support</legend>
                         <input type="hidden" name="refcode" value="homepage">
-                        <div class="input-wrapper">
+                        <div class="donation-wrapper">
                             <span>
                                 <label class="btn {model.amt === 10 ? 'btn-serenity' : ''}">$10
-                                    <input type="radio" name="amount" value="10" checked="{model.amt === 10 ? '' : void 0}">
+                                    <input type="radio" name="{model.other ? '' : 'amount'}" value="10" checked="{model.amt === 10 ? '' : void 0}">
                                 </label>
                             </span>
                             <span>
                                 <label class="btn {model.amt === 35 ? 'btn-serenity' : ''}">$35
-                                    <input type="radio" name="amount" value="35" checked="{model.amt === 35 ? '' : void 0}">
-                                </label>
-                            </span>
-                            <span key="100">
-                                <label class="btn {model.amt === 100 ? 'btn-serenity' : ''}">$100
-                                    <input type="radio" name="amount" value="100" checked="{model.amt === 100 ? '' : void 0}">
+                                    <input type="radio" name="{model.other ? '' : 'amount'}" value="35" checked="{model.amt === 35 ? '' : void 0}">
                                 </label>
                             </span>
                             <span>
-                                <label class="btn">Other
-                                    <input type="number" min="1" max="6000" placeholder="Other">
+                                <label class="btn {model.amt === 100 ? 'btn-serenity' : ''}">$100
+                                    <input type="radio" name="{model.other ? '' : 'amount'}" value="100" checked="{model.amt === 100 ? '' : void 0}">
+                                </label>
+                            </span>
+                            <span class="donate-other">
+                                <label><span>Other</span>
+                                    <input type="number" class="{model.other ? 'btn-serenity' : ''}" name="{model.other ? 'amount' : ''}" min="1" max="6000" placeholder="Other">
                                 </label>
                             </span>
                         </div>
@@ -50,37 +50,41 @@
         <ul class="vision-list issue-blocks">
             <li>
                 <h2>Make Government Work for Us</h2>
-                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Make Government work for us" width="150" height="150" />
+                <img src="/images/issues/opengov.svg" alt="Make Government work for us" width="150" height="150" />
             </li>
 
             <li>
                 <h2>Reform Our Criminal Justice System</h2>
-                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Reform our criminal justice system" width="150" height="150" />
+                <img src="/images/issues/fist.svg" alt="Reform our criminal justice system" width="150" height="150" />
             </li>
 
             <li>
                 <h2>Ensure a Living Wage for all Workers</h2>
-                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Fight for a $15 minimum wage" width="150" height="150" />
+                <img src="/images/issues/dollar.svg" alt="Fight for a $15 minimum wage" width="150" height="150" />
             </li>
 
             <li>
                 <h2>Give Our Children a Brighter Future</h2>
-                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Improve our children's education" width="150" height="150" />
+                <img src="/images/issues/education.svg" alt="Improve our children's education" width="150" height="150" />
             </li>
 
             <li>
                 <h2>Create a More Just Society for Everyone</h2>
-                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="Create a more just society" width="150" height="150" />
+                <img src="/images/issues/equality.svg" alt="Create a more just society" width="150" height="150" />
             </li>
 
             <li>
-                <h2>Accomplish So Much for Our Community</h2>
-                <img src="http://placehold.it/170x170/91a8d0/ffffff" alt="See other issues" width="150" height="150" />
+                <h2>Send Our Community Values to Annapolis</h2>
+                <img src="/images/issues/forward.svg" alt="See other issues" width="150" height="150" />
             </li>
         </ul>
 
         <h1>A Note From Derek</h1>
         <blockquote>
+            <blockquote>
+                When a man assumes a public trust he should consider himself a public property. - Thomas Jefferson
+            </blockquote>
+
             <p>
                 I've always believed that <strong>government is most effective when it is
                 responsive to the needs of the community it represents</strong>. At its core,
@@ -216,5 +220,26 @@
         <h1>For the People</h1>
 
         <p>A practical idealist.</p>
+
+        <p>
+        Ted gets a 0% from NARAL Pro-Choice Maryland. A 0% from Equality Maryland. A 25% from the Maryland State Education Association. He's endorsed by the NRA.
+
+        Mark Chang was endorsed by Maryland Right to Life and Protect Marriage Maryland — conservative organizations that are homophobic and anti-women.
+
+        Maryland Right to Life has given all 3 District 32 reps a 100% rating. Only 5 other Democrats in the entire state had a rating other than 0%.
+
+        Ted voted against legislation prohibiting firearms on college campuses: http://votesmart.org/bill/votes/56027  HB 1002 (2016) - only 3 other democrats in the entire state voted with him
+
+        Mark and Ted voted against legislation that returned voting rights to felons who served their time and were released on parole: http://votesmart.org/bill/votes/55138 HB980 (2016) - only 4 other democrats in the entire state voted with them
+
+        Mark, Pam, and Ted ALL voted against legislation to allow new birth certificates for sex changes: http://votesmart.org/bill/votes/51873 SB 743 (2015) - only 1 other democrat in the entire state voted with them
+
+        Mark, Pam and Ted ALL voted against reducing mandatory minimum sentencing for drug offenses HB 121 (2015) - only 3 other democrats in the entire state voted with them
+
+        Mark and Ted both voted against legislation that authorizes people to have convictions which are no longer crimes to be expunged from their record HB 124 (2015) - only 2 other democrats in the entire state voted with them
+
+
+        Pam Beidle voted against guaranteed paid sick leave HB 580 (2016) - only 4 other democrats in the entire state voted with her
+        </p>
     </article>
 </template>

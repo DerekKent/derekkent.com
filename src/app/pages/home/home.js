@@ -22,15 +22,25 @@ export default class Home extends Controller {
     onSubscribeSubmit(e) {
         e.preventDefault();
 
+        const data = new FormData(e.delegateTarget);
+
+        fetch('/api/v1/subscribe', {
+            method: 'PUT',
+            body: data
+        });
+
         this.model.subscribed = true;
         this.update();
     }
 
-    @on('click .input-wrapper input')
+    @on('click .donation-wrapper input')
+    @on('focus .donation-wrapper input')
+    @on('keydown .donation-wrapper input')
     onToggleDonationValue(e) {
-        const input = e.target;
+        const input = e.delegateTarget;
 
-        this.model.amt = +input.getAttribute('value');
+        this.model.amt = Number(input.getAttribute('value'));
+        this.model.other = input.type === 'number';
         this.update();
     }
 

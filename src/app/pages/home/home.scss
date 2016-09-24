@@ -28,6 +28,18 @@
 
         .btn-serenity {
             text-shadow: 0.1rem 0 0.1rem color(blue);
+
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        fieldset {
+            > legend {
+                font-size: 2.9rem;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
         }
 
         input {
@@ -35,30 +47,48 @@
         }
     }
 
-    .donate {
-        .input-wrapper {
-            align-items: stetch;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+    .donation-wrapper {
+        align-items: stetch;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-            input {
-                display: none;
-            }
+        span {
+            flex: 0 1 45%;
+            padding: 0.85rem 0;
+            text-align: center;
+        }
 
-            span {
-                flex: 0 1 50%;
-                padding: 0.85rem 0;
-                text-align: center;
-            }
+        label {
+            border-radius: 0.5rem;
+            font-size: 1.8rem;
+            height: 4.7rem;
+            padding: 1rem;
+            width: 100%;
+        }
+    }
 
-            label {
-                border-radius: 0.5rem;
-                font-size: 1.8rem;
-                height: 4.7rem;
-                padding: 1rem;
-                width: 9rem;
-            }
+    .donate-other {
+        label {
+            padding: 0;
+        }
+
+        span {
+            display: none;
+        }
+
+        input {
+            cursor: pointer;
+            display: inline-block;
+            font-family: $serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            height: 4.7rem;
+            letter-spacing: 0.1rem;
+            margin-top: 0;
+            outline: 0;
+            text-align: center;
+            width: 100%;
         }
     }
 }

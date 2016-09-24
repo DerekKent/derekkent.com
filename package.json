@@ -66,6 +66,7 @@
       "jspm:browser": "src/jspm.browser.js"
     },
     "dependencies": {
+      "fetch": "npm:whatwg-fetch@^1.0.0",
       "superb": "npm:superb.js@^0.2.7"
     },
     "devDependencies": {},

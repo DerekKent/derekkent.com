@@ -38,6 +38,7 @@ SystemJS.config({
     "github:*/*.json"
   ],
   map: {
+    "fetch": "npm:whatwg-fetch@1.0.0",
     "incremental-dom": "npm:incremental-dom@0.4.1",
     "superb": "npm:superb.js@0.2.7"
   },
