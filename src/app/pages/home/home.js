@@ -2,6 +2,8 @@ import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators';
 import {description as template} from './home.html';
 
+const USER_NAV_KEYS = [9, 13];
+
 export default class Home extends Controller {
 
     init() {
@@ -38,6 +40,10 @@ export default class Home extends Controller {
     @on('keydown .donation-wrapper input')
     onToggleDonationValue(e) {
         const input = e.delegateTarget;
+
+        if (e instanceof KeyboardEvent && USER_NAV_KEYS.includes(e.keyCode)) {
+            return;
+        }
 
         this.model.amt = Number(input.getAttribute('value'));
         this.model.other = input.type === 'number';
