@@ -40,7 +40,7 @@ SystemJS.config({
   map: {
     "fetch": "npm:whatwg-fetch@1.0.0",
     "incremental-dom": "npm:incremental-dom@0.4.1",
-    "superb": "npm:superb.js@0.2.7"
+    "superb": "npm:superb.js@0.2.10"
   },
   packages: {}
 });
