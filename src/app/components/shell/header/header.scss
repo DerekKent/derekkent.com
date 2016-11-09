@@ -5,7 +5,6 @@ $desktop-height: 6rem;
 $mobile-height: 4rem;
 
 .page-header {
-    border-bottom: 0.1rem solid color(gray, lighter);
     padding: 0;
     text-transform: uppercase;
 
@@ -15,10 +14,6 @@ $mobile-height: 4rem;
 
     @include tablet {
         padding: 1rem 3rem;
-    }
-
-    @include desktop {
-        border-bottom: 0;
     }
 
     a {
