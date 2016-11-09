@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'mixins';
+
 .issue-blocks {
     align-items: stretch;
     display: flex;
@@ -15,6 +18,14 @@
     > li {
         flex: 1 1 33%;
         padding: 1.5rem;
+
+        @include tablet {
+            flex: 1 1 50%;
+        }
+
+        @include phone {
+            flex: 1 1 100%;
+        }
 
         h2 {
             font-size: 2rem;

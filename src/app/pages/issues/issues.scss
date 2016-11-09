@@ -4,4 +4,9 @@
 .issues-page {
     margin-bottom: 6rem;
     text-align: center;
+
+    > .banner {
+        background-image: url('/images/banners/issues.jpg');
+        background-position: center top;
+    }
 }

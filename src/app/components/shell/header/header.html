@@ -1,27 +1,30 @@
 <template args="page">
     <nav>
         <ul>
-            <li>
+            <li class="logo">
                 <a href="/">
                     <img src="/images/kent.svg" alt="Derek Kent for Maryland District 32" height="40" />
                 </a>
             </li>
-            <li>
+            <li class="expand-nav">
+                <button>☰</button>
+            </li>
+            <li class="nav-item">
                 <a href="/about" class="menu-link{page === 'about' ? ' active' : ''}">Meet Derek</a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="/issues" class="menu-link{page === 'issues' ? ' active' : ''}">Vision</a>
             </li>
-            <li>
-                <a href="/events" class="menu-link{page === 'events' ? ' active' : ''}">Events</a>
-            </li>
-            <li>
+            <li class="nav-item">
                 <a href="/news" class="menu-link{page === 'news' ? ' active' : ''}">News</a>
             </li>
-            <li>
+            <li class="nav-item">
+                <a href="/map" class="menu-link{page === 'map' ? ' active' : ''}">Map</a>
+            </li>
+            <li class="nav-item">
                 <a href="/join" class="menu-link{page === 'join' ? ' active' : ''}">Join</a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="/contribute" class="btn btn-red">Contribute</a>
             </li>
         </ul>

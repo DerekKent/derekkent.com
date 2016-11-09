@@ -1,4 +1,5 @@
 import {Controller} from 'superb';
+import {on} from '~/helpers/controller/decorators';
 import {description as template} from './header.html';
 
 class Header extends Controller {
@@ -19,6 +20,24 @@ class Header extends Controller {
     updateHeaderRoute(e) {
         this.model = e.detail.page;
         this.update();
+    }
+
+    @on('click .expand-nav')
+    toggleMobileMenu() {
+        const list = this.el.querySelector('ul');
+        const button = list.querySelector('button');
+
+        list.classList.toggle('open');
+        button.classList.toggle('open');
+    }
+
+    @on('click a')
+    closeMobileMenu() {
+        const list = this.el.querySelector('ul');
+        const button = list.querySelector('button');
+
+        list.classList.remove('open');
+        button.classList.remove('open');
     }
 
 }

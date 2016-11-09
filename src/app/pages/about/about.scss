@@ -3,4 +3,8 @@
 
 .about-page {
     margin-bottom: 6rem;
+
+    > .banner {
+        background-image: url('/images/banners/about.jpg');
+    }
 }

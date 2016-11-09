@@ -7,6 +7,10 @@
     padding: 3rem 5rem;
     text-align: center;
 
+    @include mobile {
+        padding: 3rem 0;
+    }
+
     @include wcag2-aaa {
         background-color: color(background, lighter);
     }
@@ -19,11 +23,28 @@
         margin: 0;
         padding: 0;
 
+        @include mobile {
+            flex-wrap: wrap;
+        }
+
         > li {
             flex: 1 0 auto;
 
+            @include phone {
+                flex-basis: 100%;
+            }
+
+            @include tablet {
+                flex-basis: 33%;
+            }
+
+            @include mobile {
+                padding: 2rem 0;
+            }
+
             > a {
-                padding: 2rem 3rem;
+                padding: 2rem;
+                white-space: nowrap;
             }
         }
     }
@@ -53,13 +74,34 @@
             border: 0.1rem solid lighten(color(black), 50%);
             font-size: 1.1em;
             padding: 1rem 1.5rem;
+
+            @include phone {
+                border: 0;
+            }
+
+            @include mobile {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    .accessibility,
+    .copyright,
+    .privacy {
+        @include phone {
+            display: block;
         }
     }
 
     .copyright,
     .privacy {
+
         &::after {
             content: ' | ';
+
+            @include phone {
+                content: '';
+            }
         }
     }
 

@@ -3,8 +3,6 @@ $breakpoints: (
     tablet: 768px
 );
 
-$boxed-width: 1200px; // For @media, 120rem != 1200px
-
 @function breakpoints($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         @return map-get($breakpoints, $breakpoint);

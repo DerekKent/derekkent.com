@@ -2,8 +2,12 @@
 @import 'mixins';
 
 .map-page {
-    border-top: 1px solid color(gray, lighter);
+    padding: 0 2rem;
     text-align: center;
+
+    @include desktop {
+        border-top: 1px solid color(gray, lighter);
+    }
 
     form {
         margin-bottom: 3rem;
@@ -14,5 +18,9 @@
         height: 40vw;
         margin: 0 auto;
         width: 50vw;
+
+        @include phone {
+            width: 100%;
+        }
     }
 }

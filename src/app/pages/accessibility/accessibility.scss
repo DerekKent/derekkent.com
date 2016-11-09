@@ -2,8 +2,8 @@
 @import 'mixins';
 
 .accessibility-page {
-    .banner {
-        background-image: url('/images/accessibility/one-world.jpg');
+    > .banner {
+        background-image: url('/images/banners/bench.jpg');
     }
 
     .level {
@@ -20,12 +20,21 @@
         padding: 0;
         text-align: center;
 
+        @include mobile {
+            flex-wrap: wrap;
+        }
+
         > li {
             display: inline-block;
-            flex: 1 1 25%;
+            flex: 1 1 33%;
             font-size: 3rem;
             margin: 0 3rem;
             position: relative;
+
+            @include mobile {
+                flex-basis: 100%;
+                margin: 1rem 0;
+            }
 
             &[aria-checked="true"] {
                 box-shadow: inset 0 0 3px 3px rgba(color(black), 0.5);

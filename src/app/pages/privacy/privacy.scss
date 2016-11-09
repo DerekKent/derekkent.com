@@ -2,8 +2,8 @@
 @import 'mixins';
 
 .privacy-page {
-    .banner {
-        background-image: url('/images/privacy/online-privacy.jpg');
+    > .banner {
+        background-image: url('/images/banners/bench.jpg');
     }
 
     .dnt-info {

@@ -133,9 +133,19 @@ p {
     background-color: lightblue;
     background-position: center center;
     background-size: cover;
+    display: none;
     height: calc(100vh - 16.6rem);
-    min-height: 50rem;
+    max-height: 70vw;
+    min-height: 60rem;
     position: relative;
+
+    @include desktop {
+        display: block;
+    }
+
+    @media (min-width: 1200px) {
+        min-height: 50vw;
+    }
 }
 
 .curved-bottom {
@@ -143,9 +153,6 @@ p {
 
     &::after {
         background-image: url('/images/components/divider.svg');
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
         bottom: 0;
         content: '';
         height: 5rem;

@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'mixins';
 
-.issues_justice-page {
+.issues_ubi-page {
     margin-bottom: 6rem;
+
+    > .banner {
+        background-image: url('/images/banners/ubi.jpg');
+    }
 }

@@ -26,7 +26,7 @@ export default class Home extends Controller {
 
         const data = new FormData(e.delegateTarget);
 
-        fetch('/api/v1/subscribe', {
+        fetch('https://derekkent.com/api/v1/subscribe', {
             method: 'PUT',
             body: data
         });

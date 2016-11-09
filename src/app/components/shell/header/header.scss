@@ -1,15 +1,28 @@
 @import 'variables';
 @import 'mixins';
 
+$desktop-height: 6rem;
+$mobile-height: 4rem;
+
 .page-header {
-    padding: 1rem;
+    border-bottom: 0.1rem solid color(gray, lighter);
+    padding: 0;
     text-transform: uppercase;
+
+    @include phone {
+        padding: 1rem 2rem;
+    }
+
+    @include tablet {
+        padding: 1rem 3rem;
+    }
 
     a {
         color: color(blue);
         display: inline-block;
         font-weight: bold;
         letter-spacing: 0.1rem;
+        line-height: 0;
 
         &.active,
         &:active,
@@ -20,27 +33,117 @@
 
         &.btn {
             color: color(white);
+            line-height: normal;
         }
     }
 
     ul {
         align-items: center;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         list-style-type: none;
         margin: 0;
+        max-height: $mobile-height;
+        overflow: hidden;
         padding: 0;
+        transition: max-height 0.5s;
+        will-change: max-height;
+
+        @include desktop {
+            height: $desktop-height;
+            max-height: $desktop-height;
+        }
+
+        &.open {
+            @include phone {
+                max-height: $mobile-height + 42rem;
+            }
+
+            @include tablet {
+                max-height: $mobile-height + 14rem;
+            }
+        }
 
         > li {
+            align-items: center;
+            display: flex;
             flex: 1 0 auto;
+            justify-content: center;
+            line-height: 0;
+
+            @include mobile {
+                &:first-child {
+                    justify-content: flex-start;
+                }
+
+                &:nth-child(2) {
+                    justify-content: flex-end;
+                }
+            }
         }
     }
 
-    > nav {
-        text-align: center;
+    .nav-item {
+        display: flex;
+        height: $mobile-height;
+        margin-top: 3rem;
+
+        @include phone {
+            flex-basis: 100%;
+        }
+
+        @include tablet {
+            flex-basis: 33%;
+        }
+
+        @include desktop {
+            height: $desktop-height;
+            margin-top: 0;
+        }
+
+        > a {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            padding: 1rem;
+        }
+
+        .btn {
+            height: auto;
+        }
     }
 
-    .menu-link {
-        padding: 1rem;
+    .logo {
+        flex-basis: 50%;
+
+        @include desktop {
+            flex-basis: auto;
+        }
+    }
+
+    .expand-nav {
+        flex-basis: 50%;
+
+        @include desktop {
+            display: none;
+        }
+
+        > button {
+            background-color: #fff;
+            border: 0;
+            color: color(blue);
+            font-size: 2.5rem;
+            padding: 0;
+            transition: transform 0.5s;
+
+            &:active {
+                box-shadow: none;
+            }
+
+            &.open {
+                transform: rotate(-90deg);
+            }
+        }
     }
 }

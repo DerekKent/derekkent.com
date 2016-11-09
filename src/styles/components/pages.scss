@@ -8,6 +8,10 @@
         margin: 0 auto;
         max-width: 80rem;
 
+        @media (max-width: 889px) {
+            max-width: 90%;
+        }
+
         > p:first-of-type {
             margin-top: 0;
         }
