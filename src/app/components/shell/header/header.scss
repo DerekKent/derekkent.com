@@ -17,6 +17,10 @@ $mobile-height: 4rem;
         padding: 1rem 3rem;
     }
 
+    @include desktop {
+        border-bottom: 0;
+    }
+
     a {
         color: color(blue);
         display: inline-block;
