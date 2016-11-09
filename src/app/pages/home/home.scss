@@ -4,10 +4,21 @@
 .home-page {
     text-align: center;
 
-    > .intro {
+    > .banner {
         background-image: url('/images/banners/home.jpg');
         margin-left: -17rem;
         padding-left: 17rem;
+
+        @include mobile {
+            background: none;
+            margin: 0;
+            min-height: 33rem;
+            padding: 0;
+
+            &::after {
+                height: 0;
+            }
+        }
     }
 
     .join {
@@ -22,6 +33,13 @@
         right: 0;
         top: 0;
         width: 48.5rem;
+
+        @include mobile {
+            border-radius: 0;
+            height: auto;
+            padding: 3rem;
+            width: 100%;
+        }
 
         @include wcag2-aaa {
             background-color: color(blue, dark);

@@ -133,15 +133,11 @@ p {
     background-color: lightblue;
     background-position: center center;
     background-size: cover;
-    display: none;
+    display: block;
     height: calc(100vh - 16.6rem);
     max-height: 70vw;
     min-height: 60rem;
     position: relative;
-
-    @include desktop {
-        display: block;
-    }
 
     @media (min-width: 1200px) {
         min-height: 50vw;
