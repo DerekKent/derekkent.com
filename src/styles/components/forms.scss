@@ -1,8 +1,31 @@
 @import 'variables';
 @import 'mixins';
 
+label {
+    align-items: center;
+    color: color(black);
+    display: flex;
+    font-family: $serif;
+    font-size: 1.1em;
+    margin-top: 1em;
+
+    > .label {
+        flex: 0 0 12rem;
+    }
+
+    > input {
+        flex: 1 1 90%;
+
+        &[type="checkbox"] {
+            flex: 0 0 auto;
+        }
+    }
+}
+
 fieldset {
     border: 0;
+    color: color(blue);
+    margin-top: 3rem;
     text-align: left;
 
     > legend {
@@ -18,8 +41,46 @@ input {
     font-family: $serif;
     font-size: 1.15em;
     height: 2.5em;
-    margin-top: 1em;
     outline: 0;
     padding: 0 1em;
     width: 100%;
+}
+
+[type="checkbox"] {
+    background-color: lighten(color(gray, light), 8%);
+    border-radius: 0.3rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(color(black), 0.05), inset 0 -1.5rem 1rem -1.2rem rgba(color(black), 0.05);
+    display: inline-block;
+    height: 1rem;
+    margin-right: 0.5em;
+    padding: 1rem;
+    position: relative;
+    width: 1rem;
+
+    &::after {
+        align-items: center;
+        display: flex;
+    }
+
+    &:active,
+    &:checked:active {
+        box-shadow: 0 0.1rem 0.2rem rgba(color(black), 0.05), inset 0 0.1rem 0.3rem rgba(color(black), 0.1);
+    }
+
+    &:checked {
+        background-color: lighten(color(gray, light), 5%);
+        box-shadow: 0 0.1rem 0.2rem rgba(color(black), 0.05), inset 0 -1.5rem 1rem -1.2rem rgba(color(black), 0.05), inset 1.5rem 1rem -1.2rem rgba(color(white), 0.1);
+
+        &::after {
+            color: color(blue);
+            content: '\2714';
+            left: 0.2rem;
+            position: absolute;
+            top: -0.1rem;
+        }
+    }
+}
+
+[type="submit"] {
+    margin-top: 3rem;
 }

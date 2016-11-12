@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'mixins';
+
+.join-page {
+    > .banner {
+        background-image: url('/images/banners/get-involved.jpg');
+
+        &.joined {
+            background-image: url('/images/banners/joined.jpg');
+            background-position: center bottom;
+        }
+    }
+}

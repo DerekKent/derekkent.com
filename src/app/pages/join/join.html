@@ -1,0 +1,66 @@
+<template args="model">
+    <div class="banner curved-bottom{model.joined ? ' joined' : ''}"></div>
+    <article>
+        <if condition="!model.joined">
+            <h1>Get Involved</h1>
+
+            <form>
+                <label><span class="label">First Name:</span>
+                    <input type="text" name="fname">
+                </label>
+                <label><span class="label">Last Name:</span>
+                    <input type="text" name="lname">
+                </label>
+                <label><span class="label">Zip Code:</span>
+                    <input type="text" name="zip" pattern="(\d{5}([\-]\d{4})?)" required>
+                </label>
+                <label><span class="label">E-mail:</span>
+                    <input type="email" name="email" required>
+                </label>
+                <label><span class="label">Phone:</span>
+                    <input type="tel" name="phone">
+                </label>
+                <fieldset>
+                    <legend>Volunteer to:</legend>
+                    <label>
+                        <input type="checkbox" name="attend_events">Attend Events
+                    </label>
+                    <label>
+                        <input type="checkbox" name="canvass">Knock on Doors
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phonebank">Make Phone Calls
+                    </label>
+                    <label>
+                        <input type="checkbox" name="yard_signs">Setup Yard Signs
+                    </label>
+                    <label>
+                        <input type="checkbox" name="data_entry">Enter Data
+                    </label>
+                    <label>
+                        <input type="checkbox" name="research">Perform Research
+                    </label>
+                    <label>
+                        <input type="checkbox" name="house_party">Host a House Party
+                    </label>
+                    <label>
+                        <input type="checkbox" name="organize">Recruit & Organize
+                    </label>
+              </fieldset>
+              <input type="submit" class="btn btn-red{model.submitting ? ' disabled' : ''}" value="Get Involved">
+            </form>
+        <else>
+            <h1>Welcome to the Team!</h1>
+
+            <p>
+                Thanks for expressing interest in supporting a real progressive candidate
+                for District 32 — this campaign depends on people like you.
+            </p>
+
+            <p>
+                We'll be in touch shortly, but you don't have to wait for us! Spread
+                the word to friends and family and help us grow a real grassroots effort.
+            </p>
+        </if>
+    </article>
+</template>
