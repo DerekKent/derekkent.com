@@ -12,7 +12,7 @@
                     <input type="text" name="lname">
                 </label>
                 <label><span class="label">Zip Code:</span>
-                    <input type="text" name="zip" pattern="(\d{5}([\-]\d{4})?)" required>
+                    <input type="text" name="zip" pattern="{model.zipcode}" required>
                 </label>
                 <label><span class="label">E-mail:</span>
                     <input type="email" name="email" required>
@@ -46,8 +46,11 @@
                     <label>
                         <input type="checkbox" name="organize">Recruit & Organize
                     </label>
-              </fieldset>
-              <input type="submit" class="btn btn-red{model.submitting ? ' disabled' : ''}" value="Get Involved">
+                </fieldset>
+                <if condition="model.error">
+                    <span class="error">{model.error}</span>
+                </if>
+                <input type="submit" class="btn btn-red{model.submitting ? ' disabled' : ''}" value="Get Involved">
             </form>
         <else>
             <h1>Welcome to the Team!</h1>
