@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'mixins';
+
+.issues_gerrymandering-page {
+    margin-bottom: 6rem;
+
+    blockquote {
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    > .banner {
+        background-image: url('/images/banners/bench.jpg');
+    }
+}
