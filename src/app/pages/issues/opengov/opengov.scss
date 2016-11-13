@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+
+.issues_opengov-page {
+    margin-bottom: 6rem;
+
+    > .banner {
+        background-image: url('/images/banners/sitting-group.jpg');
+        background-position: center bottom;
+    }
+}

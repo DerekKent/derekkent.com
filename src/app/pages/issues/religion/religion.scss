@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
+.issues_religion-page {
+    margin-bottom: 6rem;
+
+    > .banner {
+        background-image: url('/images/banners/bench.jpg');
+    }
+}

@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+
+.issues_policy-page {
+    margin-bottom: 6rem;
+
+    > .banner {
+        background-image: url('/images/banners/policy.jpg');
+        background-position: center top;
+    }
+}
