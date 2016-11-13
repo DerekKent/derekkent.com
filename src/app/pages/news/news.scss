@@ -1,0 +1,8 @@
+@import 'variables';
+@import 'mixins';
+
+.news-page {
+    > .banner {
+        background-image: url('/images/banners/bench.jpg');
+    }
+}
