@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import 'fetch';
 import router from '~/router';
 import shell from '~/components/shell/shell';

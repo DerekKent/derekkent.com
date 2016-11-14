@@ -38,9 +38,27 @@ SystemJS.config({
     "github:*/*.json"
   ],
   map: {
+    "babel-polyfill": "npm:babel-polyfill@6.16.0",
     "fetch": "npm:whatwg-fetch@1.0.0",
+    "fs": "npm:jspm-nodelibs-fs@0.2.0",
     "incremental-dom": "npm:incremental-dom@0.4.1",
+    "path": "npm:jspm-nodelibs-path@0.2.1",
+    "process": "npm:jspm-nodelibs-process@0.2.0",
     "superb": "npm:superb.js@0.2.10"
   },
-  packages: {}
+  packages: {
+    "npm:babel-polyfill@6.16.0": {
+      "map": {
+        "regenerator-runtime": "npm:regenerator-runtime@0.9.6",
+        "babel-runtime": "npm:babel-runtime@6.18.0",
+        "core-js": "npm:core-js@2.4.1"
+      }
+    },
+    "npm:babel-runtime@6.18.0": {
+      "map": {
+        "regenerator-runtime": "npm:regenerator-runtime@0.9.6",
+        "core-js": "npm:core-js@2.4.1"
+      }
+    }
+  }
 });
