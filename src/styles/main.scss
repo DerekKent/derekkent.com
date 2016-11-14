@@ -140,7 +140,7 @@ p {
     position: relative;
 
     @media (min-width: 1200px) {
-        min-height: 50vw;
+        min-height: calc(50vw - 16.6rem);
     }
 }
 
