@@ -4,7 +4,7 @@ import shell from '~/components/shell/shell';
 
 if ('@ENV@' === 'production' && 'serviceWorker' in navigator) {
     /* eslint no-console: 0 */
-    navigator.serviceWorker.register('sw.js').then((registration) => {
+    navigator.serviceWorker.register('/sw.js').then((registration) => {
         if (typeof registration.update === 'function') {
             registration.update();
         }
