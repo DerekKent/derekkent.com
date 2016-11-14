@@ -17,9 +17,27 @@
         }
     }
 
-    iframe {
-        display: block;
-        margin: 0 auto;
+    .youtube-video-wrapper {
+        margin: 3rem auto;
+        max-width: 56rem;
+    }
+
+    .youtube-video {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+
+        &.four-by-three {
+            padding-bottom: 75%;
+        }
+
+        > iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .back-to-issues {
