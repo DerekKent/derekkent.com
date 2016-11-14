@@ -150,11 +150,12 @@ p {
 
     &::after {
         background-image: url('/images/components/divider.svg');
+        background-position: bottom center;
+        background-repeat: no-repeat;
         bottom: 0;
         content: '';
         height: 5rem;
         left: 0;
-        margin-bottom: -0.6rem;
         position: absolute;
         right: 0;
     }
