@@ -145,6 +145,7 @@ p {
 }
 
 .curved-bottom {
+    overflow: hidden;
     position: relative;
 
     &::after {
@@ -153,6 +154,7 @@ p {
         content: '';
         height: 5rem;
         left: 0;
+        margin-bottom: -0.5rem;
         position: absolute;
         right: 0;
     }
