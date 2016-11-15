@@ -68,7 +68,7 @@
     "dependencies": {
       "babel-polyfill": "npm:babel-polyfill@^6.16.0",
       "fetch": "npm:whatwg-fetch@^1.0.0",
-      "superb": "npm:superb.js@^0.2.11"
+      "superb": "npm:superb.js@^0.2.12"
     },
     "devDependencies": {},
     "peerDependencies": {
