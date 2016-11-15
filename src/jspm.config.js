@@ -41,10 +41,10 @@ SystemJS.config({
     "babel-polyfill": "npm:babel-polyfill@6.16.0",
     "fetch": "npm:whatwg-fetch@1.0.0",
     "fs": "npm:jspm-nodelibs-fs@0.2.0",
-    "incremental-dom": "npm:incremental-dom@0.4.1",
+    "incremental-dom": "npm:incremental-dom@0.5.1",
     "path": "npm:jspm-nodelibs-path@0.2.1",
     "process": "npm:jspm-nodelibs-process@0.2.0",
-    "superb": "npm:superb.js@0.2.10"
+    "superb": "npm:superb.js@0.2.11"
   },
   packages: {
     "npm:babel-polyfill@6.16.0": {
