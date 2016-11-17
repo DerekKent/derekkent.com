@@ -44,7 +44,7 @@ SystemJS.config({
     "incremental-dom": "npm:incremental-dom@0.5.1",
     "path": "npm:jspm-nodelibs-path@0.2.1",
     "process": "npm:jspm-nodelibs-process@0.2.0",
-    "superb": "npm:superb.js@0.2.12"
+    "superb": "npm:superb.js@0.2.13"
   },
   packages: {
     "npm:babel-polyfill@6.16.0": {
