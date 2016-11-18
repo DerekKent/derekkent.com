@@ -5,4 +5,33 @@
     > .banner {
         background-image: url('/images/banners/bench.jpg');
     }
+
+    .press-release {
+        color: color(gray, darker);
+        margin-top: 0.5rem;
+
+        &::before {
+            color: color(red);
+            content: 'Press Release';
+            font-family: $sans-serif;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+        }
+
+        > h2 {
+            margin-top: 0;
+        }
+
+        .location {
+            > .city {
+                text-transform: uppercase;
+            }
+        }
+
+        > time {
+            color: color(gray);
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+        }
+    }
 }
