@@ -2,9 +2,7 @@
 @import 'mixins';
 
 blockquote {
-    border-left: 1rem solid #ccc;
     margin: 6rem -3rem;
-    padding: 1rem 3rem;
     position: relative;
     quotes: '“' '”' '‘' '’';
     text-align: justify;
@@ -23,15 +21,15 @@ blockquote {
 
     &::before {
         content: open-quote;
-        left: 0.1em;
+        left: 0.05em;
         position: absolute;
-        top: 0.3em;
+        top: 0.25em;
     }
 
     &::after {
         bottom: -0.3em;
         content: close-quote;
         position: absolute;
-        right: 0.1em;
+        right: 0.05em;
     }
 }

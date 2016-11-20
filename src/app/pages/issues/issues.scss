@@ -3,7 +3,10 @@
 
 .issues-page {
     margin-bottom: 6rem;
-    text-align: center;
+
+    h1 {
+        text-align: center;
+    }
 
     > .banner {
         background-image: url('/images/banners/issues.jpg');

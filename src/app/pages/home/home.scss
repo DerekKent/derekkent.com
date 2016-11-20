@@ -4,6 +4,10 @@
 .home-page {
     text-align: center;
 
+    h1 {
+        text-align: center;
+    }
+
     > .banner {
         background-image: url('/images/banners/home.jpg');
         margin-left: -17rem;
