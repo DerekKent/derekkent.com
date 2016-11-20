@@ -2,12 +2,16 @@
 @import 'mixins';
 
 blockquote {
+    border-left: 1rem solid #ccc;
     margin: 6rem -3rem;
+    padding: 1rem 3rem;
     position: relative;
     quotes: '“' '”' '‘' '’';
     text-align: justify;
 
     &.issue {
+        border: 0;
+        padding: 0;
         text-align: center;
     }
 
