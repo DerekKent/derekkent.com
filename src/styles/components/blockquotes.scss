@@ -11,6 +11,9 @@ blockquote {
 
     &.issue {
         border: 0;
+        display: block;
+        margin: 6rem auto;
+        max-width: 90%;
         padding: 0;
         text-align: center;
     }
