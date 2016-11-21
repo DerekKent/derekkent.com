@@ -32,8 +32,9 @@
             flex: 1 1 100%;
         }
 
-        h2 {
+        > a > h2 {
             font-size: 2rem;
+            text-align: center;
         }
     }
 }
