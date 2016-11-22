@@ -4,6 +4,12 @@
 .issues_justice-page {
     margin-bottom: 6rem;
 
+    img {
+        display: block;
+        margin: 3rem auto;
+        width: 90%;
+    }
+
     > .banner {
         background-image: url('/images/banners/justice.jpg');
     }
