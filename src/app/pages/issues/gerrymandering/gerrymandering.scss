@@ -11,5 +11,9 @@
 
     > .banner {
         background-image: url('/images/banners/bench.jpg');
+
+        @media (min-width: 1500px) {
+            background-position: center 25%;
+        }
     }
 }
