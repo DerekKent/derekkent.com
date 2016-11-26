@@ -124,6 +124,69 @@
         }
     }
 
+    .know-your-rep {
+        margin-bottom: 3rem;
+        width: 100%;
+
+        @include phone {
+            margin-left: -5%;
+            width: 110%;
+        }
+
+        > caption {
+            color: color(blue);
+            font-size: 4.8rem;
+            font-weight: bold;
+            margin-bottom: 0.4em;
+            margin-top: 0.4em;
+        }
+
+        thead th {
+            color: color(gray, darker);
+            white-space: nowrap;
+
+            > img {
+                max-width: 30vw;
+            }
+        }
+
+        th,
+        td {
+            text-align: center;
+            margin: 0;
+            padding: 0 1rem;
+
+            @include phone {
+                font-size: 0.8em;
+                padding: 0 0.5rem;
+            }
+
+            > img {
+                vertical-align: middle;
+            }
+        }
+
+        tbody th {
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(color(gray, light), 0.33);
+        }
+
+        th:nth-child(n+3),
+        td:nth-child(n+3) {
+            opacity: 0.5;
+        }
+
+        th:nth-child(n+4),
+        td:nth-child(n+4) {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
     .starts-with-you {
         margin-bottom: 6rem;
 
