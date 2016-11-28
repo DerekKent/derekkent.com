@@ -3,6 +3,7 @@ import {on} from '~/helpers/controller/decorators';
 import {description as template} from './home.html';
 
 const USER_NAV_KEYS = [9, 13];
+const USER_INPUT_KEYS = [13, 32];
 
 export default class Home extends Controller {
 
@@ -47,6 +48,19 @@ export default class Home extends Controller {
 
         this.model.amt = Number(input.getAttribute('value'));
         this.model.other = input.type === 'number';
+        this.update();
+    }
+
+    @on('click .toggle-citations')
+    @on('keydown .toggle-citations')
+    toggleCitations(e) {
+        if (e instanceof KeyboardEvent && !USER_INPUT_KEYS.includes(e.keyCode)) {
+            return;
+        }
+
+        e.preventDefault();
+
+        this.model.citations = !this.model.citations;
         this.update();
     }
 

@@ -125,7 +125,6 @@
     }
 
     .know-your-rep {
-        margin-bottom: 3rem;
         width: 100%;
 
         @include phone {
@@ -141,20 +140,23 @@
             margin-top: 0.4em;
         }
 
-        thead th {
-            color: color(gray, darker);
-            white-space: nowrap;
+        thead {
+            th {
+                color: color(gray, darker);
+                white-space: nowrap;
+            }
 
-            > img {
+            img {
                 max-width: 30vw;
             }
         }
 
         th,
         td {
-            text-align: center;
             margin: 0;
             padding: 0 1rem;
+            position: relative;
+            text-align: center;
 
             @include phone {
                 font-size: 0.8em;
@@ -163,6 +165,13 @@
 
             > img {
                 vertical-align: middle;
+            }
+
+            > sup {
+                position: absolute;
+                right: 0;
+                top: 0;
+                vertical-align: top;
             }
         }
 
@@ -187,8 +196,40 @@
         }
     }
 
+    .toggle-citations {
+        color: color(links);
+        cursor: pointer;
+        display: inline-block;
+        font-size: 0.9em;
+        user-select: none;
+
+        @include wcag2-aa {
+            color: color(links, dark);
+        }
+
+        @include wcag2-aaa {
+            color: color(links, dark);
+        }
+
+        &::after {
+            content: '▸';
+            margin-left: 0.5rem;
+        }
+
+        &.show {
+            &::after {
+                content: '▾';
+            }
+        }
+    }
+
+    .citations {
+        font-size: 0.9em;
+    }
+
     .starts-with-you {
         margin-bottom: 6rem;
+        margin-top: 3rem;
 
         p {
             font-size: 1.1em;
