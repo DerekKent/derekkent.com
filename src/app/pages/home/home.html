@@ -1,16 +1,9 @@
 <template args="model">
     <div class="banner curved-bottom">
         <div class="join block">
-            <if condition="!model.subscribed">
-                <form class="subscribe" key="subscribe">
-                    <fieldset>
-                        <legend>Join the Movement</legend>
-                        <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" />
-                        <input type="text" name="zip" placeholder="Zip Code" aria-label="Zip Code" />
-                        <input type="submit" value="Count Me In" class="btn btn-red" />
-                    </fieldset>
-                </form>
-            <else>
+            <if condition="model.thanks">
+                <div class="thanks">{model.thanks}</div>
+            <elseif condition="model.donate">
                 <form action="https://secure.actblue.com/contribute/page/derekkent" method="get" class="donate" key="donate">
                     <fieldset>
                         <legend>Lend Your Support</legend>
@@ -39,6 +32,16 @@
                         </div>
                         <input type="submit" value="Donate" class="btn btn-green">
                     </fieldset>
+                </form>
+            <else>
+                <form class="subscribe" key="subscribe">
+                    <fieldset>
+                        <legend>Join the Movement</legend>
+                        <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" />
+                        <input type="text" name="zip" placeholder="Zip Code" aria-label="Zip Code" />
+                        <input type="submit" value="Count Me In" class="btn btn-red{model.submitting ? ' disabled' : ''}" />
+                    </fieldset>
+                    <span if="model.error">Something went wrong.</span>
                 </form>
             </if>
         </div>

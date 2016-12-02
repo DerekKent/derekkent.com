@@ -1,5 +1,6 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators';
+import analytics from '~/handlers/analytics';
 import {description as template} from './home.html';
 
 const USER_NAV_KEYS = [9, 13];
@@ -16,7 +17,8 @@ export default class Home extends Controller {
         };
 
         this.model = {
-            subscribed: false,
+            thanks: false,
+            donate: false,
             amt: 10
         };
     }
@@ -27,13 +29,38 @@ export default class Home extends Controller {
 
         const data = new FormData(e.delegateTarget);
 
+        this.model.error = false;
+        this.model.submitting = true;
+        this.update();
+
         fetch('https://derekkent.com/api/v1/subscribe', {
             method: 'PUT',
             body: data
-        });
+        }).then(() => {
+            this.model.submitting = false;
+            this.model.thanks = 'Welcome!';
+            this.update();
 
-        this.model.subscribed = true;
-        this.update();
+            if (analytics.tracking) {
+                SystemJS.import('conversions').then(() => {
+                    window.google_trackConversion({
+                        'google_conversion_id': 880588424,
+                        'google_remarketing_only': false
+                    });
+                });
+            }
+
+            setTimeout(() => {
+                this.model.thanks = false;
+                this.model.donate = true;
+                this.update();
+            }, 2000);
+        }).catch(() => {
+            this.model.thanks = false;
+            this.model.submitting = false;
+            this.model.error = true;
+            this.update();
+        });
     }
 
     @on('click .donation-wrapper input')

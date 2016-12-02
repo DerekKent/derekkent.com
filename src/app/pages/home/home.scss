@@ -33,6 +33,7 @@
         border-bottom-right-radius: 0;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        display: flex;
         height: 45rem;
         padding: 4rem 4rem 16rem 16rem;
         position: absolute;
@@ -53,12 +54,8 @@
             background-color: color(blue, dark);
         }
 
-        .btn-serenity {
-            text-shadow: 0.1rem 0 0.1rem color(blue);
-
-            &::placeholder {
-                color: white;
-            }
+        > form {
+            width: 100%;
         }
 
         fieldset {
@@ -75,6 +72,20 @@
         input {
             border: 0;
             margin-top: 1em;
+        }
+
+        .thanks {
+            align-self: center;
+            font-size: 5rem;
+            margin: 0 auto;
+        }
+
+        .btn-serenity {
+            text-shadow: 0.1rem 0 0.1rem color(blue);
+
+            &::placeholder {
+                color: white;
+            }
         }
     }
 
