@@ -2,7 +2,7 @@ SystemJS.config({
   paths: {
     "ga": "https://www.google-analytics.com/analytics.js",
     "maps": "https://maps.googleapis.com/maps/api/js?key=AIzaSyDs-LCQYSx1USipOSIVS_8sjnfNIPdfIsA",
-    "conversions": "https://www.googleadservices.com/pagead/conversion.js"
+    "conversions": "https://www.googleadservices.com/pagead/conversion_async.js"
   },
   meta: {
     "ga": {
