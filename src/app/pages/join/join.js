@@ -1,5 +1,6 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators';
+import analytics from '~/handlers/analytics';
 import {description as template} from './join.html';
 
 export default class Join extends Controller {
@@ -54,6 +55,16 @@ export default class Join extends Controller {
                 this.model.joined = true;
                 this.update();
                 window.scrollTo(0, 0);
+
+                if (analytics.tracking) {
+                    SystemJS.import('conversions').then(() => {
+                        window.google_trackConversion({
+                            'google_conversion_id': 880588424,
+                            'google_conversion_label': 'QCOtCMT0vGwQiO3yowM',
+                            'google_remarketing_only': false
+                        });
+                    });
+                }
             }).catch(() => {
                 this.model.submitting = false;
                 this.model.error = 'Oops, something went wrong.';
