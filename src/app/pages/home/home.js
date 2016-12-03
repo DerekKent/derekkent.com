@@ -45,6 +45,7 @@ export default class Home extends Controller {
                 SystemJS.import('conversions').then(() => {
                     window.google_trackConversion({
                         'google_conversion_id': 880588424,
+                        'google_conversion_label': 'rE4FCMLavGwQiO3yowM',
                         'google_remarketing_only': false
                     });
                 });
