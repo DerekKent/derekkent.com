@@ -12,5 +12,9 @@
 
     > .banner {
         background-image: url('/images/banners/education.jpg');
+
+        @media (min-width: 1200px) {
+            background-position: center 25%;
+        }
     }
 }
