@@ -89,6 +89,13 @@ input {
     }
 }
 
+[type="checkbox"],
+[type="radio"] {
+    @at-root .btn > & {
+        display: none;
+    }
+}
+
 [type="submit"] {
     margin-top: 3rem;
 }
