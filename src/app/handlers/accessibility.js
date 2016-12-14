@@ -26,8 +26,17 @@ class Accessibility {
     }
 
     update() {
-        document.body.classList.toggle('wcag2-aa', this.level === 'aa');
-        document.body.classList.toggle('wcag2-aaa', this.level === 'aaa');
+        if (this.level === 'aa') {
+            document.body.classList.add('wcag2-aa');
+        } else {
+            document.body.classList.remove('wcag2-aa');
+        }
+
+        if (this.level === 'aaa') {
+            document.body.classList.add('wcag2-aaa');
+        } else {
+            document.body.classList.remove('wcag2-aaa');
+        }
     }
 
 }
