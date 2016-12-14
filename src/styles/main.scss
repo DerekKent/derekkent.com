@@ -123,6 +123,10 @@ p {
     font-weight: 400;
 }
 
+img {
+    border: 0; // Hide borders in IE10
+}
+
 @import 'components/blockquotes';
 @import 'components/blocks';
 @import 'components/buttons';
