@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import 'fetch';
 import router from '~/router';
+import accessibility from '~/handlers/accessibility';
 import shell from '~/components/shell/shell';
 
 if ('@ENV@' === 'production' && 'serviceWorker' in navigator) {
@@ -40,6 +41,7 @@ class App {
     constructor() {
         this.shell = shell;
         router.start();
+        accessibility.update();
     }
 
 }
