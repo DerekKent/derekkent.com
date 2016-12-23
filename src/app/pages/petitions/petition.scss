@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'mixins';
+
+.petition {
+    border-top: 0.1rem solid color(gray, lighter);
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        line-height: 1;
+    }
+
+    .petition-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include desktop {
+            flex-wrap: nowrap;
+        }
+
+        > .petition-text,
+        > form {
+            flex: 1 0 100%;
+        }
+
+        > .petition-text {
+            @include desktop {
+                flex: 1 1 55%;
+            }
+        }
+
+        > form {
+            align-self: flex-start;
+            background-color: color(blue);
+            padding: 2rem;
+
+            @include desktop {
+                flex: 1 1 45%;
+                margin-left: 4rem;
+            }
+
+            label {
+                color: color(serenity, light);
+                display: block;
+                margin-top: 1rem;
+            }
+
+            legend {
+                color: color(white);
+                font-size: 3rem;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .error {
+        color: color(white);
+        display: block;
+        font-size: 1.2em;
+        font-style: italic;
+        margin-top: 1em;
+    }
+}

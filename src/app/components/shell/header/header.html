@@ -9,21 +9,23 @@
             <li class="expand-nav">
                 <button>☰</button>
             </li>
-            <li class="nav-item">
-                <a href="/about" class="menu-link{page === 'about' ? ' active' : ''}">Meet Derek</a>
-            </li>
-            <li class="nav-item">
-                <a href="/issues" class="menu-link{page === 'issues' ? ' active' : ''}">Vision</a>
-            </li>
-            <li class="nav-item">
-                <a href="/news" class="menu-link{page === 'news' ? ' active' : ''}">News</a>
-            </li>
-            <li class="nav-item">
-                <a href="/map" class="menu-link{page === 'map' ? ' active' : ''}">Map</a>
-            </li>
-            <li class="nav-item">
-                <a href="/join" class="menu-link{page === 'join' ? ' active' : ''}">Join</a>
-            </li>
+            <if condition="page !== 'petitions'">
+                <li class="nav-item">
+                    <a href="/about" class="menu-link{page === 'about' ? ' active' : ''}">Meet Derek</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/issues" class="menu-link{page === 'issues' ? ' active' : ''}">Vision</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/news" class="menu-link{page === 'news' ? ' active' : ''}">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/map" class="menu-link{page === 'map' ? ' active' : ''}">Map</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/join" class="menu-link{page === 'join' ? ' active' : ''}">Join</a>
+                </li>
+            </if>
             <li class="nav-item">
                 <a href="https://secure.actblue.com/contribute/page/derekkent?refcode=homepage&amount=27" class="btn btn-red" data-local="true">Contribute</a>
             </li>

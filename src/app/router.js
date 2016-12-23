@@ -23,6 +23,7 @@ class AppRouter extends Router {
         this.default('404');
         this.root('home');
         this.route('issues/:issue', {view: 'issues'});
+        this.route('petitions/:issue', {view: 'petitions'});
 
         for (const page of pages) {
             this.route(page);
