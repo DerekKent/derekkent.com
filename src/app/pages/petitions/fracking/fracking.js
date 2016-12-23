@@ -4,6 +4,7 @@ export default class FrackingPetition extends Petition {
 
     setup() {
         this.petition = {
+            redirect: 'ban-fracking?amount=50.00&recurring=1',
             conversionLabel: 'Gd7ACJr6z2wQiO3yowM',
             title: 'Ban Fracking in Maryland',
             lead: 'Help protect our health, climate and natural resources',

@@ -1,61 +1,47 @@
 <template args="model">
     <article>
-        <if condition="!model.signed">
-            <h1>{model.petition.title}</h1>
+        <h1>{model.petition.title}</h1>
 
-            <div class="petition-wrapper">
-                <div class="petition-text">
-                    <h2>{model.petition.lead}</h2>
+        <div class="petition-wrapper">
+            <div class="petition-text">
+                <h2>{model.petition.lead}</h2>
 
-                    <p>
-                        {model.petition.blurb}
-                    </p>
+                <p>
+                    {model.petition.blurb}
+                </p>
 
-                    <p if="model.petition.blurb2">
-                        {model.petition.blurb2}
-                    </p>
+                <p if="model.petition.blurb2">
+                    {model.petition.blurb2}
+                </p>
 
-                    <p if="model.petition.blurb3">
-                        {model.petition.blurb3}
-                    </p>
+                <p if="model.petition.blurb3">
+                    {model.petition.blurb3}
+                </p>
 
-                    <p>
-                        We'll deliver your signature to members of the Maryland
-                        General Assembly.
-                    </p>
-                </div>
-
-                <form>
-                    <legend>
-                        Sign the Petition
-                    </legend>
-                    <label><span class="label">E-mail:</span>
-                        <input type="email" name="email" required>
-                    </label>
-                    <label><span class="label">First Name:</span>
-                        <input type="text" name="fname">
-                    </label>
-                    <label><span class="label">Zip Code:</span>
-                        <input type="text" name="zip" pattern="{model.zipcode}" required>
-                    </label>
-                    <if condition="model.error">
-                        <span class="error">{model.error}</span>
-                    </if>
-                    <input type="submit" class="btn btn-red{model.submitting ? ' disabled' : ''}" value="Add Your Name">
-                </form>
+                <p>
+                    We'll deliver your signature to members of the Maryland
+                    General Assembly.
+                </p>
             </div>
-        <else>
-            <h1>Welcome to the Team!</h1>
 
-            <p>
-                Thanks for expressing interest in supporting a real progressive candidate
-                for District 32 — this campaign depends on people like you.
-            </p>
-
-            <p>
-                We'll be in touch shortly, but you don't have to wait for us! Spread
-                the word to friends and family and help us grow a real grassroots effort.
-            </p>
-        </if>
+            <form>
+                <legend>
+                    Sign the Petition
+                </legend>
+                <label><span class="label">E-mail:</span>
+                    <input type="email" name="email" required>
+                </label>
+                <label><span class="label">First Name:</span>
+                    <input type="text" name="fname">
+                </label>
+                <label><span class="label">Zip Code:</span>
+                    <input type="text" name="zip" pattern="{model.zipcode}" required>
+                </label>
+                <if condition="model.error">
+                    <span class="error">{model.error}</span>
+                </if>
+                <input type="submit" class="btn btn-red{model.submitting ? ' disabled' : ''}" value="Add Your Name">
+            </form>
+        </div>
     </article>
 </template>
