@@ -7,6 +7,7 @@ export default class FrackingPetition extends Petition {
             redirect: 'ban-fracking?amount=50.00&recurring=1',
             conversionLabel: 'Gd7ACJr6z2wQiO3yowM',
             title: 'Ban Fracking in Maryland',
+            slug: 'ban-fracking',
             lead: 'Help protect our health, climate and natural resources',
             blurb: 'Fracking has been connected with cardiac and neurological ' +
                 'illnesses and premature births, pollutes drinking water, ' +

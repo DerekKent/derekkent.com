@@ -7,6 +7,7 @@ export default class GerrymanderingPetition extends Petition {
             redirect: 'end_gerrymandering?amount=50.00&recurring=1',
             conversionLabel: '_-uXCMW_52wQiO3yowM',
             title: 'End Gerrymandering in Maryland',
+            slug: 'end-gerrymandering',
             lead: 'Help keep communities together',
             blurb: 'Maryland has the most egregious gerrymandering in the ' +
                 'nation. It\'s time to end the embarrassment by taking redistricting ' +
