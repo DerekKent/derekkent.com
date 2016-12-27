@@ -16,11 +16,11 @@ This site is targeted at developers who would like to contribute to the campaign
 
 ## Requirements
 
-* Node.js v6.2
+* Node.js v6.9.2+
 * Ruby v2.2.3 (for testing)
 * Gulp v4.0.0-alpha.2
-* JSPM v0.17.0-beta.28
-* SCSS-Lint v0.50.2 (for testing)
+* JSPM v0.17.0-beta.32
+* SCSS-Lint v0.51 (for testing)
 
 ## Installation
 
