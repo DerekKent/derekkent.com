@@ -12,4 +12,8 @@ export default class MinimumWage extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Minimum Wage — Derek Kent';
+    }
+
 }

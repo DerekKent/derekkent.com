@@ -12,4 +12,8 @@ export default class About extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'About — Derek Kent';
+    }
+
 }

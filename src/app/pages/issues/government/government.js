@@ -12,4 +12,8 @@ export default class Government extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Government For The People — Derek Kent';
+    }
+
 }

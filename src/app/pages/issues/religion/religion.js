@@ -12,4 +12,8 @@ export default class Religion extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Religious Freedom — Derek Kent';
+    }
+
 }

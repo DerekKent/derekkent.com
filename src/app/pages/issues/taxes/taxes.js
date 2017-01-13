@@ -12,4 +12,8 @@ export default class Taxes extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Taxes — Derek Kent';
+    }
+
 }

@@ -12,4 +12,8 @@ export default class Women extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Women\'s Rights — Derek Kent';
+    }
+
 }

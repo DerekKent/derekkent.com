@@ -12,4 +12,8 @@ export default class LGBT extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'LGBTQ Rights — Derek Kent';
+    }
+
 }

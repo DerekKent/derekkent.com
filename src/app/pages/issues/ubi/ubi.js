@@ -12,4 +12,8 @@ export default class BasicIncome extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Universal Basic Income — Derek Kent';
+    }
+
 }

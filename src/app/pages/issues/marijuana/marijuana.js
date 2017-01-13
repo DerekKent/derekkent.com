@@ -12,4 +12,8 @@ export default class Marijuana extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Marijuana — Derek Kent';
+    }
+
 }

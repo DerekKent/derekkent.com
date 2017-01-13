@@ -12,4 +12,8 @@ export default class Gerrymandering extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'End Gerrymandering — Derek Kent';
+    }
+
 }

@@ -12,4 +12,8 @@ export default class Guns extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Responsible Gun Rights — Derek Kent';
+    }
+
 }

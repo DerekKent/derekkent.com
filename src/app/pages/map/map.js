@@ -16,6 +16,8 @@ export default class Map extends Controller {
     }
 
     onLoaded() {
+        document.title = 'District 32 Locator — Derek Kent';
+
         const controller = this;
 
         function handler(e) {

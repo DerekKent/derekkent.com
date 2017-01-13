@@ -12,4 +12,8 @@ export default class Education extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Education — Derek Kent';
+    }
+
 }

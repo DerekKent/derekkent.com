@@ -12,4 +12,8 @@ export default class OpenGov extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Open Government — Derek Kent';
+    }
+
 }

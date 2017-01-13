@@ -12,4 +12,8 @@ export default class Corruption extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Money in Politics — Derek Kent';
+    }
+
 }

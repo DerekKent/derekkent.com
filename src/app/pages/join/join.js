@@ -18,6 +18,10 @@ export default class Join extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Get Involved — Derek Kent';
+    }
+
     @on('change form')
     checkFormValidity(e) {
         const form = e.delegateTarget;

@@ -12,4 +12,8 @@ export default class Infrastructure extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Infrastructure — Derek Kent';
+    }
+
 }

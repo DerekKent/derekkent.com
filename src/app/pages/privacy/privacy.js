@@ -21,6 +21,10 @@ export default class Privacy extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Privacy Policy — Derek Kent';
+    }
+
     @on('click .opt-in')
     onOptIn() {
         analytics.optIn();

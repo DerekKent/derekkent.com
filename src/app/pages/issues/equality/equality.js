@@ -12,4 +12,8 @@ export default class Equality extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Equality — Derek Kent';
+    }
+
 }

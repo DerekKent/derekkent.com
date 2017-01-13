@@ -12,4 +12,8 @@ export default class Children extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Our Children\'s Future — Derek Kent';
+    }
+
 }

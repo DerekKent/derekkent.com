@@ -12,4 +12,8 @@ export default class Issues extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Issues — Derek Kent';
+    }
+
 }

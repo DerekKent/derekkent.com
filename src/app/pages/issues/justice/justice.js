@@ -12,4 +12,8 @@ export default class Justice extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Criminal Justice Reform — Derek Kent';
+    }
+
 }

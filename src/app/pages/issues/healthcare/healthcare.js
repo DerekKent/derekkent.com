@@ -12,4 +12,8 @@ export default class Healthcare extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Universal Healthcare — Derek Kent';
+    }
+
 }

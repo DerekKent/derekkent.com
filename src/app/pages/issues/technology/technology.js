@@ -12,4 +12,8 @@ export default class Technology extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Technology — Derek Kent';
+    }
+
 }

@@ -12,4 +12,8 @@ export default class Environment extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Protecting Our Environment — Derek Kent';
+    }
+
 }

@@ -12,4 +12,8 @@ export default class Fracking extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Ban Fracking — Derek Kent';
+    }
+
 }

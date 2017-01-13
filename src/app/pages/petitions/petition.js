@@ -31,6 +31,10 @@ export default class Petition extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = `${this.petition.title} — Derek Kent`;
+    }
+
     update() {
         this.model.petition = this.petition || this.model.petition;
         super.update();

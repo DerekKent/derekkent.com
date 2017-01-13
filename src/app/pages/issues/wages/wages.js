@@ -12,4 +12,8 @@ export default class Wages extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Living Wages — Derek Kent';
+    }
+
 }

@@ -12,4 +12,8 @@ export default class Family extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Supporting Families — Derek Kent';
+    }
+
 }

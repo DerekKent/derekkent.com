@@ -12,4 +12,8 @@ export default class Elections extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Modern Elections — Derek Kent';
+    }
+
 }

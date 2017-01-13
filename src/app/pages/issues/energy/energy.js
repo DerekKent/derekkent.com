@@ -12,4 +12,8 @@ export default class Energy extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Clean Energy — Derek Kent';
+    }
+
 }

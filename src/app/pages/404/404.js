@@ -10,4 +10,8 @@ export default class FourOhFour extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Page Not Found — Derek Kent';
+    }
+
 }

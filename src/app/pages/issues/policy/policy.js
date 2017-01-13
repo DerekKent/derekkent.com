@@ -12,4 +12,8 @@ export default class Policy extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Evidence-based Policies — Derek Kent';
+    }
+
 }

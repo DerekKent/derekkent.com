@@ -12,4 +12,8 @@ export default class Privacy extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Privacy — Derek Kent';
+    }
+
 }

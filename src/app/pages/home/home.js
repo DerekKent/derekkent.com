@@ -23,6 +23,10 @@ export default class Home extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'Derek Kent for Maryland District 32 Delegate';
+    }
+
     @on('submit .subscribe')
     onSubscribeSubmit(e) {
         e.preventDefault();

@@ -12,4 +12,8 @@ export default class News extends Controller {
         };
     }
 
+    onLoaded() {
+        document.title = 'News — Derek Kent';
+    }
+
 }

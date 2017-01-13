@@ -17,6 +17,10 @@ export default class Accessibility extends Controller {
         this.model = accessibility.level;
     }
 
+    onLoaded() {
+        document.title = 'Accessibility — Derek Kent';
+    }
+
     @on('keydown .accessibility-level > li')
     @on('click .accessibility-level > li')
     setAccessibilityLevel(e) {
