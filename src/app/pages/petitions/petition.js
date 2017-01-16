@@ -10,6 +10,7 @@ export default class Petition extends Controller {
     constructor() {
         super();
         this.setup();
+        this.setTitle();
         this.update();
     }
 
@@ -31,16 +32,16 @@ export default class Petition extends Controller {
         };
     }
 
-    onLoaded() {
-        document.title = `${this.petition.title} — Derek Kent`;
-    }
-
     update() {
         this.model.petition = this.petition || this.model.petition;
         super.update();
     }
 
     setup() {}
+
+    setTitle() {
+        document.title = `${this.petition.title} — Derek Kent`;
+    }
 
     @on('submit form')
     onPetitionSubmit(e) {
