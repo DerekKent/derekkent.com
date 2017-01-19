@@ -10,13 +10,18 @@
         }
     }
 
-    .press-release {
+    .press-release,
+    .newsletter {
         color: color(gray, darker);
         margin-top: 0.5rem;
+        margin-bottom: 9rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         &::before {
             color: color(red);
-            content: 'Press Release';
             font-family: $sans-serif;
             letter-spacing: 0.3rem;
             text-transform: uppercase;
@@ -37,5 +42,21 @@
             letter-spacing: 0.2rem;
             text-transform: uppercase;
         }
+    }
+
+    .press-release::before {
+        content: 'Press Release';
+    }
+
+    .newsletter::before {
+        content: 'Newsletter';
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .btn {
+        margin: 1.5rem;
     }
 }
