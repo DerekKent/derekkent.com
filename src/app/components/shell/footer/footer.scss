@@ -67,6 +67,25 @@
         text-transform: uppercase;
     }
 
+    .social {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+
+        img {
+            width: 3rem;
+        }
+
+        > a {
+            margin-right: 3rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
     .paid {
         margin: 5rem 0;
 
