@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './elections.html';
+import {description as template} from './elections.html.js';
 
 export default class Elections extends Controller {
 

@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './education.html';
+import {description as template} from './education.html.js';
 
 export default class Education extends Controller {
 

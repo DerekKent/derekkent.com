@@ -1,4 +1,4 @@
-import linkHelper from '~/helpers/link';
+import linkHelper from '~/helpers/link.js';
 
 export const analyticsID = 'UA-77275133-1';
 const RELATIVE_TO_ROOT = /^\//;

@@ -1,4 +1,4 @@
-import Petition from '../petition';
+import Petition from '../petition.js';
 
 export default class CorruptionPetition extends Petition {
 

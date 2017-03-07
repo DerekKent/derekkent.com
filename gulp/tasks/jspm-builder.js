@@ -6,8 +6,7 @@ const config = require('../config');
 const glob = [
     'jspm_packages/system.js',
     'jspm_packages/system.js.map',
-    'jspm_packages/system-polyfills.js',
-    'jspm_packages/system-polyfills.js.map',
+    'jspm_packages/npm/systemjs-*/**/*',
     'jspm_packages/**/*.json'
 ];
 
@@ -26,7 +25,6 @@ function jspmBuilder() {
     const builder = new jspm.Builder();
 
     builder.config({
-        defaultJSExtensions: true,
         paths: {
             '~/': `${config.dest}/app/`
         }

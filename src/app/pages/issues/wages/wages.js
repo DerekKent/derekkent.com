@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './wages.html';
+import {description as template} from './wages.html.js';
 
 export default class Wages extends Controller {
 

@@ -1,7 +1,7 @@
 import {Controller} from 'superb';
-import {on} from '~/helpers/controller/decorators';
-import {default as analytics, optedOut, optedIn} from '~/handlers/analytics';
-import {description as template} from './privacy.html';
+import {on} from '~/helpers/controller/decorators.js';
+import {default as analytics, optedOut, optedIn} from '~/handlers/analytics.js';
+import {description as template} from './privacy.html.js';
 
 export default class Privacy extends Controller {
 

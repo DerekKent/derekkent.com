@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './religion.html';
+import {description as template} from './religion.html.js';
 
 export default class Religion extends Controller {
 

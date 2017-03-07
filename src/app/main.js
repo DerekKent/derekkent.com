@@ -1,8 +1,8 @@
 import 'babel-polyfill';
 import 'fetch';
-import router from '~/router';
-import accessibility from '~/handlers/accessibility';
-import shell from '~/components/shell/shell';
+import router from '~/router.js';
+import accessibility from '~/handlers/accessibility.js';
+import shell from '~/components/shell/shell.js';
 
 if ('@ENV@' === 'production' && 'serviceWorker' in navigator) {
     /* eslint no-console: 0 */

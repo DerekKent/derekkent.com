@@ -1,7 +1,7 @@
 import {Controller} from 'superb';
-import header from './header/header';
-import footer from './footer/footer';
-import {description as template} from './shell.html';
+import header from './header/header.js';
+import footer from './footer/footer.js';
+import {description as template} from './shell.html.js';
 
 class Shell extends Controller {
 

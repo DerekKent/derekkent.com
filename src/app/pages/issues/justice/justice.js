@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './justice.html';
+import {description as template} from './justice.html.js';
 
 export default class Justice extends Controller {
 

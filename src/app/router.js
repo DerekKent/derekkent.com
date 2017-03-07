@@ -1,7 +1,7 @@
 import {Router} from 'superb';
-import analytics from '~/handlers/analytics';
-import linkHelper from '~/helpers/link';
-import shell from '~/components/shell/shell';
+import analytics from '~/handlers/analytics.js';
+import linkHelper from '~/helpers/link.js';
+import shell from '~/components/shell/shell.js';
 
 const pages = [
     'about',

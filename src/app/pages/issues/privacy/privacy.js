@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './privacy.html';
+import {description as template} from './privacy.html.js';
 
 export default class Privacy extends Controller {
 

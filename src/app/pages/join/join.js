@@ -1,7 +1,7 @@
 import {Controller} from 'superb';
-import {on} from '~/helpers/controller/decorators';
-import analytics from '~/handlers/analytics';
-import {description as template} from './join.html';
+import {on} from '~/helpers/controller/decorators.js';
+import analytics from '~/handlers/analytics.js';
+import {description as template} from './join.html.js';
 
 export default class Join extends Controller {
 

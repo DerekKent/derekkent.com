@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './consumers.html';
+import {description as template} from './consumers.html.js';
 
 export default class Consumers extends Controller {
 

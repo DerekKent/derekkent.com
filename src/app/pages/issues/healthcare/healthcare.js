@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './healthcare.html';
+import {description as template} from './healthcare.html.js';
 
 export default class Healthcare extends Controller {
 

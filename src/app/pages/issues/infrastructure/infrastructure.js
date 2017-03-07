@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './infrastructure.html';
+import {description as template} from './infrastructure.html.js';
 
 export default class Infrastructure extends Controller {
 

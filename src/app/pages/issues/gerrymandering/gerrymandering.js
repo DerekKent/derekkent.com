@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './gerrymandering.html';
+import {description as template} from './gerrymandering.html.js';
 
 export default class Gerrymandering extends Controller {
 

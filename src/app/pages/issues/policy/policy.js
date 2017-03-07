@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './policy.html';
+import {description as template} from './policy.html.js';
 
 export default class Policy extends Controller {
 

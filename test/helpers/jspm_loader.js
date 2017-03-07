@@ -4,66 +4,51 @@ const path = require('path');
 const url = require('url');
 const load = Module._load;
 
-function debug() {
+function debug(...args) {
     if (process.env.AVA_JSPM_LOADER_DEBUG) {
-        console.log.apply(console, arguments);
+        Reflect.apply(console.log, console, args); // eslint-disable-line
     }
 }
 
 const pjsonLoc = require('find-pkg').sync(process.cwd());
 const pjsonDir = path.parse(pjsonLoc).dir;
-const pjson = require(pjsonLoc);
 
-debug(`[loader:internal] package.json location: ${pjsonLoc}`)
+debug(`[loader:internal] package.json location: ${pjsonLoc}`);
 
-jspm.setPackagePath(pjsonDir)
+jspm.setPackagePath(pjsonDir);
 
-const System = jspm.Loader();
-
-System.config({
-    packages: {
-        [pjson.jspm.name]: {
-            defaultExtension: "js"
-        }
-    }
-});
+const SystemJS = jspm.Loader(); // eslint-disable-line
 
 function jspmHasModule(name) {
     if (/^(\.\/|\.\.\/|\/)/.test(name)) {
         return false;
     }
 
-    const possiblePaths = [name + '/'];
+    const possiblePaths = [`${name}/`];
     let i = -1;
 
     while (~(i = name.lastIndexOf('/'))) {
         name = name.substr(0, i);
-        possiblePaths.push(name + '/');
+        possiblePaths.push(`${name}/`);
     }
 
     debug(`[loader:internal] possible paths: ${possiblePaths}`);
 
     return possiblePaths.some((p) => {
-        return p in System.paths || p.slice(0, -1) in System.map;
+        return p in SystemJS.paths || p.slice(0, -1) in SystemJS.map;
     });
 }
 
 Module._load = (name, m) => {
-    debug(`[loader:internal] ${name} in System._loader.modules: ${name in System._loader.modules}`);
-
-    if (name in System._loader.modules) {
-        return System._loader.modules[name].module;
-    }
-
     debug(`[loader:internal] jspmHasModule(${name}): ${jspmHasModule(name)}`);
 
     if (jspmHasModule(name)) {
-        let jspmUri = System.normalizeSync(name);
+        const jspmUri = SystemJS.normalizeSync(name);
 
         debug(`[loader:internal] successfully normalized: ${jspmUri}`);
 
         if (~jspmUri.indexOf('nodelibs-')) {
-            debug(`[loader:internal] Detected a "nodelibs" shim. Deferring to node.`);
+            debug('[loader:internal] Detected a "nodelibs" shim. Deferring to node.');
         } else {
             name = url.parse(jspmUri).path;
             debug(`[loader:internal] parsed module path: ${name}`);
@@ -71,4 +56,4 @@ Module._load = (name, m) => {
     }
 
     return load(name, m);
-}
+};

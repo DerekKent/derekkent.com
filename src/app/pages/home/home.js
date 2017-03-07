@@ -1,7 +1,7 @@
 import {Controller} from 'superb';
-import {on} from '~/helpers/controller/decorators';
-import analytics from '~/handlers/analytics';
-import {description as template} from './home.html';
+import {on} from '~/helpers/controller/decorators.js';
+import analytics from '~/handlers/analytics.js';
+import {description as template} from './home.html.js';
 
 const USER_NAV_KEYS = [9, 13];
 const USER_INPUT_KEYS = [13, 32];
