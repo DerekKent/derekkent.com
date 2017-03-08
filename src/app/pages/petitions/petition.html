@@ -40,7 +40,7 @@
                 <if condition="model.error">
                     <span class="error">{model.error}</span>
                 </if>
-                <input type="hidden" value="{model.petition.slug}">
+                <input type="hidden" name="petition" value="{model.petition.slug}">
                 <input type="submit" class="btn btn-red{model.submitting ? ' disabled' : ''}" value="Add Your Name">
             </form>
         </div>
