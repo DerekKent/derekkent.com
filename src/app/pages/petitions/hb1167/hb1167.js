@@ -4,7 +4,7 @@ export default class HB1167Petition extends Petition {
 
     setup() {
         this.petition = {
-            redirect: 'maryland-money?amount=50.00&recurring=1',
+            redirect: 'derekkent?refcode=hb1167&amount=50.00&recurring=1',
             conversionLabel: '7zF1CK3rjm8QiO3yowM',
             title: 'Protect the Right to Choose',
             slug: 'hb1167',
