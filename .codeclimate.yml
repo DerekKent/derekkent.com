@@ -35,4 +35,5 @@ ratings:
   paths:
   - '**.js'
   - '**.scss'
-exclude_paths: []
+exclude_paths:
+  - 'src/jspm.*.js'
