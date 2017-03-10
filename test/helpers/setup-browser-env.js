@@ -1,70 +1,72 @@
-require('jsdom-global')()
+require('jsdom-global')();
 
-var RESERVED_KEYS = {
+const RESERVED_KEYS = {
     length: true,
     key: true,
     setItem: true,
     getItem: true,
     removeItem: true,
     clear: true
-}
+};
 
-var StorageShim = function () {
-    Object.defineProperty(this, 'length', {
+const StorageShim = function () {
+    Reflect.defineProperty(this, 'length', {
         enumerable: false,
-        get: function () {
-            return Object.keys(this).length
+        get() {
+            return Object.keys(this).length;
         }
-    })
+    });
 
-    Object.defineProperty(this, 'key', {
+    Reflect.defineProperty(this, 'key', {
         enumerable: false,
-        value: function (n) {
-            var key = Object.keys(this)[n]
-            return key || (key === '' ? key : null)
+        value(n) {
+            const key = Object.keys(this)[n];
+
+            return key || (key === '' ? key : null);
         }
-    })
+    });
 
-    Object.defineProperty(this, 'setItem', {
+    Reflect.defineProperty(this, 'setItem', {
         enumerable: false,
-        value: function (key, value) {
+        value(key, value) {
             if (key in RESERVED_KEYS) {
-                throw new Error('Cannot assign to reserved key "' + key + '"')
+                throw new Error(`Cannot assign to reserved key "${key}"`);
             }
 
-            this[key] = '' + value
+            this[key] = `${value}`;
         }
-    })
+    });
 
-    Object.defineProperty(this, 'getItem', {
+    Reflect.defineProperty(this, 'getItem', {
         enumerable: false,
-        value: function (key) {
+        value(key) {
             if (key in RESERVED_KEYS) {
-                throw new Error('Cannot get reserved key "' + key + '"')
+                throw new Error(`Cannot get reserved key "${key}"`);
             }
 
-            var item = this[key]
-            return item || (item === '' ? item : null)
-        }
-    })
+            const item = this[key];
 
-    Object.defineProperty(this, 'removeItem', {
-        enumerable: false,
-        value: function (key) {
-            delete this[key]
+            return item || (item === '' ? item : null);
         }
-    })
+    });
 
-    Object.defineProperty(this, 'clear', {
+    Reflect.defineProperty(this, 'removeItem', {
         enumerable: false,
-        value: function () {
-            for (var key in this) {
+        value(key) {
+            delete this[key];
+        }
+    });
+
+    Reflect.defineProperty(this, 'clear', {
+        enumerable: false,
+        value() {
+            for (const key in this) {
                 if (this.hasOwnProperty(key)) {
-                    delete this[key]
+                    delete this[key];
                 }
             }
         }
-    })
-}
+    });
+};
 
 global.window.localStorage = new StorageShim();
