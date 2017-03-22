@@ -13,7 +13,7 @@ variables:
 install dependencies:
   stage: install
   cache:
-    key: $CI_BUILD_REF_NAME
+    key: $CI_COMMIT_REF_NAME
     paths:
       - node_modules/
       - jspm_packages/
@@ -72,6 +72,6 @@ release:
   dependencies:
     - build
   script:
-    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
     - docker build --pull -t $CONTAINER_RELEASE_IMAGE .
     - docker push $CONTAINER_RELEASE_IMAGE
