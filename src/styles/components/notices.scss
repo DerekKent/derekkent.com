@@ -23,5 +23,15 @@ $notice-colors: (
         background-color: color($color, light);
         border-color: color($color, lighter);
         color: color($color, dark);
+
+        @include wcag2-aa {
+            background-color: lighten(color($color, light), 3%);
+            color: darken(color($color, dark), 3%);
+        }
+
+        @include wcag2-aaa {
+            background-color: lighten(color($color, light), 5%);
+            color: darken(color($color, dark), 5%);
+        }
     }
 }
