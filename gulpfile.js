@@ -29,8 +29,8 @@ gulp.task('dev', gulp.series(
 gulp.task('dist', gulp.series(
     'production',
     'build',
-    'precache',
     'minify-scripts',
+    'precache',
     'humans'
 ));
 

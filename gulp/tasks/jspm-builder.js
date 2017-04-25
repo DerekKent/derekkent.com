@@ -2,26 +2,36 @@ const path = require('path');
 const gulp = require('gulp');
 const jspm = require('jspm');
 const config = require('../config');
+const pi = require('gulp-load-plugins')({
+    pattern: ['gulp-*', 'gulp.*', 'del']
+});
 
-const glob = [
-    'jspm_packages/system.js',
-    'jspm_packages/system.js.map',
-    'jspm_packages/npm/systemjs-*/**/*',
-    'jspm_packages/**/*.json'
-];
+function concatDependencies() {
+    const loader = path.join(config.dest, '/loader.js');
 
-function copyDependencies() {
-    return gulp.src(glob, {
-        base: './',
-        since: gulp.lastRun(copyDependencies)
-    })
+    return gulp.src([
+        'jspm_packages/npm/es6-promise*/dist/es6-promise.auto.js', // IE11 support
+        'jspm_packages/system.src.js',
+        `${config.src}/jspm.browser.js`,
+        `${config.src}/jspm.config.js`,
+        loader
+    ])
+    .pipe(pi.if(config.env !== 'production', pi.sourcemaps.init()))
+    .pipe(pi.concat('loader.js'), {newLine: ';'})
+    .pipe(pi.uglify({
+        compress: false,
+        mangle: false,
+        preserveComments: false
+    }))
+    .pipe(pi.insert.append('SystemJS.import(\'app/main\');'))
+    .pipe(pi.if(config.env !== 'production', pi.sourcemaps.write('.')))
     .pipe(gulp.dest(config.dest));
 }
 
-function jspmBuilder() {
+function dependencyBuilder() {
     const appPath = path.join(config.dest, '/app/**/*');
     const dependencies = `${appPath}.js - [${appPath}]`;
-    const output = path.join(config.dest, '/libs/dependencies.js');
+    const output = path.join(config.dest, '/loader.js');
     const builder = new jspm.Builder();
 
     builder.config({
@@ -31,8 +41,8 @@ function jspmBuilder() {
     });
 
     return builder.bundle(dependencies, output, {
-        minify: (config.env === 'production'),
-        sourceMaps: (config.env !== 'production')
+        minify: false,
+        sourceMaps: false
     })
     .catch((err) => {
         /* eslint no-console: 0 */
@@ -41,10 +51,9 @@ function jspmBuilder() {
     });
 }
 
-gulp.task(copyDependencies);
-gulp.task('jspm-builder', gulp.parallel(
-    copyDependencies,
-    jspmBuilder
+gulp.task('jspm-builder', gulp.series(
+    dependencyBuilder,
+    concatDependencies
 ));
 
 gulp.task('jspm:watch', () => {

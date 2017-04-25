@@ -14,11 +14,9 @@ const shellFiles = [
 
     // Bundles Dependencies
     // '/dependencies.js',
-    '/jspm_packages/system.js',
+    '/loader.js',
 
     // Application Shell
-    '/jspm.browser.js',
-    '/jspm.config.js',
     '/app/main.js',
     '/app/router.js',
     '/app/components/shell/**/*.{js,css}',

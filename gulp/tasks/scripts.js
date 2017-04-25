@@ -30,7 +30,12 @@ function eslint() {
 }
 
 function compileScripts() {
-    return gulp.src(`${config.src}/**/*.js`, {
+    return gulp.src([
+        `${config.src}/**/*.js`,
+        `!${config.src}/jspm.browser.js`,
+        `!${config.src}/jspm.config.js`,
+        `!${config.src}/jspm.dev.js`
+    ], {
         since: gulp.lastRun('compileScripts')
     })
     .pipe(pi.if(config.env !== 'production', pi.sourcemaps.init()))
@@ -53,8 +58,7 @@ function minifyScripts() {
         `${config.dest}/**/*.js`
     ])
     .pipe(pi.uglify({
-        preserveComments: false,
-        screwIE8: true
+        preserveComments: false
     }))
     .pipe(gulp.dest(config.dest));
 }

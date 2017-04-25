@@ -1,5 +1,4 @@
 SystemJS.config({
-  warnings: true,
   paths: {
     "ga": "https://www.google-analytics.com/analytics.js",
     "maps": "https://maps.googleapis.com/maps/api/js?key=AIzaSyDs-LCQYSx1USipOSIVS_8sjnfNIPdfIsA",
@@ -45,6 +44,7 @@ SystemJS.config({
   ],
   map: {
     "babel-polyfill": "npm:babel-polyfill@6.23.0",
+    "es6-promise": "npm:es6-promise@4.1.0",
     "fetch": "npm:whatwg-fetch@1.1.1",
     "fs": "npm:jspm-nodelibs-fs@0.2.0",
     "incremental-dom": "npm:incremental-dom@0.5.1",
