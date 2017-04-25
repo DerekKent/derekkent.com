@@ -19,7 +19,7 @@ This site is targeted at developers who would like to contribute to the campaign
 * Node.js v6.9.2+
 * Ruby v2.2.3 (for testing)
 * Gulp v4.0.0-alpha.2
-* JSPM v0.17.0-beta.32
+* JSPM v0.17.0-beta.41
 * SCSS-Lint v0.51 (for testing)
 
 ## Installation
@@ -101,7 +101,7 @@ gem install scss_lint
 npm install -g gulp-cli
 ```
 
-Note: On macOS, you must have Xcode 7.1+ installed along with the associated Command Line Tools (Xcode will prompt you to install these when you launch it if they are not installed).
+Note: On macOS, you must have Xcode 8.3.2+ installed along with the associated Command Line Tools (Xcode will prompt you to install these when you launch it if they are not installed).
 
 ### Install JSPM
 
