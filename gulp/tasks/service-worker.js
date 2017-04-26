@@ -10,16 +10,28 @@ const packageName = JSON.parse(fs.readFileSync('./package.json', 'utf8')).name;
 const shellFiles = [
     'index.html',
     '/manifest.json',
-    '/images/*.{png,jpg,jpeg,gif,svg}',
+
+    // Images
+    '/images/kent.svg',
+    '/images/components/divider.svg',
+    '/images/social/twitter.svg',
+    '/images/social/facebook.svg',
 
     // Bundles Dependencies
-    // '/dependencies.js',
     '/loader.js',
 
     // Application Shell
     '/app/main.js',
     '/app/router.js',
     '/app/components/shell/**/*.{js,css}',
+
+    // Handlers
+    '/app/handlers/accessibility.js',
+    '/app/handlers/analytics.js',
+
+    // Helpers
+    '/app/helpers/link.js',
+    '/app/helpers/controller/decorators.js',
 
     // 404 Page
     '/app/pages/404/**/*.{js,css}'
