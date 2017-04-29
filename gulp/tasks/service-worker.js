@@ -34,7 +34,10 @@ const shellFiles = [
     '/app/helpers/controller/decorators.js',
 
     // 404 Page
-    '/app/pages/404/**/*.{js,css}'
+    '/app/pages/404/**/*.{js,css}',
+
+    // Global Styles
+    '/styles/main.css'
 ];
 
 function precache() {
