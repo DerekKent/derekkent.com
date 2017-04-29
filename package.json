@@ -18,6 +18,7 @@
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-decorators": "6.24.1",
     "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-plugin-transform-es2015-modules-systemjs": "6.24.1",
     "babel-plugin-transform-object-assign": "6.22.0",
     "babel-preset-es2015": "6.24.1",
     "browser-sync": "2.18.12",
@@ -79,6 +80,19 @@
       "incremental-dom": "npm:incremental-dom@^0.5.1",
       "path": "npm:jspm-nodelibs-path@^0.2.0",
       "process": "npm:jspm-nodelibs-process@^0.2.0"
+    },
+    "overrides": {
+      "npm:incremental-dom@0.5.1": {
+        "defaultExtension": "js",
+        "main": "dist/incremental-dom.js",
+        "format": "amd",
+        "meta": {
+          "dist/incremental-dom.js": {
+            "esModule": true
+          }
+        },
+        "configured": true
+      }
     }
   },
   "ava": {

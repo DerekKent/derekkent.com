@@ -17,13 +17,8 @@ function concatDependencies() {
         loader
     ])
     .pipe(pi.if(config.env !== 'production', pi.sourcemaps.init()))
-    .pipe(pi.concat('loader.js'), {newLine: ';'})
-    .pipe(pi.uglify({
-        compress: false,
-        mangle: false,
-        preserveComments: false
-    }))
-    .pipe(pi.insert.append('SystemJS.import(\'app/main\');'))
+    .pipe(pi.concat('loader.js'), {newLine: ';\n'})
+    .pipe(pi.insert.append('\nSystemJS.import(\'app/main\');'))
     .pipe(pi.if(config.env !== 'production', pi.sourcemaps.write('.')))
     .pipe(gulp.dest(config.dest));
 }

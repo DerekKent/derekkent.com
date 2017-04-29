@@ -46,7 +46,8 @@ function compileScripts() {
         plugins: [
             'transform-decorators-legacy',
             'transform-class-properties',
-            'transform-object-assign'
+            'transform-es2015-modules-systemjs',
+            'transform-object-assign',
         ]
     }))
     .pipe(pi.if(config.env !== 'production', pi.sourcemaps.write('.')))

@@ -31,7 +31,7 @@ SystemJS.config({
   packages: {
     "~": {
       "main": "app/main.js",
-      "format": "cjs"
+      "format": "system"
     }
   }
 });

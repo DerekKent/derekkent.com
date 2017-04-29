@@ -15,12 +15,11 @@ function precompileTemplates() {
     .pipe(pi.htmlmin({
         collapseWhitespace: true
     }))
-    .pipe(pi.superviewsjs({
-        es6: true
-    }))
+    .pipe(pi.superviewsjs())
     .pipe(pi.babel({
         compact: false,
-        presets: ['es2015']
+        presets: ['es2015'],
+        plugins: ['transform-es2015-modules-systemjs']
     }))
     .pipe(pi.if(config.env !== 'production', pi.sourcemaps.write('.')))
     .pipe(gulp.dest(`${config.dest}/app`));
