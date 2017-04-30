@@ -8,7 +8,6 @@ const swPrecache = require('sw-precache');
 const packageName = JSON.parse(fs.readFileSync('./package.json', 'utf8')).name;
 
 const shellFiles = [
-    'index.html',
     '/manifest.json',
 
     // Images
@@ -43,8 +42,13 @@ const shellFiles = [
 function precache() {
     return swPrecache.write(path.join(config.dest, 'sw.js'), {
         staticFileGlobs: shellFiles.map((uri) => `${config.dest}${uri}`),
+        dynamicUrlToDependencies: {
+            '/': [
+                `${config.dest}/index.html`
+            ]
+        },
         stripPrefix: config.dest,
-        navigateFallback: '/404',
+        navigateFallback: '/index.html',
         cacheId: packageName
     });
 }
