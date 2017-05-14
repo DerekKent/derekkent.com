@@ -4,9 +4,9 @@ const config = require('../config');
 const pi = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
 });
-const rules = JSON.parse(fs.readFileSync('./.eslintrc', 'utf8'));
+const rules = JSON.parse(fs.readFileSync('./.eslintrc.json', 'utf8'));
 
-// Convert from .eslintrc format to ESLint's CLIEngine Format
+// Convert from .eslintrc.json format to ESLint's CLIEngine Format
 rules.envs = Object.keys(rules.env);
 rules.globals = Object.keys(rules.globals);
 
