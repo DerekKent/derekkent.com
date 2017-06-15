@@ -58,9 +58,7 @@ function minifyScripts() {
     return gulp.src([
         `${config.dest}/**/*.js`
     ])
-    .pipe(pi.uglify({
-        preserveComments: false
-    }))
+    .pipe(pi.uglify())
     .pipe(gulp.dest(config.dest));
 }
 
