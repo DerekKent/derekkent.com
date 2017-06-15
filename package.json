@@ -47,7 +47,7 @@
     "gulp-sass": "3.1.0",
     "gulp-scss-lint": "0.4.0",
     "gulp-sourcemaps": "2.6.0",
-    "gulp-superviewsjs": "github:dak/gulp-superviewsjs",
+    "gulp-superviewsjs": "github:alexsad/gulp-superviewsjs",
     "gulp-uglify": "3.0.0",
     "gulp-util": "3.0.8",
     "gulp-wrap": "0.13.0",
@@ -77,22 +77,9 @@
     "devDependencies": {},
     "peerDependencies": {
       "fs": "npm:jspm-nodelibs-fs@^0.2.0",
-      "incremental-dom": "npm:incremental-dom@^0.5.1",
+      "incremental-dom": "local:incremental-dom@0.5.1",
       "path": "npm:jspm-nodelibs-path@^0.2.0",
       "process": "npm:jspm-nodelibs-process@^0.2.0"
-    },
-    "overrides": {
-      "npm:incremental-dom@0.5.1": {
-        "defaultExtension": "js",
-        "main": "dist/incremental-dom.js",
-        "format": "amd",
-        "meta": {
-          "dist/incremental-dom.js": {
-            "esModule": true
-          }
-        },
-        "configured": true
-      }
     }
   },
   "ava": {
