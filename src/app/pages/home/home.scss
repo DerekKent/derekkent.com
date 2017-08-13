@@ -202,8 +202,10 @@
             opacity: 0.5;
         }
 
-        th:nth-child(n+4),
-        td:nth-child(n+4) {
+        th:nth-child(3),
+        td:nth-child(3),
+        th:nth-child(5),
+        td:nth-child(5) {
             @include mobile {
                 display: none;
             }
