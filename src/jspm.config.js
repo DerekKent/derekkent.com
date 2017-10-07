@@ -65,11 +65,6 @@ SystemJS.config({
         "core-js": "npm:core-js@2.5.1",
         "regenerator-runtime": "npm:regenerator-runtime@0.10.1"
       }
-    },
-    "npm:incremental-dom@0.5.1": {
-      "map": {
-        "incremental-dom": "npm:incremental-dom@0.5.1"
-      }
     }
   }
 });
