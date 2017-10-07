@@ -1,121 +1,121 @@
 {
-  "name": "@derekkent/derekkent.com",
-  "version": "0.2.0",
-  "description": "Derek Kent for Maryland District 32 Delegate official web site",
-  "scripts": {
-    "prepublish": "jspm install",
-    "upgrade": "jspm update",
-    "test": "gulp build && gulp test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.com/DerekKent/derekkent.com.git"
-  },
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "ava": "0.22.0",
-    "babel-eslint": "8.0.1",
-    "babel-plugin-transform-class-properties": "6.24.1",
-    "babel-plugin-transform-decorators": "6.24.1",
-    "babel-plugin-transform-decorators-legacy": "1.3.4",
-    "babel-plugin-transform-es2015-modules-systemjs": "6.24.1",
-    "babel-plugin-transform-object-assign": "6.22.0",
-    "babel-preset-env": "1.6.0",
-    "browser-sync": "2.18.13",
-    "connect-history-api-fallback": "1.3.0",
-    "del": "3.0.0",
-    "eslint": "4.8.0",
-    "find-pkg": "1.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-autoprefixer": "4.0.0",
-    "gulp-ava": "0.18.0",
-    "gulp-babel": "7.0.0",
-    "gulp-clip-empty-files": "0.1.2",
-    "gulp-concat": "2.6.1",
-    "gulp-cssnano": "2.1.2",
-    "gulp-env": "0.4.0",
-    "gulp-eslint": "4.0.0",
-    "gulp-htmlmin": "3.0.0",
-    "gulp-humans": "2.0.2",
-    "gulp-if": "2.0.2",
-    "gulp-imagemin": "3.4.0",
-    "gulp-insert": "0.5.0",
-    "gulp-load-plugins": "1.5.0",
-    "gulp-real-favicon": "0.2.2",
-    "gulp-rename": "1.2.2",
-    "gulp-replace": "0.6.1",
-    "gulp-sass": "3.1.0",
-    "gulp-scss-lint": "0.5.0",
-    "gulp-sourcemaps": "2.6.1",
-    "gulp-superviewsjs": "github:alexsad/gulp-superviewsjs",
-    "gulp-uglify": "3.0.0",
-    "gulp-util": "3.0.8",
-    "gulp-wrap": "0.13.0",
-    "jsdom": "11.3.0",
-    "jsdom-global": "3.0.2",
-    "jspm": "0.17.0-beta.45",
-    "require-dir": "0.3.2",
-    "sw-precache": "5.2.0",
-    "yargs": "9.0.1"
-  },
-  "jspm": {
-    "main": "main.js",
-    "directories": {
-      "lib": "src/app"
+    "name": "@derekkent/derekkent.com",
+    "version": "0.2.0",
+    "description": "Derek Kent for Maryland District 32 Delegate official web site",
+    "scripts": {
+        "prepublish": "jspm install",
+        "upgrade": "jspm update",
+        "test": "gulp build && gulp test"
     },
-    "configFiles": {
-      "jspm": "src/jspm.config.js",
-      "jspm:dev": "src/jspm.dev.js",
-      "jspm:browser": "src/jspm.browser.js"
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.com/DerekKent/derekkent.com.git"
     },
-    "dependencies": {
-      "babel-polyfill": "npm:babel-polyfill@^6.26.0",
-      "es6-promise": "npm:es6-promise@^4.1.1",
-      "fetch": "npm:whatwg-fetch@^2.0.3",
-      "superb": "npm:superb.js@^0.2.16"
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "ava": "0.22.0",
+        "babel-eslint": "8.0.1",
+        "babel-plugin-transform-class-properties": "6.24.1",
+        "babel-plugin-transform-decorators": "6.24.1",
+        "babel-plugin-transform-decorators-legacy": "1.3.4",
+        "babel-plugin-transform-es2015-modules-systemjs": "6.24.1",
+        "babel-plugin-transform-object-assign": "6.22.0",
+        "babel-preset-env": "1.6.0",
+        "browser-sync": "2.18.13",
+        "connect-history-api-fallback": "1.3.0",
+        "del": "3.0.0",
+        "eslint": "4.8.0",
+        "find-pkg": "1.0.0",
+        "gulp": "github:gulpjs/gulp#4.0",
+        "gulp-autoprefixer": "4.0.0",
+        "gulp-ava": "0.18.0",
+        "gulp-babel": "7.0.0",
+        "gulp-clip-empty-files": "0.1.2",
+        "gulp-concat": "2.6.1",
+        "gulp-cssnano": "2.1.2",
+        "gulp-env": "0.4.0",
+        "gulp-eslint": "4.0.0",
+        "gulp-htmlmin": "3.0.0",
+        "gulp-humans": "2.0.2",
+        "gulp-if": "2.0.2",
+        "gulp-imagemin": "3.4.0",
+        "gulp-insert": "0.5.0",
+        "gulp-load-plugins": "1.5.0",
+        "gulp-real-favicon": "0.2.2",
+        "gulp-rename": "1.2.2",
+        "gulp-replace": "0.6.1",
+        "gulp-sass": "3.1.0",
+        "gulp-scss-lint": "0.5.0",
+        "gulp-sourcemaps": "2.6.1",
+        "gulp-superviewsjs": "github:alexsad/gulp-superviewsjs",
+        "gulp-uglify": "3.0.0",
+        "gulp-util": "3.0.8",
+        "gulp-wrap": "0.13.0",
+        "jsdom": "11.3.0",
+        "jsdom-global": "3.0.2",
+        "jspm": "0.17.0-beta.45",
+        "require-dir": "0.3.2",
+        "sw-precache": "5.2.0",
+        "yargs": "9.0.1"
     },
-    "devDependencies": {},
-    "peerDependencies": {
-      "fs": "npm:jspm-nodelibs-fs@^0.2.1",
-      "incremental-dom": "npm:incremental-dom@^0.5.1",
-      "path": "npm:jspm-nodelibs-path@^0.2.3",
-      "process": "npm:jspm-nodelibs-process@^0.2.1"
-    },
-    "overrides": {
-      "npm:incremental-dom@0.5.1": {
-        "defaultExtension": "js",
-        "main": "dist/incremental-dom.js",
-        "format": "amd",
-        "meta": {
-          "dist/incremental-dom.js": {
-            "esModule": true
-          }
+    "jspm": {
+        "main": "main.js",
+        "directories": {
+            "lib": "src/app"
         },
-        "configured": true
-      }
+        "configFiles": {
+            "jspm": "src/jspm.config.js",
+            "jspm:dev": "src/jspm.dev.js",
+            "jspm:browser": "src/jspm.browser.js"
+        },
+        "dependencies": {
+            "babel-polyfill": "npm:babel-polyfill@^6.26.0",
+            "es6-promise": "npm:es6-promise@^4.1.1",
+            "fetch": "npm:whatwg-fetch@^2.0.3",
+            "superb": "npm:superb.js@^0.2.16"
+        },
+        "devDependencies": {},
+        "peerDependencies": {
+            "fs": "npm:jspm-nodelibs-fs@^0.2.1",
+            "incremental-dom": "npm:incremental-dom@^0.5.1",
+            "path": "npm:jspm-nodelibs-path@^0.2.3",
+            "process": "npm:jspm-nodelibs-process@^0.2.1"
+        },
+        "overrides": {
+            "npm:incremental-dom@0.5.1": {
+                "defaultExtension": "js",
+                "main": "dist/incremental-dom.js",
+                "format": "amd",
+                "meta": {
+                    "dist/incremental-dom.js": {
+                        "esModule": true
+                    }
+                },
+                "configured": true
+            }
+        }
+    },
+    "ava": {
+        "require": [
+            "./test/helpers/jspm_loader",
+            "./test/helpers/setup-browser-env.js"
+        ],
+        "verbose": true
+    },
+    "nyc": {
+        "include": [
+            "dev/**/*.js"
+        ],
+        "exclude": [
+            "dist",
+            "gulp",
+            "jspm_packages",
+            "node_modules",
+            "src",
+            "test"
+        ]
+    },
+    "engines": {
+        "node": ">=8.6.0"
     }
-  },
-  "ava": {
-    "require": [
-      "./test/helpers/jspm_loader",
-      "./test/helpers/setup-browser-env.js"
-    ],
-    "verbose": true
-  },
-  "nyc": {
-    "include": [
-      "dev/**/*.js"
-    ],
-    "exclude": [
-      "dist",
-      "gulp",
-      "jspm_packages",
-      "node_modules",
-      "src",
-      "test"
-    ]
-  },
-  "engines": {
-    "node": ">=8.6.0"
-  }
 }
