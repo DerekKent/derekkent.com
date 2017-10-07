@@ -5,17 +5,19 @@ const pi = require('gulp-load-plugins')({
 });
 
 function ava() {
-    return gulp.src('test/src/**/*.js', {
-        since: gulp.lastRun('ava')
-    })
-    .pipe(pi.ava());
+    return gulp
+        .src('test/src/**/*.js', {
+            since: gulp.lastRun('ava')
+        })
+        .pipe(pi.ava());
 }
 
 gulp.task(ava);
 
 gulp.task('ava:watch', () => {
-    gulp.watch(`${config.src}/**/*.js`, config.watchOpts)
-    .on('change', gulp.series(
-        ava
-    ));
+    gulp
+        .watch(`${config.src}/**/*.js`, config.watchOpts)
+        .on('change', gulp.series(
+            ava
+        ));
 });

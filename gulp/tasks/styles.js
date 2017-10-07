@@ -6,38 +6,39 @@ const pi = require('gulp-load-plugins')({
 });
 
 function scsslint() {
-    return gulp.src([`${config.src}/**/*.scss`], {
-        since: gulp.lastRun('scsslint')
-    })
-    .pipe(pi.scssLint({
-        config: 'gulp/.scss-lint.yml',
-        customReport: (file) => {
-            /* eslint prefer-template:0 */
-            const colors = pi.util.colors;
+    return gulp
+        .src([`${config.src}/**/*.scss`], {
+            since: gulp.lastRun('scsslint')
+        })
+        .pipe(pi.scssLint({
+            config: 'gulp/.scss-lint.yml',
+            customReport: (file) => {
+                /* eslint prefer-template:0 */
+                const colors = pi.util.colors;
 
-            if (!file.scsslint.success) {
-                process.exitCode = 1;
+                if (!file.scsslint.success) {
+                    process.exitCode = 1;
 
-                pi.util.log(
-                    colors.cyan(file.scsslint.issues.length) +
-                    ' issues found in ' +
-                    colors.magenta(file.path)
-                );
+                    pi.util.log(
+                        colors.cyan(file.scsslint.issues.length) +
+                        ' issues found in ' +
+                        colors.magenta(file.path)
+                    );
 
-                file.scsslint.issues.forEach((issue) => {
-                    const severity = issue.severity === 'warning' ? colors.yellow(' [W] ') : colors.red(' [E] ');
-                    const linter = issue.linter ? (`${issue.linter}: `) : '';
-                    const logMsg = `${colors.cyan(file.relative)}:` +
-                        colors.magenta(issue.line) +
-                        severity +
-                        colors.green(linter) +
-                        issue.reason;
+                    file.scsslint.issues.forEach((issue) => {
+                        const severity = issue.severity === 'warning' ? colors.yellow(' [W] ') : colors.red(' [E] ');
+                        const linter = issue.linter ? (`${issue.linter}: `) : '';
+                        const logMsg = `${colors.cyan(file.relative)}:` +
+                            colors.magenta(issue.line) +
+                            severity +
+                            colors.green(linter) +
+                            issue.reason;
 
-                    pi.util.log(logMsg);
-                });
+                        pi.util.log(logMsg);
+                    });
+                }
             }
-        }
-    }));
+        }));
 }
 
 function compileStyles(src, dest) {
@@ -98,24 +99,27 @@ gulp.task('styles', gulp.series(
 ));
 
 gulp.task('styles:watch', () => {
-    gulp.watch([
-        `${config.src}/**/*.scss`,
-        `!${config.src}/styles/{components,mixins,variables}/**/*.scss`
-    ], config.watchOpts)
-    .on('change', gulp.series(
-        scsslint,
-        compileChangedStyles
-    ));
+    gulp
+        .watch([
+            `${config.src}/**/*.scss`,
+            `!${config.src}/styles/{components,mixins,variables}/**/*.scss`
+        ], config.watchOpts)
+        .on('change', gulp.series(
+            scsslint,
+            compileChangedStyles
+        ));
 
-    gulp.watch(`${config.src}/styles/components/**/*.scss`, config.watchOpts)
-    .on('change', gulp.series(
-        scsslint,
-        compileMainStyle
-    ));
+    gulp
+        .watch(`${config.src}/styles/components/**/*.scss`, config.watchOpts)
+        .on('change', gulp.series(
+            scsslint,
+            compileMainStyle
+        ));
 
-    gulp.watch(`${config.src}/styles/{mixins,variables}/**/*.scss`, config.watchOpts)
-    .on('change', gulp.series(
-        scsslint,
-        compileAllStyles
-    ));
+    gulp
+        .watch(`${config.src}/styles/{mixins,variables}/**/*.scss`, config.watchOpts)
+        .on('change', gulp.series(
+            scsslint,
+            compileAllStyles
+        ));
 });

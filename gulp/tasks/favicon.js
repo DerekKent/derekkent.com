@@ -62,19 +62,21 @@ function generateFavicons(done) {
 
 function injectFaviconMarkup() {
     if (config.env !== 'production') {
-        return gulp.src(`${config.src}/*.html`, {
-            since: gulp.lastRun('injectFaviconMarkup')
-        })
-        .pipe(gulp.dest(config.dest));
+        return gulp
+            .src(`${config.src}/*.html`, {
+                since: gulp.lastRun('injectFaviconMarkup')
+            })
+            .pipe(gulp.dest(config.dest));
     }
 
-    return gulp.src(`${config.src}/*.html`, {
-        since: gulp.lastRun('injectFaviconMarkup')
-    })
-    .pipe(pi.realFavicon.injectFaviconMarkups(
-        JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code
-    ))
-    .pipe(gulp.dest(config.dest));
+    return gulp
+        .src(`${config.src}/*.html`, {
+            since: gulp.lastRun('injectFaviconMarkup')
+        })
+        .pipe(pi.realFavicon.injectFaviconMarkups(
+            JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code
+        ))
+        .pipe(gulp.dest(config.dest));
 }
 
 gulp.task(generateFavicons);
@@ -86,9 +88,10 @@ gulp.task('favicon', gulp.series(
 ));
 
 gulp.task('favicon:watch', () => {
-    gulp.watch(`${config.src}/*.html`, config.watchOpts)
-    .on('change', gulp.series(
-        'favicon',
-        'reload-browser'
-    ));
+    gulp
+        .watch(`${config.src}/*.html`, config.watchOpts)
+        .on('change', gulp.series(
+            'favicon',
+            'reload-browser'
+        ));
 });
