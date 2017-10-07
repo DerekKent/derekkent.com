@@ -42,7 +42,14 @@ function compileScripts() {
     .pipe(pi.replace(/@VERSION@/g, config.version))
     .pipe(pi.replace(/@ENV@/g, config.env))
     .pipe(pi.babel({
-        presets: ['es2015'],
+        presets: [['env', {
+            targets: {
+                browsers: [
+                    'last 3 versions',
+                    'IE 11'
+                ]
+            }
+        }]],
         plugins: [
             'transform-decorators-legacy',
             'transform-class-properties',

@@ -18,7 +18,14 @@ function precompileTemplates() {
     .pipe(pi.superviewsjs())
     .pipe(pi.babel({
         compact: false,
-        presets: ['es2015'],
+        presets: [['env', {
+            targets: {
+                browsers: [
+                    'last 3 versions',
+                    'IE 11'
+                ]
+            }
+        }]],
         plugins: ['transform-es2015-modules-systemjs']
     }))
     .pipe(pi.if(config.env !== 'production', pi.sourcemaps.write('.')))
