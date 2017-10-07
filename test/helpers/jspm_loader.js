@@ -2,6 +2,7 @@ const Module = require('module');
 const jspm = require('jspm');
 const path = require('path');
 const url = require('url');
+
 const load = Module._load;
 
 function debug(...args) {

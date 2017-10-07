@@ -27,7 +27,7 @@ function precompileTemplates() {
                     ]
                 }
             }]],
-            plugins: ['transform-es2015-modules-systemjs']
+            plugins: ['transform-es2015-modules-umd']
         }))
         .pipe(pi.if(config.env !== 'production', pi.sourcemaps.write('.')))
         .pipe(gulp.dest(`${config.dest}/app`));

@@ -56,7 +56,7 @@ function compileScripts() {
             plugins: [
                 'transform-decorators-legacy',
                 'transform-class-properties',
-                'transform-es2015-modules-systemjs',
+                'transform-es2015-modules-umd',
                 'transform-object-assign'
             ]
         }))

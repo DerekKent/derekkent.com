@@ -1,5 +1,5 @@
 import test from 'ava';
-import linkHelper from '~/helpers/link';
+import linkHelper from '~/helpers/link.js';
 
 test('External Link Detection', async (assert) => {
     const externalLink = 'https://derekkent.com';
