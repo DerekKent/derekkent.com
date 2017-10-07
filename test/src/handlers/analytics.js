@@ -1,8 +1,7 @@
 import test from 'ava';
-import {default as analytics, optedOut, optedIn} from '~/handlers/analytics';
-import {analyticsID} from  '~/handlers/analytics';
+import {default as analytics, analyticsID, optedOut, optedIn} from '~/handlers/analytics';
 
-test('Tracking Opt-in', async function (assert) {
+test('Tracking Opt-in', async (assert) => {
     window.localStorage.clear();
 
     let actual = optedIn();
@@ -26,7 +25,7 @@ test('Tracking Opt-in', async function (assert) {
         `window['ga-disable-${analyticsID}'] should be undefined when analytics are being collected.`);
 });
 
-test('Tracking Opt-out', async function (assert) {
+test('Tracking Opt-out', async (assert) => {
     analytics.optOut();
 
     let actual = optedOut();
@@ -42,7 +41,7 @@ test('Tracking Opt-out', async function (assert) {
         `window['ga-disable-${analyticsID}'] should be true when analytics are disabled.`);
 });
 
-test('Tracking Preference Detection', async function (assert) {
+test('Tracking Preference Detection', async (assert) => {
     window.localStorage.clear();
     navigator.doNotTrack = null;
     delete window.doNotTrack;
@@ -80,8 +79,8 @@ test('Tracking Preference Detection', async function (assert) {
         'tracking should return true if a user has chosen to optIn(), even if DNT is also set.');
 });
 
-test('Google Analytics ID', async function (assert) {
-    const actual = /^UA-\d{5,}-\d{1}$/.test(analyticsID);
+test('Google Analytics ID', async (assert) => {
+    const actual = (/^UA-\d{5,}-\d{1}$/).test(analyticsID);
     const expected = true;
 
     assert.is(actual, expected,
@@ -90,7 +89,7 @@ test('Google Analytics ID', async function (assert) {
 
 const GA = Symbol();
 
-test('Google Analytics Data Formats', async function (assert) {
+test('Google Analytics Data Formats', async (assert) => {
     // Provide a polyfill for testing Google Analytics
     SystemJS.map.ga = '@empty';
     window.ga = function (command, fields) {
@@ -101,7 +100,7 @@ test('Google Analytics Data Formats', async function (assert) {
     await analytics.sendPageview('/test');
 
     let actual = window[GA];
-    let expected = undefined;
+    let expected;
 
     assert.is(actual, expected,
         'No data should be sent to Google Analytics if a user opted out of tracking.');

@@ -1,7 +1,7 @@
 import test from 'ava';
 import linkHelper from '~/helpers/link';
 
-test('External Link Detection', async function (assert) {
+test('External Link Detection', async (assert) => {
     const externalLink = 'https://derekkent.com';
     const internalLink = '/issues';
 
@@ -18,8 +18,9 @@ test('External Link Detection', async function (assert) {
         `isExternal() should return false for ${internalLink}.`);
 });
 
-test('Internal Link Click Detection', async function (assert) {
-    let e = {
+test('Internal Link Click Detection', async (assert) => {
+    let href = 'mailto:derek@derekkent.com';
+    const e = {
         target: {
             getAttribute() {
                 return href;
@@ -27,7 +28,6 @@ test('Internal Link Click Detection', async function (assert) {
         }
     };
 
-    let href = 'mailto:derek@derekkent.com';
     let actual = linkHelper.validUrlClick(e);
     let expected = false;
 

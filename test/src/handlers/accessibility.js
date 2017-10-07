@@ -1,7 +1,7 @@
 import test from 'ava';
 import accessibility from '~/handlers/accessibility';
 
-test('Toggle WCAG2 Level', async function (assert) {
+test('Toggle WCAG2 Level', async (assert) => {
     window.localStorage.clear();
 
     let actual = accessibility.level;

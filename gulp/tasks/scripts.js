@@ -14,6 +14,7 @@ function eslint() {
     return gulp
         .src([
             'gulp/**/*.js',
+            'test/**/*.js',
             `${config.src}/**/*.js`,
             `!${config.src}/jspm.browser.js`,
             `!${config.src}/jspm.config.js`,
