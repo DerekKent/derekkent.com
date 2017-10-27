@@ -25,7 +25,7 @@ engines:
     - 9c533e1448af5652247f940a471f64e7
   eslint:
     enabled: true
-    channel: 'eslint-3'
+    channel: 'eslint-4'
   scss-lint:
     enabled: true
     config: 'gulp/.scss-lint.yml'
