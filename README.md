@@ -1,8 +1,6 @@
-<p align="center">
-    <a href="https://derekkent.com">
-        <img height="125" src="src/images/kent-for-delegate-441x250.png" alt="Derek Kent for Delegate">
-    </a>
-</p>
+<a href="https://derekkent.com">
+    <img height="125" src="src/images/kent-for-delegate-441x250.png" alt="Derek Kent for Delegate">
+</a>
 
 # Derek Kent for Maryland District 32 Delegate
 
@@ -10,16 +8,16 @@
 [![Coverage Report](https://gitlab.com/DerekKent/derekkent.com/badges/master/coverage.svg)](https://gitlab.com/DerekKent/derekkent.com/commits/master)
 [![Code Climate](https://codeclimate.com/github/DerekKent/derekkent.com/badges/gpa.svg)](https://codeclimate.com/github/DerekKent/derekkent.com)
 
-Welcome to the official repo for the _Derek Kent for Maryland District 32 Delegate_ campaign web site.
+Welcome to the official repository for the _Derek Kent for Maryland District 32 Delegate_ campaign web site.
 
 This site is targeted at developers who would like to contribute to the campaign with code. If you are looking for the [campaign web site](https://derekkent.com), you can click the logo above. If you'd like to volunteer to improve the site, you can read on to learn how to setup your development environment. You can also take a look through the list of open Issues and read [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## Requirements
 
-* Node.js v6.9.2+
+* Node.js v8.7+
 * Ruby v2.2.3 (for testing)
-* Gulp v4.0.0-alpha.2
-* JSPM v0.17.0-beta.41
+* Gulp v4.0.0
+* JSPM v0.17.0-beta.47
 * SCSS-Lint v0.51 (for testing)
 
 ## Installation
@@ -37,7 +35,7 @@ brew install node
 #### Debian / Ubuntu
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs build-essential
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 ```
@@ -101,7 +99,7 @@ gem install scss_lint
 npm install -g gulp-cli
 ```
 
-Note: On macOS, you must have Xcode 8.3.2+ installed along with the associated Command Line Tools (Xcode will prompt you to install these when you launch it if they are not installed).
+Note: On macOS, you must have Xcode 9.0.1+ installed along with the associated Command Line Tools (Xcode will prompt you to install these when you launch it if they are not installed).
 
 ### Install JSPM
 
