@@ -1,0 +1,34 @@
+<template args="model">
+    <div class="banner curved-bottom"></div>
+    <article>
+        <if condition="!model.submitted">
+            <h1>Contact</h1>
+
+            <form>
+                <label><span class="label">Your E-mail:</span>
+                    <input type="email" name="sender" required>
+                </label>
+                <label><span class="label">Subject:</span>
+                    <input type="text" name="subject" maxlength="78" required>
+                </label>
+                <label class="wrap"><span class="label">Message:</span>
+                    <textarea name="message" rows="8" maxlength="2500" required></textarea>
+                </label>
+                <if condition="model.error">
+                    <span class="error">{model.error}</span>
+                </if>
+                <input type="submit" class="btn btn-red{model.submitting ? ' disabled' : ''}" value="Send">
+            </form>
+        <else>
+            <h1>Message Sent</h1>
+
+            <p>
+                Thanks for reaching out!
+            </p>
+
+            <p>
+                We'll get back to you as soon as possible.
+            </p>
+        </if>
+    </article>
+</template>

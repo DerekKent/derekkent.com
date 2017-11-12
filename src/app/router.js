@@ -6,6 +6,7 @@ import shell from '~/components/shell/shell.js';
 const pages = [
     'about',
     'accessibility',
+    'contact',
     'contribute',
     'events',
     'issues',
