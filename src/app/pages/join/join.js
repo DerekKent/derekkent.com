@@ -41,6 +41,10 @@ export default class Join extends Controller {
     onSubscribeSubmit(e) {
         e.preventDefault();
 
+        if (this.model.submitting) {
+            return;
+        }
+
         const form = e.delegateTarget;
         const data = new FormData(form);
 
