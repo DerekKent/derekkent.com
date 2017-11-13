@@ -45,7 +45,7 @@ function compileScripts() {
         .pipe(pi.replace(/@VERSION@/g, config.version))
         .pipe(pi.replace(/@ENV@/g, config.env))
         .pipe(pi.babel({
-            presets: ['stage-2', ['env', {
+            presets: ['stage-3', ['env', {
                 targets: {
                     browsers: [
                         'last 3 versions',
@@ -56,8 +56,7 @@ function compileScripts() {
             plugins: [
                 'transform-decorators-legacy',
                 'transform-class-properties',
-                'transform-es2015-modules-umd',
-                'transform-object-assign'
+                'transform-es2015-modules-umd'
             ]
         }))
         .pipe(pi.if(config.env !== 'production', pi.sourcemaps.write('.')))

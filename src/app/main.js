@@ -1,5 +1,6 @@
 import 'babel-polyfill';
 import 'fetch';
+import '~/polyfills/object-assign.js';
 import router from '~/router.js';
 import accessibility from '~/handlers/accessibility.js';
 import shell from '~/components/shell/shell.js';
