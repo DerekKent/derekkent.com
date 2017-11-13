@@ -16,6 +16,7 @@ const corsHeaders = [
 
 function browserSync(done) {
     bs.init({
+        open: false,
         server: {
             baseDir: `./${config.dest}`,
             middleware: [
