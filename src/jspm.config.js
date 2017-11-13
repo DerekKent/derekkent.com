@@ -45,7 +45,6 @@ SystemJS.config({
   map: {
     "babel-polyfill": "npm:babel-polyfill@6.26.0",
     "es6-promise": "npm:es6-promise@4.1.1",
-    "fetch": "npm:whatwg-fetch@2.0.3",
     "fs": "npm:jspm-nodelibs-fs@0.2.1",
     "incremental-dom": "npm:incremental-dom@0.5.1",
     "path": "npm:jspm-nodelibs-path@0.2.3",

@@ -1,6 +1,7 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
 import analytics from '~/handlers/analytics.js';
+import xhr from '~/handlers/xhr.js';
 import {description as template} from './petition.html.js';
 
 const ACT_BLUE = 'https://secure.actblue.com/contribute/page/';
@@ -44,7 +45,7 @@ export default class Petition extends Controller {
     }
 
     @on('submit form')
-    onPetitionSubmit(e) {
+    async onPetitionSubmit(e) {
         e.preventDefault();
 
         const form = e.delegateTarget;
@@ -57,32 +58,33 @@ export default class Petition extends Controller {
             this.model.error = false;
             this.model.submitting = true;
 
-            fetch('https://derekkent.com/api/v1/petition', {
-                method: 'POST',
-                body: data
-            }).then(() => {
-                this.model.submitting = false;
-                this.model.signed = true;
-                this.update();
-                window.scrollTo(0, 0);
-
-                if (analytics.tracking) {
-                    SystemJS.import('conversions').then(() => {
-                        window.google_trackConversion({
-                            'google_conversion_id': 880588424,
-                            'google_conversion_label': this.petition.conversionLabel,
-                            'google_remarketing_only': false
-                        });
-                        this.loadThankYou();
-                    });
-                } else {
-                    this.loadThankYou();
-                }
-            }).catch(() => {
-                this.model.submitting = false;
+            try {
+                await xhr.post('https://derekkent.com/api/v1/petition', data);
+            } catch (err) {
                 this.model.error = 'Oops, something went wrong.';
                 this.update();
-            });
+
+                return;
+            } finally {
+                this.model.submitting = false;
+            }
+
+            this.model.signed = true;
+            this.update();
+            window.scrollTo(0, 0);
+
+            if (analytics.tracking) {
+                SystemJS.import('conversions').then(() => {
+                    window.google_trackConversion({
+                        'google_conversion_id': 880588424,
+                        'google_conversion_label': this.petition.conversionLabel,
+                        'google_remarketing_only': false
+                    });
+                    this.loadThankYou();
+                });
+            } else {
+                this.loadThankYou();
+            }
         }
 
         this.update();

@@ -40,14 +40,14 @@ export default class Contact extends Controller {
             try {
                 await xhr.post('https://derekkent.com/api/v1/contact', data);
             } catch (err) {
-                this.model.submitting = false;
                 this.model.error = 'Oops, something went wrong.';
                 this.update();
 
                 return;
+            } finally {
+                this.model.submitting = false;
             }
 
-            this.model.submitting = false;
             this.model.submitted = true;
             this.update();
             window.scrollTo(0, 0);

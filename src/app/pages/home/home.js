@@ -1,6 +1,7 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
 import analytics from '~/handlers/analytics.js';
+import xhr from '~/handlers/xhr.js';
 import {description as template} from './home.html.js';
 
 const USER_NAV_KEYS = [9, 13];
@@ -28,7 +29,7 @@ export default class Home extends Controller {
     }
 
     @on('submit .subscribe')
-    onSubscribeSubmit(e) {
+    async onSubscribeSubmit(e) {
         e.preventDefault();
 
         const data = new FormData(e.delegateTarget);
@@ -37,35 +38,36 @@ export default class Home extends Controller {
         this.model.submitting = true;
         this.update();
 
-        fetch('https://derekkent.com/api/v1/subscribe', {
-            method: 'PUT',
-            body: data
-        }).then(() => {
-            this.model.submitting = false;
-            this.model.thanks = 'Welcome!';
-            this.update();
-
-            if (analytics.tracking) {
-                SystemJS.import('conversions').then(() => {
-                    window.google_trackConversion({
-                        'google_conversion_id': 880588424,
-                        'google_conversion_label': 'rE4FCMLavGwQiO3yowM',
-                        'google_remarketing_only': false
-                    });
-                });
-            }
-
-            setTimeout(() => {
-                this.model.thanks = false;
-                this.model.donate = true;
-                this.update();
-            }, 2000);
-        }).catch(() => {
+        try {
+            await xhr.put('https://derekkent.com/api/v1/subscribe', data);
+        } catch (err) {
             this.model.thanks = false;
-            this.model.submitting = false;
             this.model.error = true;
             this.update();
-        });
+
+            return;
+        } finally {
+            this.model.submitting = false;
+        }
+
+        this.model.thanks = 'Welcome!';
+        this.update();
+
+        if (analytics.tracking) {
+            SystemJS.import('conversions').then(() => {
+                window.google_trackConversion({
+                    'google_conversion_id': 880588424,
+                    'google_conversion_label': 'rE4FCMLavGwQiO3yowM',
+                    'google_remarketing_only': false
+                });
+            });
+        }
+
+        setTimeout(() => {
+            this.model.thanks = false;
+            this.model.donate = true;
+            this.update();
+        }, 2000);
     }
 
     @on('click .donation-wrapper input')
