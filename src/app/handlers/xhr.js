@@ -45,6 +45,9 @@ class Xhr {
     static [FETCH](url, options = {method: 'GET', headers: {}}) {
         options.headers = options.headers || {};
 
+        // CSRF Custom Header Defense
+        options.headers['X-Requested-With'] = 'XMLHttpRequest';
+
         // Detect basic objects, but ignore FormData
         if (options.body && options.body.constructor === Object) {
             options.headers['Content-Type'] = 'application/json';
