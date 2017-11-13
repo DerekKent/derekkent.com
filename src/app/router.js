@@ -68,7 +68,9 @@ class AppRouter extends Router {
             if (el.getAttribute('data-local') === 'true') {
                 document.location.href = href;
             } else {
-                window.open(href, '_blank');
+                const newWindow = window.open(href, '_blank');
+
+                newWindow.opener = null;
             }
         } else {
             this.navigate(href);
