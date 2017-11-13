@@ -45,7 +45,7 @@ function compileScripts() {
         .pipe(pi.replace(/@VERSION@/g, config.version))
         .pipe(pi.replace(/@ENV@/g, config.env))
         .pipe(pi.babel({
-            presets: [['env', {
+            presets: ['stage-2', ['env', {
                 targets: {
                     browsers: [
                         'last 3 versions',
