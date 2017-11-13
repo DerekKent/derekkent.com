@@ -14,33 +14,24 @@ class Xhr {
     put(url = '', data, headers) {
         return Xhr[FETCH](url, {
             method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                ...headers
-            },
-            body: data
+            body: data,
+            headers
         });
     }
 
     post(url = '', data, headers) {
         return Xhr[FETCH](url, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                ...headers
-            },
-            body: data
+            body: data,
+            headers
         });
     }
 
     patch(url = '', data, headers) {
         return Xhr[FETCH](url, {
             method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-                ...headers
-            },
-            body: data
+            body: data,
+            headers
         });
     }
 
@@ -51,7 +42,14 @@ class Xhr {
         });
     }
 
-    static [FETCH](url, options = {method: 'GET', headers: {}, body: null}) {
+    static [FETCH](url, options = {method: 'GET', headers: {}}) {
+        options.headers = options.headers || {};
+
+        // Detect basic objects, but ignore FormData
+        if (options.body && options.body.constructor === Object) {
+            options.headers['Content-Type'] = 'application/json';
+        }
+
         const req = new XMLHttpRequest();
         const promise = new Promise((resolve, reject) => {
             function error() {
@@ -96,7 +94,7 @@ class Xhr {
 
             req.withCredentials = false;
 
-            if (options.method.includes(['PUT', 'POST', 'PATCH']) && options.body) {
+            if (['PUT', 'POST', 'PATCH'].includes(options.method) && options.body) {
                 req.send(options.body);
             } else {
                 req.send();
