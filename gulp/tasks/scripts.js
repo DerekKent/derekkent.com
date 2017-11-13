@@ -47,10 +47,7 @@ function compileScripts() {
         .pipe(pi.babel({
             presets: ['stage-3', ['env', {
                 targets: {
-                    browsers: [
-                        'last 3 versions',
-                        'IE 11'
-                    ]
+                    browsers: config.browsers
                 }
             }]],
             plugins: [

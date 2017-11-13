@@ -21,10 +21,7 @@ function precompileTemplates() {
             compact: false,
             presets: [['env', {
                 targets: {
-                    browsers: [
-                        'last 3 versions',
-                        'IE 11'
-                    ]
+                    browsers: config.browsers
                 }
             }]],
             plugins: ['transform-es2015-modules-umd']

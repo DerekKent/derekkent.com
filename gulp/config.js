@@ -17,8 +17,17 @@ module.exports = {
     },
     src: 'src',
     browsers: [
-        'last 2 versions',
-        'not ie < 11'
+        // Desktop
+        'last 2 Firefox versions',
+        'last 2 Chrome versions',
+        'last 2 Safari versions',
+        'last 2 Edge versions',
+        'Firefox ESR',
+        'IE 11',
+
+        // Mobile
+        'last 2 iOS versions',
+        'last 2 ChromeAndroid versions'
     ],
     name: project.name,
     version: project.version,
