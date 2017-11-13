@@ -48,6 +48,7 @@ export default class Home extends Controller {
             return;
         } finally {
             this.model.submitting = false;
+            this.update();
         }
 
         this.model.thanks = 'Welcome!';

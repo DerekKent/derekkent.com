@@ -67,6 +67,7 @@ export default class Petition extends Controller {
                 return;
             } finally {
                 this.model.submitting = false;
+                this.update();
             }
 
             this.model.signed = true;

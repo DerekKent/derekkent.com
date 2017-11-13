@@ -65,6 +65,7 @@ export default class Join extends Controller {
                 return;
             } finally {
                 this.model.submitting = false;
+                this.update();
             }
 
             this.model.joined = true;
