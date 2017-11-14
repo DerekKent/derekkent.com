@@ -31,7 +31,7 @@ function validUrlClick(e) {
 }
 
 function isExternal(href) {
-    return EXTERNAL.test(href);
+    return EXTERNAL.test(href) || href === '/donate';
 }
 
 export default {

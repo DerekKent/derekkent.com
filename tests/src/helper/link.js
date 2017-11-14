@@ -4,6 +4,7 @@ import linkHelper from '~/helpers/link.js';
 test('External Link Detection', async (assert) => {
     const externalLink = 'https://derekkent.com';
     const internalLink = '/issues';
+    const donateLink = '/donate';
 
     let actual = linkHelper.isExternal(externalLink);
     let expected = true;
@@ -16,6 +17,12 @@ test('External Link Detection', async (assert) => {
 
     assert.is(actual, expected,
         `isExternal() should return false for ${internalLink}.`);
+
+    actual = linkHelper.isExternal(donateLink);
+    expected = true;
+
+    assert.is(actual, expected,
+        `isExternal() should return true for ${donateLink}.`);
 });
 
 test('Internal Link Click Detection', async (assert) => {
