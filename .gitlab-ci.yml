@@ -18,7 +18,7 @@ install dependencies:
       - node_modules/
       - jspm_packages/
   artifacts:
-    expire_in: 2 days
+    expire_in: 2 hours
     paths:
       - node_modules/
       - jspm_packages/
@@ -31,11 +31,11 @@ setup tests:
   dependencies:
     - install dependencies
   artifacts:
-    expire_in: 2 days
+    expire_in: 2 hours
     paths:
-      - dev/
+      - test/
   script:
-    - gulp build
+    - gulp build --test
 
 lint:
   stage: test
@@ -57,7 +57,7 @@ build:
   dependencies:
     - install dependencies
   artifacts:
-    expire_in: 2 days
+    expire_in: 2 hours
     paths:
       - dist/
   script:

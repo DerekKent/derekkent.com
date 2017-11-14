@@ -5,7 +5,7 @@
     "scripts": {
         "prepublish": "jspm install",
         "upgrade": "jspm update",
-        "test": "gulp build && gulp test"
+        "test": "gulp build --test && gulp test"
     },
     "repository": {
         "type": "git",
@@ -18,7 +18,7 @@
         "babel-plugin-transform-class-properties": "6.24.1",
         "babel-plugin-transform-decorators": "6.24.1",
         "babel-plugin-transform-decorators-legacy": "1.3.4",
-        "babel-plugin-transform-es2015-modules-umd": "6.24.1",
+        "babel-plugin-transform-es2015-modules-systemjs": "6.24.1",
         "babel-preset-env": "1.6.1",
         "babel-preset-stage-3": "6.24.1",
         "browser-sync": "2.18.13",
@@ -92,23 +92,27 @@
         }
     },
     "ava": {
+        "files": [
+            "./tests/src/**/*.js"
+        ],
         "require": [
-            "./test/helpers/jspm_loader",
-            "./test/helpers/setup-browser-env.js"
+            "./tests/helpers/jspm_loader",
+            "./tests/helpers/setup-browser-env.js"
         ],
         "verbose": true
     },
     "nyc": {
         "include": [
-            "dev/**/*.js"
+            "test/**/*.js"
         ],
         "exclude": [
+            "dev",
             "dist",
             "gulp",
             "jspm_packages",
             "node_modules",
             "src",
-            "test"
+            "tests"
         ]
     },
     "engines": {

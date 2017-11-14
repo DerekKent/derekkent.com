@@ -20,6 +20,12 @@ jspm.setPackagePath(pjsonDir);
 
 const SystemJS = jspm.Loader(); // eslint-disable-line
 
+SystemJS.config({
+    paths: {
+        '~/': 'test/app/'
+    }
+});
+
 function jspmHasModule(name) {
     if (/^(\.\/|\.\.\/|\/)/.test(name)) {
         return false;

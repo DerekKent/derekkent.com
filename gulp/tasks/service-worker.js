@@ -39,7 +39,11 @@ const shellFiles = [
     '/styles/main.css'
 ];
 
-function precache() {
+function precache(done) {
+    if (config.env !== 'production') {
+        return done();
+    }
+
     return swPrecache.write(path.join(config.dest, 'sw.js'), {
         staticFileGlobs: shellFiles.map((uri) => `${config.dest}${uri}`),
         dynamicUrlToDependencies: {

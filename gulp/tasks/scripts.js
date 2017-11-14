@@ -14,7 +14,7 @@ function eslint() {
     return gulp
         .src([
             'gulp/**/*.js',
-            'test/**/*.js',
+            'tests/**/*.js',
             `${config.src}/**/*.js`,
             `!${config.src}/jspm.browser.js`,
             `!${config.src}/jspm.config.js`,
@@ -32,6 +32,15 @@ function eslint() {
 }
 
 function compileScripts() {
+    const plugins = [
+        'transform-decorators-legacy',
+        'transform-class-properties'
+    ];
+
+    if (config.env !== 'test') {
+        plugins.push('transform-es2015-modules-systemjs');
+    }
+
     return gulp
         .src([
             `${config.src}/**/*.js`,
@@ -41,7 +50,7 @@ function compileScripts() {
         ], {
             since: gulp.lastRun('compileScripts')
         })
-        .pipe(pi.if(config.env !== 'production', pi.sourcemaps.init()))
+        .pipe(pi.if(config.env === 'development', pi.sourcemaps.init()))
         .pipe(pi.replace(/@VERSION@/g, config.version))
         .pipe(pi.replace(/@ENV@/g, config.env))
         .pipe(pi.babel({
@@ -50,17 +59,17 @@ function compileScripts() {
                     browsers: config.browsers
                 }
             }]],
-            plugins: [
-                'transform-decorators-legacy',
-                'transform-class-properties',
-                'transform-es2015-modules-umd'
-            ]
+            plugins
         }))
-        .pipe(pi.if(config.env !== 'production', pi.sourcemaps.write('.')))
+        .pipe(pi.if(config.env === 'development', pi.sourcemaps.write('.')))
         .pipe(gulp.dest(config.dest));
 }
 
-function minifyScripts() {
+function minifyScripts(done) {
+    if (config.env !== 'production') {
+        return done();
+    }
+
     return gulp
         .src([
             `${config.dest}/**/*.js`

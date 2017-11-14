@@ -5,6 +5,12 @@ const pi = require('gulp-load-plugins')({
 });
 
 function precompileTemplates() {
+    const plugins = [];
+
+    if (config.env !== 'test') {
+        plugins.push('transform-es2015-modules-systemjs');
+    }
+
     return gulp
         .src(`${config.src}/app/**/*.html`, {
             since: gulp.lastRun('templates')
@@ -24,7 +30,7 @@ function precompileTemplates() {
                     browsers: config.browsers
                 }
             }]],
-            plugins: ['transform-es2015-modules-umd']
+            plugins
         }))
         .pipe(pi.if(config.env !== 'production', pi.sourcemaps.write('.')))
         .pipe(gulp.dest(`${config.dest}/app`));

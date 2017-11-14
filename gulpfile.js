@@ -15,7 +15,10 @@ gulp.task('build', gulp.series(
         'templates',
         'images'
     ),
-    'jspm-builder'
+    'jspm-builder',
+    'minify-scripts',
+    'precache',
+    'humans'
 ));
 
 gulp.task('default', gulp.series(
@@ -29,10 +32,7 @@ gulp.task('dev', gulp.series(
 
 gulp.task('dist', gulp.series(
     'production',
-    'build',
-    'minify-scripts',
-    'precache',
-    'humans'
+    'build'
 ));
 
 gulp.task('lint', gulp.parallel(

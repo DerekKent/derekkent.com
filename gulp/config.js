@@ -2,18 +2,29 @@ const fs = require('fs');
 const argv = require('yargs').argv;
 const project = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
+const env = process.env.NODE_ENV;
+const environments = new Map([
+    [true, 'development'], // Default
+    [env === 'test', 'test'],
+    [env === 'production', 'production'],
+    [argv.development, 'development'],
+    [argv.test, 'test'],
+    [argv.production, 'production']
+]);
+const target = {
+    'development': 'dev',
+    'production': 'dist',
+    'test': 'test'
+};
+
+process.env.NODE_ENV = environments.get(true);
+
 module.exports = {
     get env() {
-        let env = process.env.NODE_ENV || 'development';
-
-        if (argv.production || env === 'production') {
-            env = 'production';
-        }
-
-        return env;
+        return process.env.NODE_ENV;
     },
     get dest() {
-        return (this.env === 'development' ? 'dev' : 'dist');
+        return target[this.env];
     },
     src: 'src',
     browsers: [

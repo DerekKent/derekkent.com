@@ -5,7 +5,11 @@ const pi = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
 });
 
-function humans() {
+function humans(done) {
+    if (config.env !== 'production') {
+        return done();
+    }
+
     const committers = spawnSync('git', ['shortlog', '-sn'], {
         encoding: 'utf8',
         stdio: [0, 'pipe', 'ignore']

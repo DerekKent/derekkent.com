@@ -10,6 +10,7 @@ const FAVICON_DATA_FILE = '.favicon.json';
 function generateFavicons(done) {
     if (config.env !== 'production') {
         done();
+
         return;
     }
 
@@ -55,13 +56,13 @@ function generateFavicons(done) {
             errorOnImageTooSmall: true
         },
         markupFile: FAVICON_DATA_FILE
-    }, () => {
-        done();
-    });
+    }, done);
 }
 
-function injectFaviconMarkup() {
-    if (config.env !== 'production') {
+function injectFaviconMarkup(done) {
+    if (config.env === 'test') {
+        return done();
+    } else if (config.env !== 'production') {
         return gulp
             .src(`${config.src}/*.html`, {
                 since: gulp.lastRun('injectFaviconMarkup')

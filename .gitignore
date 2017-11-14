@@ -2,6 +2,7 @@
 node_modules/
 /dev/
 /dist/
+/test/
 .favicon.json
 .nyc_output/
 coverage/

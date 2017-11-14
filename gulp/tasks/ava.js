@@ -6,7 +6,7 @@ const pi = require('gulp-load-plugins')({
 
 function ava() {
     return gulp
-        .src('test/src/**/*.js', {
+        .src('tests/src/**/*.js', {
             since: gulp.lastRun('ava')
         })
         .pipe(pi.ava());
