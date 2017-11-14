@@ -13,12 +13,12 @@ gulp.task('build', gulp.series(
         'styles',
         'scripts',
         'templates',
-        'images'
+        'images',
+        'humans'
     ),
     'jspm-builder',
     'minify-scripts',
-    'precache',
-    'humans'
+    'precache'
 ));
 
 gulp.task('default', gulp.series(

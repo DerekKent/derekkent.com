@@ -32,9 +32,9 @@ function humans(done) {
                     month: 'short',
                     day: 'numeric'
                 })}`,
-                'Standards: ECMAScript 2016, HTML5, CSS3, WCAG2A',
-                'Components: SystemJS, SuperbJS, Incremental DOM',
-                'Software: Gulp, JSPM, SCSS, Superviews.js'
+                'Standards: ECMAScript 2017 & TC39 Stage 2, HTML5, CSS3, WCAG2A',
+                'Components: Incremental DOM, SuperbJS, SystemJS',
+                'Software: Ava, Babel, Gulp, JSPM, SCSS'
             ],
             note: 'Revolutionizing politics, one commit at a time.'
         }))
