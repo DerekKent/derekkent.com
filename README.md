@@ -14,7 +14,7 @@ This site is targeted at developers who would like to contribute to the campaign
 
 ## Requirements
 
-* Node.js v8.7+
+* Node.js v8.9+
 * Ruby v2.2.3 (for testing)
 * Gulp v4.0.0
 * JSPM v0.17.0-beta.47
@@ -148,15 +148,9 @@ gulp dist
 To run the linters and unit tests locally, enter:
 
 ```bash
-gulp test
+npm test
 ```
 
-or
+You can also just run the linters (`gulp lint`) or unit tests (`gulp build --test && gulp ava`) individually.
 
-```bash
-gulp build && gulp test
-```
-
-if the `dev` environment has not already been built.
-
-You can also just run the linters (`gulp lint`) or unit tests (`gulp ava`) individually.
+If you have `nyc` installed globally (`npm i -g nyc`), you can also get code coverage (`gulp build --test && nyc gulp ava`).
