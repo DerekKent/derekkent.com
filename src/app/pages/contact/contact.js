@@ -40,7 +40,7 @@ export default class Contact extends Controller {
             try {
                 await xhr.post('https://derekkent.com/api/v1/contact', data);
             } catch (err) {
-                this.model.error = 'Oops, something went wrong.';
+                this.model.error = `Oops, something went wrong: ${err.responseText}`;
 
                 return;
             } finally {

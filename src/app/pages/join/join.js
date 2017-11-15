@@ -59,7 +59,7 @@ export default class Join extends Controller {
             try {
                 await xhr.post('https://derekkent.com/api/v1/join', data);
             } catch (err) {
-                this.model.error = 'Oops, something went wrong.';
+                this.model.error = `Oops, something went wrong: ${err.responseText}`;
                 this.update();
 
                 return;
