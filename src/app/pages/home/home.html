@@ -37,8 +37,8 @@
                 <form class="subscribe" key="subscribe">
                     <fieldset>
                         <legend>Join the Movement</legend>
-                        <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" />
-                        <input type="text" name="zip" placeholder="Zip Code" aria-label="Zip Code" />
+                        <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" required />
+                        <input type="text" name="zip" placeholder="Zip Code" aria-label="Zip Code" required />
                         <input type="submit" value="Count Me In" class="btn btn-red{model.submitting ? ' disabled' : ''}" />
                     </fieldset>
                     <span if="model.error">Something went wrong.</span>
