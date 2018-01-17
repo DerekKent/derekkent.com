@@ -4,6 +4,7 @@ const config = require('../config');
 const pi = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
 });
+const manifest = JSON.parse(fs.readFileSync(`./${config.src}/manifest.json`, 'utf8'));
 
 const FAVICON_DATA_FILE = '.favicon.json';
 
@@ -42,7 +43,8 @@ function generateFavicons(done) {
                     display: 'standalone',
                     orientation: 'notSet',
                     onConflict: 'override',
-                    declared: true
+                    declared: true,
+                    'existing_manifest': manifest
                 }
             },
             safariPinnedTab: {
