@@ -8,6 +8,8 @@ SystemJS.config({
   },
   depCache: {
     "~/main.js": [
+      "babel-polyfill",
+      "~/polyfills/object-assign.js",
       "~/router.js",
       "~/handlers/accessibility.js",
       "~/components/shell/shell.js"
