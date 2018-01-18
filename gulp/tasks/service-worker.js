@@ -15,6 +15,7 @@ const shellFiles = [
     '/images/components/divider.svg',
     '/images/social/twitter.svg',
     '/images/social/facebook.svg',
+    '/images/social/e-mail.svg',
 
     // Bundles Dependencies
     '/loader.js',
@@ -27,6 +28,7 @@ const shellFiles = [
     // Handlers
     '/app/handlers/accessibility.js',
     '/app/handlers/analytics.js',
+    '/app/handlers/xhr.js',
 
     // Helpers
     '/app/helpers/link.js',
