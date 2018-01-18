@@ -1,6 +1,6 @@
 import {Controller} from 'superb';
-// import header from './header/header.js';
-// import footer from './footer/footer.js';
+import header from './header/header.js';
+import footer from './footer/footer.js';
 // import banner from './banner/banner.js';
 // import endorsements from './endorsements/endorsements.js';
 import template from './shell.html.js';
@@ -12,19 +12,19 @@ class Shell extends Controller {
         this.template = template;
         this.regions = {
             // banner: '#banner',
-            // header: '#header',
-            main: '#main'
+            header: '#header',
+            main: '#main',
             // endorsements: '#endorsements',
-            // footer: '#footer'
+            footer: '#footer'
         };
     }
 
-    // onLoaded() {
-    //     this.regions.banner.attach(banner);
-    //     this.regions.header.attach(header);
-    //     this.regions.endorsements.attach(endorsements);
-    //     this.regions.footer.attach(footer);
-    // }
+    onLoaded() {
+        // this.regions.banner.attach(banner);
+        this.regions.header.attach(header);
+        // this.regions.endorsements.attach(endorsements);
+        this.regions.footer.attach(footer);
+    }
 
 }
 

@@ -11,7 +11,6 @@ function concatDependencies() {
 
     return gulp
         .src([
-            'jspm_packages/npm/es6-promise*/dist/es6-promise.auto.js', // IE11 support
             'jspm_packages/system.src.js',
             `${config.src}/jspm.browser.js`,
             `${config.src}/jspm.config.js`,

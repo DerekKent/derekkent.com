@@ -8,7 +8,6 @@ SystemJS.config({
   },
   depCache: {
     "~/main.js": [
-      "~/polyfills/object-assign.js",
       "~/router.js",
       "~/handlers/sw.js",
       "~/handlers/accessibility.js",

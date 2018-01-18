@@ -26,9 +26,6 @@ const shellFiles = [
     '/app/router.js',
     '/app/components/shell/**/*.{js,css}',
 
-    // Polyfills
-    '/app/polyfills/object-assign.js',
-
     // Handlers
     '/app/handlers/accessibility.js',
     '/app/handlers/analytics.js',

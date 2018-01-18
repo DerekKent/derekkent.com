@@ -5,7 +5,9 @@
     "scripts": {
         "prepare": "jspm install",
         "upgrade": "jspm update",
-        "test": "gulp build --test && gulp test"
+        "test": "gulp build --test && gulp test",
+        "build": "gulp dist",
+        "dev": "gulp dev"
     },
     "repository": {
         "type": "git",
@@ -51,7 +53,7 @@
         "gulp-scss-lint": "0.6.1",
         "gulp-sourcemaps": "2.6.4",
         "gulp-superviewsjs": "github:dak/gulp-superviewsjs#upgrade",
-        "gulp-uglify": "3.0.0",
+        "gulp-uglify-es": "1.0.4",
         "gulp-wrap": "0.14.0",
         "jsdom": "11.11.0",
         "jsdom-global": "3.0.2",
@@ -68,16 +70,11 @@
             "jspm:browser": "src/jspm.browser.js"
         },
         "dependencies": {
-            "@babel/polyfill": "npm:@babel/polyfill@^7.0.0-beta.44",
-            "es6-promise": "npm:es6-promise@^4.2.4",
             "superb": "npm:superb.js@^0.3.0"
         },
         "devDependencies": {},
         "peerDependencies": {
-            "fs": "npm:jspm-nodelibs-fs@^0.2.1",
-            "incremental-dom": "npm:incremental-dom@^0.5.1",
-            "path": "npm:jspm-nodelibs-path@^0.2.3",
-            "process": "npm:jspm-nodelibs-process@^0.2.0"
+            "incremental-dom": "npm:incremental-dom@^0.5.1"
         },
         "overrides": {
             "npm:incremental-dom@0.5.1": {

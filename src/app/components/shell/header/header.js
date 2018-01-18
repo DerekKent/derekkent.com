@@ -12,10 +12,10 @@ class Header extends Controller {
             classes: ['page-header']
         };
 
-        // window.addEventListener('route:loaded', (e) => {
-        //     this.updateHeaderRoute(e);
-        //     this.closeMobileMenu();
-        // });
+        window.addEventListener('route:loaded', (e) => {
+            this.updateHeaderRoute(e);
+            this.closeMobileMenu();
+        });
     }
 
     updateHeaderRoute(e) {
@@ -23,30 +23,19 @@ class Header extends Controller {
         this.update();
     }
 
-    // @on('click .expand-nav')
-    // toggleMobileMenu(e, open) {
-    //     const navList = this.el.querySelector('ul');
-    //     const toggleButton = navList.querySelector('button');
+    @on('click .expand-nav')
+    toggleMobileMenu(e, open) {
+        const navList = this.el.querySelector('ul');
+        const toggleButton = navList.querySelector('button');
 
-    //     switch (open) {
-    //     case true:
-    //         navList.classList.add('open');
-    //         toggleButton.classList.add('open');
-    //         break;
-    //     case false:
-    //         navList.classList.remove('open');
-    //         toggleButton.classList.remove('open');
-    //         break;
-    //     default:
-    //         navList.classList.toggle('open');
-    //         toggleButton.classList.toggle('open');
-    //     }
-    // }
+        navList.classList.toggle('open', open);
+        toggleButton.classList.toggle('open', open);
+    }
 
-    // @on('click a')
-    // closeMobileMenu(e) {
-    //     this.toggleMobileMenu(e, false);
-    // }
+    @on('click a')
+    closeMobileMenu(e) {
+        this.toggleMobileMenu(e, false);
+    }
 
 }
 

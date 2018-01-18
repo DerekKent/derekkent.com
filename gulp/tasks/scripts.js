@@ -76,7 +76,7 @@ function minifyScripts(done) {
         .src([
             `${config.dest}/**/*.js`
         ])
-        .pipe(pi.uglify())
+        .pipe(pi.uglifyEs.default())
         .pipe(gulp.dest(config.dest));
 }
 

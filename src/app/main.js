@@ -1,5 +1,3 @@
-import '@babel/polyfill';
-import '~/polyfills/object-assign.js';
 import {utils} from 'superb';
 import router from '~/router.js';
 import sw from '~/handlers/sw.js';
