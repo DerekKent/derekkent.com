@@ -68,7 +68,7 @@
         "dependencies": {
             "babel-polyfill": "npm:babel-polyfill@^6.26.0",
             "es6-promise": "npm:es6-promise@^4.1.1",
-            "superb": "npm:superb.js@^0.2.16"
+            "superb": "npm:superb.js@^0.3.0"
         },
         "devDependencies": {},
         "peerDependencies": {
