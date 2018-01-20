@@ -2,7 +2,7 @@ import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
 import analytics from '~/handlers/analytics.js';
 import xhr from '~/handlers/xhr.js';
-import {description as template} from './petition.html.js';
+import template from './petition.html.js';
 
 const ACT_BLUE = 'https://secure.actblue.com/contribute/page/';
 

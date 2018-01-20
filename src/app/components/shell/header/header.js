@@ -1,6 +1,6 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
-import {description as template} from './header.html.js';
+import template from './header.html.js';
 
 class Header extends Controller {
 

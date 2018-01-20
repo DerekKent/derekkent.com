@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './marijuana.html.js';
+import template from './marijuana.html.js';
 
 export default class Marijuana extends Controller {
 

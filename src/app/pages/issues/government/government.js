@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './government.html.js';
+import template from './government.html.js';
 
 export default class Government extends Controller {
 

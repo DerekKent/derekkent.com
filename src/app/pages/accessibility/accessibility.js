@@ -1,7 +1,7 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
 import accessibility from '~/handlers/accessibility.js';
-import {description as template} from './accessibility.html.js';
+import template from './accessibility.html.js';
 
 const USER_INPUT_KEYS = [13, 32];
 

@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './fracking.html.js';
+import template from './fracking.html.js';
 
 export default class Fracking extends Controller {
 

@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './environment.html.js';
+import template from './environment.html.js';
 
 export default class Environment extends Controller {
 

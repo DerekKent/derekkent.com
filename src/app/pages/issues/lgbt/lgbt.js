@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './lgbt.html.js';
+import template from './lgbt.html.js';
 
 export default class LGBT extends Controller {
 

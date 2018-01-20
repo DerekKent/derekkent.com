@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './ubi.html.js';
+import template from './ubi.html.js';
 
 export default class BasicIncome extends Controller {
 

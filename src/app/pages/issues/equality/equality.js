@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './equality.html.js';
+import template from './equality.html.js';
 
 export default class Equality extends Controller {
 

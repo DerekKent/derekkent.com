@@ -1,6 +1,6 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
-import {description as template} from './map.html.js';
+import template from './map.html.js';
 import 'maps';
 
 export default class Map extends Controller {

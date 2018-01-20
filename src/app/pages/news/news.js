@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './news.html.js';
+import template from './news.html.js';
 
 export default class News extends Controller {
 

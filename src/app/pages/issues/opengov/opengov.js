@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './opengov.html.js';
+import template from './opengov.html.js';
 
 export default class OpenGov extends Controller {
 

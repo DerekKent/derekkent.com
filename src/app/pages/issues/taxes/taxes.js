@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './taxes.html.js';
+import template from './taxes.html.js';
 
 export default class Taxes extends Controller {
 

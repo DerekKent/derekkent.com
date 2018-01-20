@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './footer.html.js';
+import template from './footer.html.js';
 
 class Footer extends Controller {
 

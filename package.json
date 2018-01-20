@@ -47,7 +47,7 @@
         "gulp-sass": "3.1.0",
         "gulp-scss-lint": "0.6.0",
         "gulp-sourcemaps": "2.6.3",
-        "gulp-superviewsjs": "github:alexsad/gulp-superviewsjs",
+        "gulp-superviewsjs": "github:dak/gulp-superviewsjs#upgrade",
         "gulp-uglify": "3.0.0",
         "gulp-util": "3.0.8",
         "gulp-wrap": "0.13.0",

@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './issues.html.js';
+import template from './issues.html.js';
 
 export default class Issues extends Controller {
 

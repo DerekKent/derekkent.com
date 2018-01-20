@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './women.html.js';
+import template from './women.html.js';
 
 export default class Women extends Controller {
 

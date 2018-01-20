@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './energy.html.js';
+import template from './energy.html.js';
 
 export default class Energy extends Controller {
 

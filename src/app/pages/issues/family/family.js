@@ -1,5 +1,5 @@
 import {Controller} from 'superb';
-import {description as template} from './family.html.js';
+import template from './family.html.js';
 
 export default class Family extends Controller {
 

@@ -1,7 +1,7 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
 import xhr from '~/handlers/xhr.js';
-import {description as template} from './contact.html.js';
+import template from './contact.html.js';
 
 export default class Contact extends Controller {
 
