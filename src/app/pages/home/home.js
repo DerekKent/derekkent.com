@@ -1,6 +1,6 @@
 import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
-import analytics from '~/handlers/analytics.js';
+import {track} from '~/helpers/conversions.js';
 import xhr from '~/handlers/xhr.js';
 import template from './home.html.js';
 
@@ -54,15 +54,7 @@ export default class Home extends Controller {
         this.model.thanks = 'Welcome!';
         this.update();
 
-        if (analytics.tracking) {
-            SystemJS.import('conversions').then(() => {
-                window.google_trackConversion({
-                    'google_conversion_id': 880588424,
-                    'google_conversion_label': 'rE4FCMLavGwQiO3yowM',
-                    'google_remarketing_only': false
-                });
-            });
-        }
+        track('rE4FCMLavGwQiO3yowM');
 
         setTimeout(() => {
             this.model.thanks = false;
