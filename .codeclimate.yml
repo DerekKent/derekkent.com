@@ -5,45 +5,27 @@ engines:
       languages:
         - javascript
     exclude_fingerprints:
-      - a0ccea7a36ce865044af95e010b7f562
-      - 56e1ec1549e13db75a7f0f7fec10faf2
-      - 2a8c2790b62ccb9ced3cefe01268520f
-      - d1c805c13dbb3cbb457f96a147e5794e
-      - 0d5bf1c5c2c34a314d0b9e5230062e1d
-      - 1a2d9de494ff2d74ed6a1073c93ebb2f
-      - c3c235ced84179c207e467eebb82a68d
-      - 2dceefeb8e13e5b9be85ac4c1bd659ca
-      - 51c8000dda5c0ad272fe78016aad3780
-      - 135e922a0fbe1611a1dc65235f34b772
-      - a3083e81fe2ab793dd228db462690269
-      - 06939a6a73ee27682e53f16a06013644
-      - 4fc6ff8345793d1796c619d140de317d
-      - 73b68f43d607395a26cef3986033da13
-      - 47eddfa53f151541dfb2ee31741200fc
-      - 8c8f3b57894e6fba2f41132dd1c2c35e
-      - 45a37dc4259827b2ae88491df06c7f7b
-      - 4cb613a26cf11b267b993dfc4b48e4a1
-      - 7118029611d376180ba9f683610c1439
-      - 1e687b7cefe00027c55530c96e0a0f5c
-      - 46c407fba230347b67abfbd4adb808c4
-      - 04618bf50ac1099e5fe5ca0e1ec2563e
-      - 6e23f5257fbfcde505933a6df197d7a9
-      - b7806c0cceb8e9e04a853464cdc91c79
-      - 739672df2a92d0601efc5e7812599eb9
-      - 530a3f6a56f979d91a5123f305fd82c4
-      - 8d3f56b5152a006d9d710bb2e31aa829
-      - 341165b4a44e6d8fdbfb71bb8fc07c2b
-      - 16e55edcdee2e0d016b9ace6a7974045
-      - e3874c0650577a2d94cc9af01039a2e7
-      - e9265ec8329e29bd1c1f7dbbbeabe08f
-      - d0b15062a7638fb9e2f230cdf0372da2
-      - 188d931562f3b9586f1435622539ea7c
-      - 731cefbb5c5cd7ae351bfb76e9b03e36
-      - 065e3360c8c2d5ab92b94aefab67f564
-      - 6ce92b75975c1f1114c7e91733fe2602
-      - 51d5079e68f4e3a22566806e2b037fcc
-      - 0703e49442f382c21b2a23f98b197a8a
-      - ede7b8ce295b030cb7fe27f02c715ab8
+      - f28714185b3f321147f5f473607cd33f
+      - 92ed6a99b73d59e40808e446366ed737
+      - bdf2adf601a91b5402fa1a23c246c70d
+      - 25b480727f82acbe2a1b4f51f69e4718
+      - 34ddcc8dcd476c9c0681bc76a02763a9
+      - 0e4137e66ce5eda17f1da618ed7b88f0
+      - ab49ec65ec567fe7752ffe4df090b6fa
+      - f7d625b1ed1cf0f78a262480ee23790c
+      - 75097283abe3bfc52c85eedf053bc458
+      - a764d8b207de9dda50d2cd101fc2622c
+      - 5dac303df182ad980db9bc6425fe7437
+      - 518506a6a8a1a46d8889c0be25607146
+      - 1cd2d7b9112b04e1a0218fb1de6ad4f3
+      - 8f6c7042a9398743e5a5f1b3e433c542
+      - 75a9d63eb039104f7e0ab1e42da975a6
+      - 369e228bb5dfb82c9858235d1495dbde
+      - 5dfbcfa5aa09e00d568508a26ea858ba
+      - f7d43e219080e5124e0f21f146e0deb3
+      - 341b5712e12b6a3190e42ca565215e0a
+      - cb8a7655884af8bdc0d136103eb30ac3
+      - c4ea60216980739df159f18743473ab3
   eslint:
     enabled: true
     channel: 'eslint-4'
@@ -61,5 +43,6 @@ exclude_paths:
   - 'coverage/'
   - 'dev/'
   - 'dist/'
+  - 'test/'
   - 'jspm_packages/'
   - 'node_modules/'
