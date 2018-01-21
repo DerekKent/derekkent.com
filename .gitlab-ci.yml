@@ -54,6 +54,8 @@ unit tests:
 
 build:
   stage: build
+  only:
+    - master
   dependencies:
     - install dependencies
   artifacts:
@@ -65,6 +67,8 @@ build:
 
 release:
   stage: release
+  only:
+    - master
   environment: staging
   image: docker:latest
   services:
