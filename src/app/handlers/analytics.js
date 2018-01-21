@@ -41,14 +41,12 @@ class Analytics {
         this[DISABLE_GA]();
     }
 
-    send(fields) {
+    async send(fields) {
         if (this.tracking) {
-            return SystemJS.import('ga').then(() => {
-                window.ga('send', fields);
-            });
-        }
+            await SystemJS.import('ga');
 
-        return Promise.resolve();
+            window.ga('send', fields);
+        }
     }
 
     sendPageview(page) {
