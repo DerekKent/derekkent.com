@@ -62,7 +62,6 @@ export default class Petition extends Controller {
                 await xhr.post('https://derekkent.com/api/v1/petition', data);
             } catch (err) {
                 this.model.error = 'Oops, something went wrong.';
-                this.update();
 
                 return;
             } finally {

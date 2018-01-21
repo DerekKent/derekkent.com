@@ -43,7 +43,6 @@ export default class Home extends Controller {
         } catch (err) {
             this.model.thanks = false;
             this.model.error = true;
-            this.update();
 
             return;
         } finally {
