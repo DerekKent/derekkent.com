@@ -32,6 +32,7 @@ function eslint() {
 }
 
 function compileScripts() {
+    let browsers = ['last 2 Chrome versions'];
     const plugins = [
         'transform-decorators-legacy',
         'transform-class-properties'
@@ -39,6 +40,7 @@ function compileScripts() {
 
     if (config.env !== 'test') {
         plugins.push('transform-es2015-modules-systemjs');
+        browsers = config.browsers;
     }
 
     return gulp
@@ -56,7 +58,7 @@ function compileScripts() {
         .pipe(pi.babel({
             presets: ['stage-3', ['env', {
                 targets: {
-                    browsers: config.browsers
+                    browsers
                 }
             }]],
             plugins
