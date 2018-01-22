@@ -17,6 +17,7 @@ class Header extends Controller {
 
         window.addEventListener('route:loaded', (e) => {
             this.updateHeaderRoute(e);
+            this.closeMobileMenu();
         });
     }
 
