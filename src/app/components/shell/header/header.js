@@ -2,6 +2,9 @@ import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
 import template from './header.html.js';
 
+const NAV_LIST = Symbol();
+const MOBILE_MENU_BUTTON = Symbol();
+
 class Header extends Controller {
 
     init() {
@@ -17,6 +20,11 @@ class Header extends Controller {
         });
     }
 
+    onLoaded() {
+        this[NAV_LIST] = this.el.querySelector('ul');
+        this[MOBILE_MENU_BUTTON] = this[NAV_LIST].querySelector('button');
+    }
+
     updateHeaderRoute(e) {
         this.model = e.detail.page;
         this.update();
@@ -24,20 +32,14 @@ class Header extends Controller {
 
     @on('click .expand-nav')
     toggleMobileMenu() {
-        const list = this.el.querySelector('ul');
-        const button = list.querySelector('button');
-
-        list.classList.toggle('open');
-        button.classList.toggle('open');
+        this[NAV_LIST].classList.toggle('open');
+        this[MOBILE_MENU_BUTTON].classList.toggle('open');
     }
 
     @on('click a')
     closeMobileMenu() {
-        const list = this.el.querySelector('ul');
-        const button = list.querySelector('button');
-
-        list.classList.remove('open');
-        button.classList.remove('open');
+        this[NAV_LIST].classList.remove('open');
+        this[MOBILE_MENU_BUTTON].classList.remove('open');
     }
 
 }
