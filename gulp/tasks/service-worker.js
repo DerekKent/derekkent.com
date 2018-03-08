@@ -31,6 +31,7 @@ const shellFiles = [
     // Handlers
     '/app/handlers/accessibility.js',
     '/app/handlers/analytics.js',
+    '/app/handlers/sw.js',
     '/app/handlers/xhr.js',
 
     // Helpers
