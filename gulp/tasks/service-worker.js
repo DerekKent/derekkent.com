@@ -35,6 +35,7 @@ const shellFiles = [
     '/app/handlers/xhr.js',
 
     // Helpers
+    '/app/helpers/conversions.js',
     '/app/helpers/link.js',
     '/app/helpers/controller/decorators.js',
 
