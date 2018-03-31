@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+
+.not-found-page {
+    border-top: 1px solid color(gray, lighter);
+    padding: 0 2rem;
+    text-align: center;
+
+    h1 {
+        text-align: center;
+
+        @include mobile {
+            font-size: 3.5rem;
+        }
+    }
+
+    img {
+        margin-top: 1rem;
+    }
+
+    .wrapper {
+        margin: 0 auto 0;
+        padding: 5vh 3vw;
+        width: 70%;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+}

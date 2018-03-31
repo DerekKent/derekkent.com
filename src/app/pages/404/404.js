@@ -5,8 +5,10 @@ export default class FourOhFour extends Controller {
 
     init() {
         this.template = template;
+        this.css = '/app/pages/404/404.css';
         this.view = {
-            tag: 'main'
+            tag: 'main',
+            classes: ['not-found-page', 'page']
         };
     }
 
