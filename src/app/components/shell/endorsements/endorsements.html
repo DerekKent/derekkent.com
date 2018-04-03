@@ -1,0 +1,10 @@
+<template args="endorsements">
+    <h2>Endorsed By</h2>
+    <ul>
+        <li each="endorsement in endorsements">
+            <a href="{endorsement.link}">
+                <img src="{endorsement.image}" alt="{endorsement.name}">
+            </a>
+        </li>
+    </ul>
+</template>
