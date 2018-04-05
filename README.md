@@ -14,7 +14,7 @@ This site is targeted at developers who would like to contribute to the campaign
 
 ## Requirements
 
-* Node.js v8.9+
+* Node.js v8.11.1+
 * Ruby v2.2.3 (for testing)
 * Gulp v4.0.0
 * JSPM v0.17.0-beta.47

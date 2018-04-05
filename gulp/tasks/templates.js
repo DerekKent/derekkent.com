@@ -8,7 +8,7 @@ function precompileTemplates() {
     const plugins = [];
 
     if (config.env !== 'test') {
-        plugins.push('transform-es2015-modules-systemjs');
+        plugins.push('@babel/plugin-transform-modules-systemjs');
     }
 
     return gulp
@@ -25,7 +25,7 @@ function precompileTemplates() {
         .pipe(pi.superviewsjs())
         .pipe(pi.babel({
             compact: false,
-            presets: [['env', {
+            presets: [['@babel/preset-env', {
                 targets: {
                     browsers: config.browsers
                 }

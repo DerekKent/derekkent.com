@@ -34,12 +34,12 @@ function eslint() {
 function compileScripts() {
     let browsers = ['last 2 Chrome versions'];
     const plugins = [
-        'transform-decorators-legacy',
-        'transform-class-properties'
+        '@babel/plugin-proposal-decorators',
+        ['@babel/plugin-proposal-class-properties', {'loose': true}]
     ];
 
     if (config.env !== 'test') {
-        plugins.push('transform-es2015-modules-systemjs');
+        plugins.push('@babel/plugin-transform-modules-systemjs');
         browsers = config.browsers;
     }
 
@@ -56,7 +56,7 @@ function compileScripts() {
         .pipe(pi.replace(/@VERSION@/g, config.version))
         .pipe(pi.replace(/@ENV@/g, config.env))
         .pipe(pi.babel({
-            presets: ['stage-3', ['env', {
+            presets: ['@babel/preset-stage-3', ['@babel/preset-env', {
                 targets: {
                     browsers
                 }
