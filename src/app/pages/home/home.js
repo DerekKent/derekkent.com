@@ -40,7 +40,7 @@ export default class Home extends Controller {
 
         try {
             await xhr.put('https://derekkent.com/api/v1/subscribe', data);
-        } catch (err) {
+        } catch {
             this.model.thanks = false;
             this.model.error = true;
 
