@@ -1,3 +1,3 @@
-FROM nginx:1.10.1-alpine
+FROM nginx:mainline-alpine
 
 COPY dist /usr/share/nginx/html
