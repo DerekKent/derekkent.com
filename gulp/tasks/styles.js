@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const config = require('../config');
 const bs = require('browser-sync').get(config.name);
+const colors = require('ansi-colors');
+const log = require('fancy-log');
 const pi = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
 });
@@ -14,12 +16,10 @@ function scsslint() {
             config: 'gulp/.scss-lint.yml',
             customReport: (file) => {
                 /* eslint prefer-template:0 */
-                const colors = pi.util.colors;
-
                 if (!file.scsslint.success) {
                     process.exitCode = 1;
 
-                    pi.util.log(
+                    log.info(
                         colors.cyan(file.scsslint.issues.length) +
                         ' issues found in ' +
                         colors.magenta(file.path)
@@ -34,7 +34,7 @@ function scsslint() {
                             colors.green(linter) +
                             issue.reason;
 
-                        pi.util.log(logMsg);
+                        log.info(logMsg);
                     });
                 }
             }
