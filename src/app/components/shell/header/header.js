@@ -2,9 +2,6 @@ import {Controller} from 'superb';
 import {on} from '~/helpers/controller/decorators.js';
 import template from './header.html.js';
 
-const NAV_LIST = Symbol();
-const MOBILE_MENU_BUTTON = Symbol();
-
 class Header extends Controller {
 
     init() {
@@ -21,26 +18,33 @@ class Header extends Controller {
         });
     }
 
-    onLoaded() {
-        this[NAV_LIST] = this.el.querySelector('ul');
-        this[MOBILE_MENU_BUTTON] = this[NAV_LIST].querySelector('button');
-    }
-
     updateHeaderRoute(e) {
         this.model = e.detail.page;
         this.update();
     }
 
     @on('click .expand-nav')
-    toggleMobileMenu() {
-        this[NAV_LIST].classList.toggle('open');
-        this[MOBILE_MENU_BUTTON].classList.toggle('open');
+    toggleMobileMenu(e, open) {
+        const navList = this.el.querySelector('ul');
+        const toggleButton = navList.querySelector('button');
+
+        switch (open) {
+        case true:
+            navList.classList.add('open');
+            toggleButton.classList.add('open');
+            break;
+        case false:
+            navList.classList.remove('open');
+            toggleButton.classList.remove('open');
+        default:
+            navList.classList.toggle('open');
+            toggleButton.classList.toggle('open');
+        }
     }
 
     @on('click a')
-    closeMobileMenu() {
-        this[NAV_LIST].classList.remove('open');
-        this[MOBILE_MENU_BUTTON].classList.remove('open');
+    closeMobileMenu(e) {
+        this.toggleMobileMenu(e, false);
     }
 
 }
