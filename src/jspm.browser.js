@@ -24,6 +24,7 @@ SystemJS.config({
     "~/components/shell/shell.js": [
       "./header/header.js",
       "./footer/footer.js",
+      "./endorsements/endorsements.js",
       "./shell.html.js"
     ],
     "~/components/shell/header/header.js": [
@@ -32,6 +33,9 @@ SystemJS.config({
     ],
     "~/components/shell/footer/footer.js": [
       "./footer.html.js"
+    ],
+    "~/components/shell/endorsements/endorsements.js": [
+      "./endorsements.html.js"
     ],
     "~/pages/home/home.js": [
       "~/helpers/controller/decorators.js",
