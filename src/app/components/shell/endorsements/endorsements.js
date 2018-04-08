@@ -3,6 +3,24 @@ import template from './endorsements.html.js';
 
 const POPSTATE_EVENT_LISTENER = Symbol();
 
+const ENDORSEMENTS = [{
+    name: '314 Action',
+    image: '/images/endorsements/314action.png',
+    link: 'http://www.314action.org/endorsed-candidates/'
+}, {
+    name: 'Run for Something',
+    image: '/images/endorsements/run-for-something.png',
+    link: 'https://runforsomething.net/candidates/derek-kent/'
+}, {
+    name: 'Political Revolution',
+    image: '/images/endorsements/political-revolution.png',
+    link: 'https://political-revolution.com/endorsements/'
+}, {
+    name: 'Freethought Equality Fund',
+    image: '/images/endorsements/fef.png',
+    link: 'http://freethoughtequality.org/2018-endorsements-state-local/'
+}];
+
 class Endorsements extends Controller {
 
     init() {
@@ -12,23 +30,7 @@ class Endorsements extends Controller {
             classes: ['page-endorsements']
         };
 
-        this.model = this.shuffle([{
-            name: '314 Action',
-            image: '/images/endorsements/314action.png',
-            link: 'http://www.314action.org/endorsed-candidates/'
-        }, {
-            name: 'Run for Something',
-            image: '/images/endorsements/run-for-something.png',
-            link: 'https://runforsomething.net/candidates/derek-kent/'
-        }, {
-            name: 'Political Revolution',
-            image: '/images/endorsements/political-revolution.png',
-            link: 'https://political-revolution.com/endorsements/'
-        }, {
-            name: 'Freethought Equality Fund',
-            image: '/images/endorsements/fef.png',
-            link: 'http://freethoughtequality.org/2018-endorsements-state-local/'
-        }]);
+        this.model = this.shuffle(ENDORSEMENTS);
 
         this[POPSTATE_EVENT_LISTENER] = () => {
             this.shuffle(this.model);
