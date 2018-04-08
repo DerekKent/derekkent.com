@@ -68,7 +68,7 @@
             "jspm:browser": "src/jspm.browser.js"
         },
         "dependencies": {
-            "babel-polyfill": "npm:@babel/polyfill@^7.0.0-beta.44",
+            "@babel/polyfill": "npm:@babel/polyfill@^7.0.0-beta.44",
             "es6-promise": "npm:es6-promise@^4.2.4",
             "superb": "npm:superb.js@^0.3.0"
         },
