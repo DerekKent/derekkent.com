@@ -36,6 +36,7 @@ class Header extends Controller {
         case false:
             navList.classList.remove('open');
             toggleButton.classList.remove('open');
+            break;
         default:
             navList.classList.toggle('open');
             toggleButton.classList.toggle('open');
