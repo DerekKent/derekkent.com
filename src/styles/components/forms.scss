@@ -9,6 +9,13 @@ label {
     font-size: 1.1em;
     margin-top: 1em;
 
+    @include mobile {
+        &:not(.inline) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
     &.wrap {
         flex-wrap: wrap;
 
@@ -19,6 +26,10 @@ label {
 
     > .label {
         flex: 0 0 12rem;
+
+        @include mobile {
+            flex: 0 0 auto;
+        }
     }
 
     > input {
