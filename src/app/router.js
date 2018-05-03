@@ -13,7 +13,8 @@ const pages = [
     'join',
     'map',
     'news',
-    'privacy'
+    'privacy',
+    'yardsign'
 ];
 
 class AppRouter extends Router {

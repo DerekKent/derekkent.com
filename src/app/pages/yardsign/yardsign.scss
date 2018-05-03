@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
+.yardsign-page {
+    > .banner {
+        background-image: url('/images/banners/get-involved.jpg');
+
+        &.requested {
+            background-image: url('/images/banners/sitting-group.jpg');
+            background-position: center bottom;
+        }
+    }
+
+    &.page > article > .notice {
+        display: block;
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .error {
+        color: color(red);
+        display: block;
+        font-size: 1.2em;
+        margin-top: 1em;
+    }
+}

@@ -1,0 +1,48 @@
+<template args="model">
+    <div class="banner curved-bottom{model.requested ? ' requested' : ''}"></div>
+    <article>
+        <if condition="!model.requested">
+            <h1>Join the Fight — Get a Yard Sign</h1>
+
+            <form>
+                <label><span class="label">First Name:</span>
+                    <input type="text" name="fname">
+                </label>
+                <label><span class="label">Last Name:</span>
+                    <input type="text" name="lname">
+                </label>
+                <label><span class="label">E-mail:</span>
+                    <input type="email" name="email" required>
+                </label>
+                <label><span class="label">Address:</span>
+                    <input type="text" name="address" required>
+                </label>
+                <label><span class="label">Zip Code:</span>
+                    <input type="text" name="zip" pattern="{model.zipcode}" required>
+                </label>
+                <label class="wrap"><span class="label">Special delivery instructions?</span>
+                    <textarea name="instructions" rows="3" placeholder="(optional)"></textarea>
+                </label>
+                <if condition="model.error">
+                    <span class="error">{model.error}</span>
+                </if>
+                <input type="submit" class="btn btn-red{model.submitting ? ' disabled' : ''}" value="Request Your Sign">
+            </form>
+
+            <p class="notice">Free yard signs are only available while supplies last, so don't delay!</p>
+        <else>
+            <h1>We've got your request!</h1>
+
+            <p>
+                Thanks for expressing interest in joining the fight to support a real
+                progressive candidate for District 32 — this campaign depends on people like you.
+            </p>
+
+            <p>
+                We're processing your request for a yard sign and will e-mail you soon to
+                let you know when yours will be delivered. In the meantime, don't forget to spread
+                the word to friends and family and help us grow a real grassroots effort.
+            </p>
+        </if>
+    </article>
+</template>
