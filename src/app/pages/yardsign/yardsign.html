@@ -1,7 +1,7 @@
 <template args="model">
     <div class="banner curved-bottom{model.requested ? ' requested' : ''}"></div>
     <article>
-        <if condition="model.requested">
+        <if condition="!model.requested">
             <h1>Join the Fight — Get a Yard Sign</h1>
 
             <form>
