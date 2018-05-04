@@ -1,7 +1,7 @@
 <template args="model">
     <div class="banner curved-bottom{model.requested ? ' requested' : ''}"></div>
     <article>
-        <if condition="!model.requested">
+        <if condition="model.requested">
             <h1>Join the Fight — Get a Yard Sign</h1>
 
             <form>
@@ -42,6 +42,14 @@
                 We're processing your request for a yard sign and will e-mail you soon to
                 let you know when yours will be delivered. In the meantime, don't forget to spread
                 the word to friends and family and help us grow a real grassroots effort.
+            </p>
+
+            <p>
+                Please also consider contributing so we can provide others with free yard signs.
+            </p>
+
+            <p class="center">
+                <a class="btn btn-red" href="https://derekkent.com/donate">Contribute</a>
             </p>
         </if>
     </article>
