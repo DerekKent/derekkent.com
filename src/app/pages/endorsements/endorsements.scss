@@ -21,6 +21,10 @@
     li {
         flex: 0 0 33%;
 
+        @include mobile {
+            flex: 0 0 100%;
+        }
+
         img {
             padding: 2rem;
             width: 100%;
