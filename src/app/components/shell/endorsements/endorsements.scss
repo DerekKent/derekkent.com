@@ -20,6 +20,10 @@
         display: flex;
         margin: 0 0 1.5rem;
         padding: 0;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
 
     li {
@@ -27,14 +31,13 @@
         display: flex;
         flex: 1 1 25%;
         justify-content: center;
-        margin: 0 4%;
 
         @include mobile {
-            flex: 1 1 50%;
-            flex-wrap: wrap;
+            flex: 0 0 50%;
         }
 
         img {
+            padding: 0 4%;
             max-height: 10rem;
             max-width: 100%;
         }
