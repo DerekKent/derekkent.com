@@ -1,24 +1,26 @@
 import {Controller} from 'superb';
 import template from './endorsements.html.js';
 
-const POPSTATE_EVENT_LISTENER = Symbol();
-
 const ENDORSEMENTS = [{
     name: '314 Action',
-    image: '/images/endorsements/314action.png',
-    link: 'http://www.314action.org/endorsed-candidates/'
-}, {
-    name: 'Run for Something',
-    image: '/images/endorsements/run-for-something.png',
-    link: 'https://runforsomething.net/candidates/derek-kent/'
-}, {
-    name: 'Political Revolution',
-    image: '/images/endorsements/political-revolution.png',
-    link: 'https://political-revolution.com/endorsements/'
+    image: '/images/endorsements/white/314action.png',
+    link: 'http://www.314action.org/endorsed-candidates-1/'
 }, {
     name: 'Freethought Equality Fund',
-    image: '/images/endorsements/fef.png',
+    image: '/images/endorsements/white/fef.png',
     link: 'http://freethoughtequality.org/2018-endorsements-state-local/'
+}, {
+    name: 'NARAL Pro-Choice Maryland PAC Endorsed Champion of Choice',
+    image: '/images/endorsements/white/naral.png',
+    link: 'https://maryland.prochoiceamericaaffiliates.org/wp-content/uploads/sites/11/2018/05/Endorsements.pdf'
+}, {
+    name: 'Political Revolution',
+    image: '/images/endorsements/white/political-revolution.png',
+    link: 'https://political-revolution.com/endorsements/'
+}, {
+    name: 'Run for Something',
+    image: '/images/endorsements/white/run-for-something.png',
+    link: 'https://runforsomething.net/candidates/derek-kent/'
 }];
 
 class Endorsements extends Controller {
@@ -30,17 +32,22 @@ class Endorsements extends Controller {
             classes: ['page-endorsements']
         };
 
+        this.shuffleEndorsements();
+
+        window.addEventListener('route:loaded', () => {
+            if (location.pathname === '/endorsements') {
+                this.el.classList.add('hidden');
+            } else {
+                this.el.classList.remove('hidden');
+            }
+
+            this.shuffleEndorsements();
+            this.update();
+        });
+    }
+
+    shuffleEndorsements() {
         this.model = this.shuffle(ENDORSEMENTS);
-
-        this[POPSTATE_EVENT_LISTENER] = () => {
-            this.shuffle(this.model);
-
-            window.requestAnimationFrame(() => {
-                this.update();
-            });
-        };
-
-        window.addEventListener('popstate', this[POPSTATE_EVENT_LISTENER]);
     }
 
     shuffle(array) {
@@ -50,11 +57,7 @@ class Endorsements extends Controller {
             [array[i], array[j]] = [array[j], array[i]];
         }
 
-        return array;
-    }
-
-    onClose() {
-        window.removeEventListener('popstate', this[POPSTATE_EVENT_LISTENER]);
+        return array.slice(0, 4);
     }
 
 }

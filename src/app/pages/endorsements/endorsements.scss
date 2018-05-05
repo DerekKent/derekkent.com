@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+
+.endorsements-page {
+    border-top: 1px solid color(gray, lighter);
+    padding: 0 2rem;
+    text-align: center;
+
+    h1 {
+        text-align: center;
+    }
+
+    ul {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        flex: 0 0 33%;
+
+        img {
+            padding: 2rem;
+            width: 100%;
+        }
+    }
+}

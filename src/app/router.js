@@ -8,6 +8,7 @@ const pages = [
     'accessibility',
     'contact',
     'contribute',
+    'endorsements',
     'events',
     'issues',
     'join',

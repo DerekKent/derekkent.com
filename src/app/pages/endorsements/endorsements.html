@@ -1,0 +1,33 @@
+<template args="model">
+    <article>
+        <h1>Endorsements & Recognitions</h1>
+
+        <h2>Endorsements</h2>
+
+        <ul>
+            <li each="endorsement in model.endorsements">
+                <if condition="endorsement.link">
+                    <a href="{endorsement.link}" rel="nofollow">
+                        <img src="{endorsement.image}" alt="{endorsement.name}">
+                    </a>
+                <else>
+                    <img src="{endorsement.image}" alt="{endorsement.name}">
+                </if>
+            </li>
+        </ul>
+
+        <h2>Recognitions</h2>
+
+        <ul>
+            <li each="recognition in model.recognitions">
+                <if condition="recognition.link">
+                    <a href="{recognition.link}" rel="nofollow">
+                        <img src="{recognition.image}" alt="{recognition.name}">
+                    </a>
+                <else>
+                    <img src="{recognition.image}" alt="{recognition.name}">
+                </if>
+            </li>
+        </ul>
+    </article>
+</template>
