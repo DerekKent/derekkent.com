@@ -16,7 +16,7 @@ const shellFiles = [
     '/images/social/twitter.svg',
     '/images/social/facebook.svg',
     '/images/social/e-mail.svg',
-    '/images/endorsements/**/*.{png,svg,jpg}',
+    '/images/endorsements/white/*.{png,svg,jpg}',
 
     // Bundles Dependencies
     '/loader.js',
