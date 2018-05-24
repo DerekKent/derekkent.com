@@ -32,6 +32,10 @@ const RECOGNITIONS = [{
     image: '/images/endorsements/color/represent.maryland.png',
     link: ''
 }, {
+    name: 'USSEC Friend of Solar',
+    image: '/images/endorsements/color/friend-of-solar.svg',
+    link: ''
+}, {
     name: '#VoteProChoice Recommended',
     image: '/images/endorsements/color/voteprochoice.png',
     link: ''

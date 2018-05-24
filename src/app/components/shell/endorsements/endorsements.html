@@ -3,9 +3,13 @@
     <div class="view-all"><a href="/endorsements">View All</a></div>
     <ul>
         <li each="endorsement in endorsements">
-            <a href="{endorsement.link}" rel="nofollow">
+            <if condition="endorsement.link">
+                <a href="{endorsement.link}" rel="nofollow">
+                    <img src="{endorsement.image}" alt="{endorsement.name}">
+                </a>
+            <else>
                 <img src="{endorsement.image}" alt="{endorsement.name}">
-            </a>
+            </if>
         </li>
     </ul>
 </template>

@@ -21,6 +21,10 @@ const ENDORSEMENTS = [{
     name: 'Run for Something',
     image: '/images/endorsements/white/run-for-something.png',
     link: 'https://runforsomething.net/candidates/derek-kent/'
+}, {
+    name: 'USSEC Friend of Solar',
+    image: '/images/endorsements/white/friend-of-solar.svg',
+    link: ''
 }];
 
 class Endorsements extends Controller {
