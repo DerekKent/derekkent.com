@@ -13,7 +13,6 @@ const pages = [
     'issues',
     'join',
     'map',
-    'news',
     'privacy',
     'yardsign'
 ];

@@ -34,8 +34,8 @@ function eslint() {
 function compileScripts() {
     let browsers = ['last 2 Chrome versions'];
     const plugins = [
-        '@babel/plugin-proposal-decorators',
-        ['@babel/plugin-proposal-class-properties', {'loose': true}]
+        ['@babel/plugin-proposal-decorators', {legacy: true}],
+        ['@babel/plugin-proposal-class-properties', {loose: true}]
     ];
 
     if (config.env !== 'test') {
