@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'mixins';
+
+.page-banner {
+    background-color: color(yellow, darker);
+    text-align: center;
+    padding: 1rem;
+
+    &.banner-alert {
+        background-color: color(red, darker);
+    }
+
+    &.banner-notice {
+        background-color: color(orange, darker);
+    }
+
+    > span {
+        color: color(white);
+        letter-spacing: 0.1rem;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+}
