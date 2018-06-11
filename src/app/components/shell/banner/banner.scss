@@ -3,8 +3,8 @@
 
 .page-banner {
     background-color: color(yellow, darker);
-    text-align: center;
     padding: 1rem;
+    text-align: center;
 
     &.banner-alert {
         background-color: color(red, darker);
@@ -16,8 +16,8 @@
 
     > span {
         color: color(white);
-        letter-spacing: 0.1rem;
         font-size: 1.4rem;
+        letter-spacing: 0.1rem;
         text-transform: uppercase;
     }
 }

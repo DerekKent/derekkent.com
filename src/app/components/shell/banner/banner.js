@@ -53,20 +53,25 @@ class Banner extends Controller {
             classes: ['page-banner']
         };
 
-        const now = Date.now();
-
-        for (const notice of NOTICES) {
-            if (now >= notice.start && now < notice.end) {
-                this.model = notice;
-                break;
-            }
-        }
+        this.model = this.currentNotice();
 
         if (this.model && this.model.class) {
             this.view.classes.push(this.model.class);
         } else {
             this.view.classes.push('hidden');
         }
+    }
+
+    currentNotice() {
+        const now = Date.now();
+
+        for (const notice of NOTICES) {
+            if (now >= notice.start && now < notice.end) {
+                return notice;
+            }
+        }
+
+        return null;
     }
 
 }
