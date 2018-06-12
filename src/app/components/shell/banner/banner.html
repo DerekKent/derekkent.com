@@ -1,5 +1,11 @@
 <template args="notice">
     <if condition="notice && notice.message">
-        <span>{notice.message}</span>
+        <if condition="notice.link">
+            <a href="{notice.link}">
+                <span>{notice.message}</span>
+            </a>
+        <else>
+            <span>{notice.message}</span>
+        </if>
     </if>
 </template>

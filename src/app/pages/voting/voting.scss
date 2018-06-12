@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'mixins';
+
+.voting-page {
+    border-top: 1px solid color(gray, lighter);
+    padding: 0 2rem;
+    text-align: center;
+
+    address,
+    h1,
+    h2,
+    p {
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        > li {
+            flex: 0 0 33%;
+            padding: 1rem;
+
+            @include mobile {
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    p,
+    address {
+        font-size: 1.2em;
+    }
+
+    .locations a {
+        color: color(black);
+
+        &:hover {
+            color: color(red, darker);
+        }
+    }
+
+    .boe {
+        margin: 4.5rem 0;
+    }
+}

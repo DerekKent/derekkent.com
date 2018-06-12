@@ -14,7 +14,12 @@
         background-color: color(orange, darker);
     }
 
-    > span {
+    a {
+        display: block;
+    }
+
+    a,
+    span {
         color: color(white);
         font-size: 1.4rem;
         letter-spacing: 0.1rem;

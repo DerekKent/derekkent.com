@@ -14,6 +14,7 @@ const pages = [
     'join',
     'map',
     'privacy',
+    'voting',
     'yardsign'
 ];
 
