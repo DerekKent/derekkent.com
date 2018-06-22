@@ -1,48 +1,70 @@
-<template args="model">
+<template args="type">
     <article>
-        <h1>Early Voting</h1>
+        <if condition="type === 'early'">
+            <h1>Early Voting</h1>
 
-        <h2>Time</h2>
+            <h2>Time</h2>
 
-        <p>
-            <strong>8am - 10pm</strong>
-            <span>; June 14th — June 21st</span>
-        </p>
+            <p>
+                <strong>10am - 8pm</strong>
+                <span>; June 14th — June 21st</span>
+            </p>
 
-        <h2>Locations</h2>
+            <h2>Locations</h2>
 
-        <ul class="locations">
-            <li>
-                <a href="https://goo.gl/maps/ATRvJgpr2h42" rel="nofollow">
-                    <address>
-                        <strong>Odenton Regional Library</strong><br>
-                        1325 Annapolis Road<br>
-                        Odenton, MD 21113
-                    </address>
-                </a>
-            </li>
-            <li>
-                <a href="https://goo.gl/maps/khmH2qsagUF2" rel="nofollow">
-                    <address>
-                        <strong>Glen Burnie Regional Library</strong><br>
-                        1010 Eastway<br>
-                        Glen Burnie, MD 21060
-                    </address>
-                </a>
-            </li>
-            <li>
-                <a href="https://goo.gl/maps/jvnG4HaTSdn" rel="nofollow">
-                    <address>
-                        <strong>Anne Arundel County Board of Elections</strong><br>
-                        6740 Baymeadow Drive<br>
-                        Glen Burnie, MD 21060
-                    </address>
-                </a>
-            </li>
-        </ul>
+            <ul class="locations">
+                <li>
+                    <a href="https://goo.gl/maps/ATRvJgpr2h42" rel="nofollow">
+                        <address>
+                            <strong>Odenton Regional Library</strong><br>
+                            1325 Annapolis Road<br>
+                            Odenton, MD 21113
+                        </address>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://goo.gl/maps/khmH2qsagUF2" rel="nofollow">
+                        <address>
+                            <strong>Glen Burnie Regional Library</strong><br>
+                            1010 Eastway<br>
+                            Glen Burnie, MD 21060
+                        </address>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://goo.gl/maps/jvnG4HaTSdn" rel="nofollow">
+                        <address>
+                            <strong>Anne Arundel County Board of Elections</strong><br>
+                            6740 Baymeadow Drive<br>
+                            Glen Burnie, MD 21060
+                        </address>
+                    </a>
+                </li>
+            </ul>
 
-        <p class="boe">
-            <span>Visit the <a href="https://elections.maryland.gov/voting/early_voting.html" rel="nofollow">Maryland State Board of Elections web site</a> for more info.</span>
-        </p>
+            <p class="boe">
+                <span>Visit the <a href="https://elections.maryland.gov/voting/early_voting.html" rel="nofollow">Maryland State Board of Elections web site</a> for more info.</span>
+            </p>
+        <else>
+            <h1>Primary Election Day</h1>
+
+            <h2>Time</h2>
+
+            <p>
+                <strong>7am - 8pm</strong>
+                <span>; June 26th</span>
+            </p>
+
+            <h2>Find Your Polling Place</h2>
+
+            <p>
+                Use the Maryland State Board of Elections
+                <a href="https://voterservices.elections.maryland.gov/PollingPlaceSearch" ref="nofollow">Polling Place Lookup tool</a> to find your polling location.
+            </p>
+
+            <p class="boe">
+                <span>Visit the <a href="https://elections.maryland.gov/voting/early_voting.html" rel="nofollow">Maryland State Board of Elections web site</a> for more info.</span>
+            </p>
+        </if>
     </article>
 </template>
