@@ -55,6 +55,14 @@
             color: color(white);
             text-transform: uppercase;
 
+            @include wcag2-aa {
+                color: color(white);
+            }
+
+            @include wcag2-aaa {
+                color: color(white);
+            }
+
             &:hover {
                 text-decoration: underline;
             }
