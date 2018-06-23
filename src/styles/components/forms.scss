@@ -54,7 +54,7 @@ fieldset {
 
 input {
     appearance: none;
-    border: 0.1rem solid color(gray, lighter);
+    border: 0.1rem solid color(gray, light);
     border-radius: 0.3rem;
     display: block;
     font-family: $serif;
@@ -66,7 +66,7 @@ input {
 }
 
 [type="checkbox"] {
-    background-color: lighten(color(gray, light), 8%);
+    background-color: lighten(color(gray, lighter), 8%);
     border-radius: 0.3rem;
     box-shadow: 0 0.1rem 0.2rem rgba(color(black), 0.05), inset 0 -1.5rem 1rem -1.2rem rgba(color(black), 0.05);
     display: inline-block;
@@ -87,7 +87,7 @@ input {
     }
 
     &:checked {
-        background-color: lighten(color(gray, light), 5%);
+        background-color: lighten(color(gray, lighter), 5%);
         box-shadow: 0 0.1rem 0.2rem rgba(color(black), 0.05), inset 0 -1.5rem 1rem -1.2rem rgba(color(black), 0.05), inset 1.5rem 1rem -1.2rem rgba(color(white), 0.1);
 
         &::after {

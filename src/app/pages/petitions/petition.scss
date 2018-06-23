@@ -2,7 +2,7 @@
 @import 'mixins';
 
 .petition {
-    border-top: 0.1rem solid color(gray, lighter);
+    border-top: 0.1rem solid color(gray, light);
 
     h1 {
         text-align: center;
@@ -42,7 +42,7 @@
             }
 
             label {
-                color: color(serenity, light);
+                color: color(serenity, lighter);
                 display: block;
                 margin-top: 1rem;
             }

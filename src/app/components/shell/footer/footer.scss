@@ -12,7 +12,7 @@
     }
 
     @include wcag2-aaa {
-        background-color: color(background, lighter);
+        background-color: color(background, light);
     }
 
     ul {
@@ -128,7 +128,7 @@
         user-select: none;
 
         @include wcag2-aaa {
-            color: color(background, lighter);
+            color: color(background, light);
         }
     }
 }

@@ -1,80 +1,80 @@
 $colors: (
     red: (
-        light: #f7d9da,
-        lighter: #f1bcbf,
+        lighter: #f7d9da,
+        light: #f1bcbf,
         base: #d9222a,
-        darker: #bd0f18,
-        dark: #a10008
+        dark: #bd0f18,
+        darker: #a10008
     ),
     green: (
-        light: #d8f0d8,
-        lighter: #c6e9c6,
+        lighter: #d8f0d8,
+        light: #c6e9c6,
         base: #1fad1f,
-        darker: #0c8b0c,
-        dark: #006e00
+        dark: #0c8b0c,
+        darker: #006e00
     ),
     blue: (
-        light: #d9daf7,
-        lighter: #bcbff1,
+        lighter: #d9daf7,
+        light: #bcbff1,
         base: #292d78,
-        darker: #1a1d5c,
-        dark: #0e1145
+        dark: #1a1d5c,
+        darker: #0e1145
     ),
     orange: (
-        light: #ffc87f,
-        lighter: #e9a850,
+        lighter: #ffc87f,
+        light: #e9a850,
         base: #d88c27,
-        darker: #ad6b12,
-        dark: #864d00
+        dark: #ad6b12,
+        darker: #864d00
     ),
     yellow: (
-        light: #fcf8e3,
-        lighter: #faf2cc,
+        lighter: #fcf8e3,
+        light: #faf2cc,
         base: #d8ba27,
-        darker: #ae930f,
-        dark: #897200
+        dark: #ae930f,
+        darker: #897200
     ),
     teal: (
-        light: #d8f0e6,
-        lighter: #c6e9da,
+        lighter: #d8f0e6,
+        light: #c6e9da,
         base: #1b9460,
-        darker: #0c7749,
-        dark: #005c34
+        dark: #0c7749,
+        darker: #005c34
     ),
     gray: (
-        light: #e6e6e6,
-        lighter: #ccc,
+        lighter: #e6e6e6,
+        light: #ccc,
         base: gray,
-        darker: #4c4c4c,
-        dark: #323232
+        dark: #4c4c4c,
+        darker: #323232
     ),
     serenity: (
-        light: lighten(#91a8d0, 20%),
-        lighter: lighten(#91a8d0, 10%),
+        lighter: lighten(#91a8d0, 20%),
+        light: lighten(#91a8d0, 10%),
         base: #91a8d0,
-        darker: darken(#91a8d0, 5%),
-        dark: darken(#91a8d0, 10%)
+        dark: darken(#91a8d0, 5%),
+        darker: darken(#91a8d0, 10%)
     ),
     harebell: (
-        light: lighten(#6a6fc4, 20%),
-        lighter: lighten(#6a6fc4, 10%),
+        lighter: lighten(#6a6fc4, 20%),
+        light: lighten(#6a6fc4, 10%),
         base: #6a6fc4,
-        darker: darken(#6a6fc4, 5%),
-        dark: darken(#6a6fc4, 10%)
+        dark: darken(#6a6fc4, 5%),
+        darker: darken(#6a6fc4, 10%)
     ),
     links: (
-        light: lighten(#208feb, 20%),
-        lighter: lighten(#208feb, 10%),
+        lighter: lighten(#208feb, 20%),
+        light: lighten(#208feb, 10%),
         base: #208feb,
-        darker: darken(#208feb, 10%),
-        dark: darken(#208feb, 20%)
+        dark: darken(#208feb, 10%),
+        darker: darken(#208feb, 20%)
     ),
     background: (
-        light: lighten(#f0f3fa, 20%),
-        lighter: lighten(#f0f3fa, 10%),
+        lighter: lighten(#f0f3fa, 20%),
+        light: lighten(#f0f3fa, 10%),
         base: #f0f3fa,
-        darker: darken(#f0f3fa, 10%),
-        dark: darken(#f0f3fa, 20%)
+        dark: darken(#f0f3fa, 10%),
+        darker: darken(#f0f3fa, 20%)
     ),
     black: black,
     white: white

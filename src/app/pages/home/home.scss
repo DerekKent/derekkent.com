@@ -28,7 +28,7 @@
     }
 
     .join {
-        background-color: color(blue, darker);
+        background-color: color(blue, dark);
         border-bottom-left-radius: 100%;
         border-bottom-right-radius: 0;
         border-top-left-radius: 0;
@@ -51,7 +51,7 @@
         }
 
         @include wcag2-aaa {
-            background-color: color(blue, dark);
+            background-color: color(blue, darker);
         }
 
         > form {
@@ -154,7 +154,7 @@
 
         thead {
             th {
-                color: color(gray, darker);
+                color: color(gray, dark);
                 white-space: nowrap;
             }
 
@@ -194,7 +194,7 @@
         }
 
         tr:nth-child(even) {
-            background-color: rgba(color(gray, light), 0.33);
+            background-color: rgba(color(gray, lighter), 0.33);
         }
 
         th:nth-child(n+3),
@@ -211,11 +211,11 @@
         user-select: none;
 
         @include wcag2-aa {
-            color: color(links, dark);
+            color: color(links, darker);
         }
 
         @include wcag2-aaa {
-            color: color(links, dark);
+            color: color(links, darker);
         }
 
         &::after {

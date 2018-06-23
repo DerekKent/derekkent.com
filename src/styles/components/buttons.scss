@@ -44,7 +44,7 @@ button,
     &:not(.disabled):active,
     &:not(.disabled):hover,
     &:not(.disabled):focus {
-        background-color: color(gray, light);
+        background-color: color(gray, lighter);
     };
 
     &.disabled {
@@ -64,39 +64,39 @@ button,
 
         @include wcag2-aa {
             @if $color == 'serenity' {
-                background-color: darken(color($color, darker), 5%);
+                background-color: darken(color($color, dark), 5%);
             } @else {
-                background-color: color($color, darker);
+                background-color: color($color, dark);
             }
         }
 
         @include wcag2-aaa {
             @if $color == 'serenity' {
-                background-color: darken(color($color, dark), 10%);
+                background-color: darken(color($color, darker), 10%);
             } @else {
-                background-color: color($color, dark);
+                background-color: color($color, darker);
             }
         }
 
         &:not(.disabled):active,
         &:not(.disabled):hover,
         &:not(.disabled):focus {
-            background-color: color($color, darker);
+            background-color: color($color, dark);
             color: color(white);
 
             @include wcag2-aa {
                 @if $color == 'serenity' {
-                    background-color: darken(color($color, dark), 5%);
+                    background-color: darken(color($color, darker), 5%);
                 } @else {
-                    background-color: color($color, dark);
+                    background-color: color($color, darker);
                 }
             }
 
             @include wcag2-aaa {
                 @if $color == 'serenity' {
-                    background-color: darken(color($color, dark), 15%);
+                    background-color: darken(color($color, darker), 15%);
                 } @else {
-                    background-color: darken(color($color, dark), 5%);
+                    background-color: darken(color($color, darker), 5%);
                 }
             }
         };

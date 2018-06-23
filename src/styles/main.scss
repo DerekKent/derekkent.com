@@ -70,11 +70,11 @@ a {
 
     &:not(.btn) {
         @include wcag2-aa {
-            color: color(links, dark);
+            color: color(links, darker);
         }
 
         @include wcag2-aaa {
-            color: color(links, dark);
+            color: color(links, darker);
         }
     }
 

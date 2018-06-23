@@ -2,16 +2,16 @@
 @import 'mixins';
 
 .page-banner {
-    background-color: color(yellow, darker);
+    background-color: color(yellow, dark);
     padding: 1rem;
     text-align: center;
 
     &.banner-alert {
-        background-color: color(red, darker);
+        background-color: color(red, dark);
     }
 
     &.banner-notice {
-        background-color: color(orange, darker);
+        background-color: color(orange, dark);
     }
 
     a {
