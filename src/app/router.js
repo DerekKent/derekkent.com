@@ -24,13 +24,13 @@ class AppRouter extends Router {
         this.defaultRegion = shell.regions.main;
 
         this.default('404');
-        this.root('home');
-        this.route('issues/:issue', {view: 'issues'});
-        this.route('petitions/:issue', {view: 'petitions'});
+        this.root('concession');
+        // this.route('issues/:issue', {view: 'issues'});
+        // this.route('petitions/:issue', {view: 'petitions'});
 
-        for (const page of pages) {
-            this.route(page);
-        }
+        // for (const page of pages) {
+        //     this.route(page);
+        // }
     }
 
     start() {

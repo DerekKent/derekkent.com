@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+
+.thankyou-page {
+    align-items: center;
+    display: flex;
+    font-size: 1.4em;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 2rem 0;
+    width: 67vw;
+
+    @include mobile {
+        width: 75vw;
+    }
+}
